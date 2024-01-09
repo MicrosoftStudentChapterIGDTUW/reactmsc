@@ -1,0 +1,7 @@
+.eventcol{
+    overflow-y: auto;
+    height:80vh;
+}
+.eventcolhead{
+    margin-top: 1rem;
+}
