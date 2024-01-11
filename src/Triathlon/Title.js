@@ -20,20 +20,20 @@ const Title = () => {
          <img src={iglogo} className='icon'/>
         </div>
         <div>
-          <div className='container'>
+          <div className='headingcontainer'>
             <br></br>
             <br></br>
-           <h5>TECH</h5>
-           <h5>TECH</h5>
-           <h5>TECH</h5> 
+           <h5 className='Tech'>TECH</h5>
+           <h5 className='Tech'>TECH</h5>
+           <h5 className='Tech'>TECH</h5> 
           </div>  
           <br></br>
           <br></br>
           <br></br>
           <div className='container'> 
-           <h1>TRIATHLON</h1>
-           <h1>TRIATHLON</h1>
-           <h1>TRIATHLON</h1>
+           <h1 className='Triathlon'>TRIATHLON</h1>
+           <h1 className='Triathlon'>TRIATHLON</h1>
+           <h1 className='Triathlon'>TRIATHLON</h1>
            <br></br>
           </div>
         </div>
