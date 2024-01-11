@@ -20,6 +20,7 @@ import BlogAasthaSinghal from './BlogPages/blogslist/BlogAasthaSinghal';
 import Upcoming from './Home/Upcoming';
 // import AboutSec from './Home/AboutSec';
 // import CardContainer from './Home/CardContainer';
+import Triathlon from './Triathlon/MainPage';
 function App() {
   useEffect(() => {
     AOS.init();
@@ -44,6 +45,7 @@ function App() {
 </Routes>
 </BrowserRouter>
 <Footer/>
+{/* <Triathlon /> */}
     </div>
   );
 }
