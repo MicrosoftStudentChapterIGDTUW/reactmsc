@@ -30,10 +30,11 @@ const Title = () => {
           <br></br>
           <br></br>
           <br></br>
-          <div className='container'> 
+          <div className='headingcontainer'> 
            <h1 className='Triathlon'>TRIATHLON</h1>
            <h1 className='Triathlon'>TRIATHLON</h1>
            <h1 className='Triathlon'>TRIATHLON</h1>
+           <br></br>
            <br></br>
           </div>
         </div>
