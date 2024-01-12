@@ -1,6 +1,8 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,300,100);
 @import "@fontsource/press-start-2p";
-
+.prizes_body{
+  padding-bottom: 20rem;
+}
 .prizes{
     display: flex;
     justify-content: space-around;

@@ -44,12 +44,12 @@ function App() {
   <Route path="/mlsaapplicationprocess" element={<BlogKhushiSharma/>}/>
   <Route path="/smarthackathon(ferozpur)" element={<BlogAasthaSinghal/>}/>
   <Route path="/upevent" element={<Upcoming/>}/>
+  <Route path="/triathlon" element={<Triathlon/>}/>
 </Routes>
 </BrowserRouter>
 <Footer/>
 {/* <Triathlon /> */}
-<Prizes />
-<Round />
+
     </div>
   );
 }
