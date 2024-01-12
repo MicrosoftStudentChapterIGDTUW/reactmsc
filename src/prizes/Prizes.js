@@ -15,8 +15,8 @@ function Prizes() {
           <h4 className='prizeheading'>PRIZES</h4> 
        </div>
     <div className='prizes'>
-        <Prize pos='Second Prize' img={second} amt='3000' />
         <Prize pos='First Prize' img={winner} amt='5000' />
+        <Prize pos='Second Prize' img={second} amt='3000' />
         <Prize pos='Third Prize' img={third} amt='2000' />
     </div>
     </div>

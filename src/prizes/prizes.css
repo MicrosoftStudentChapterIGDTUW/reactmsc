@@ -221,4 +221,13 @@
         flex-wrap: wrap;
         justify-content: space-around;
   }
+
+  .prizes_head{
+    padding-bottom: 20px;
+    padding-top: 20px; 
+  }
+
+  .prizeheading{
+    font-size: 2em;
+  }
 }
