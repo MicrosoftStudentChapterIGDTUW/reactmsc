@@ -13,8 +13,8 @@
     display: flex;
 }
 .icon{
-    height: 4.5vmax;
-    width: 4.5vmax;
+    max-height: 4.5vmax;
+    max-width: 4.5vmax;
     margin-top: 1vmax;
     margin-left: 1vmax;
 }
@@ -48,8 +48,8 @@
     margin:2vmax;
     justify-content: center;
     align-items: center; 
-    height: 60%;
-    width: 60%;
+    max-height: 60%;
+    max-width: 60%;
     margin-top: 4vmax;
     margin-bottom: 4vmax;
 }
@@ -409,8 +409,8 @@
   .hero-register {
     color: #ec9718;
     font-family: 'Nasalization', sans-serif;
-    width: 12vw;
-    height:40px;
+    max-width: 12vw;
+    max-height:40px;
     background-color: black;
     border: #171617 solid 2px;
     padding: 8px;
@@ -434,4 +434,75 @@
     border: #ec9718 solid 2px;
     color: #e1e3e8;
     font-size: 16px;
+  }
+
+  @media only screen and (max-width:1000px) {
+    .Title{
+      display: block;
+    }
+    .headings{
+      border-right: none;
+    }
+    .qrcode{
+      margin-bottom: 3vmax;
+    }
+    .qrcodecard{
+      justify-content: center;
+      align-items: center;      
+      margin-left: 15%;
+      margin-top: 10%;
+      max-width: 70%;
+    }
+    .code{
+      margin: 2vmax all;
+    }
+    .hero-register{
+      max-width: 20%;
+    max-height:3%;
+    }
+    .hero-button {
+      margin-top: 10px;
+    }
+  
+    .hero-button {
+      /* display: flex; */
+      margin-top: 10px;
+      justify-content:center;
+    }
+    .scrolling-container{
+      width: 100%;
+    }
+  }
+  @media only screen and (max-width:775px){
+    .Tech{
+      font-size: 2em;
+    }
+    .Triathlon{
+      font-size: 3em;
+    }
+  }
+  @media only screen and (max-width:452px){
+    .hero-register{
+    max-width: 50%;
+    max-height:2%;
+    font-size: 7px;
+    padding: 4px;
+    }
+    .text h4{
+      font-size: 3vw;
+    }
+    .Tech{
+      font-size: 2em;
+    }
+    .Triathlon{
+      font-size: 2em;
+    }
+    .break{
+      display: none;
+    }
+    .qrcodecard{
+      width: 50%;
+      margin-left: 25%;
+      margin-top: 10%;
+    }
   }

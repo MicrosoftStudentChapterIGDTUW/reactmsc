@@ -29,33 +29,33 @@ const Title = () => {
           </div>  
           <br></br>
           <br></br>
-          <br></br>
+          <br className='break'></br>
           <div className='headingcontainer'> 
            <h1 className='Triathlon'>TRIATHLON</h1>
            <h1 className='Triathlon'>TRIATHLON</h1>
            <h1 className='Triathlon'>TRIATHLON</h1>
-           <br></br>
-           <br></br>
+           <br className='break'></br>
+           <br className='break'></br>
           </div>
         </div>
         <div className="scrolling-container" id="text-scrolling" >
- <div className="scrolling-text--inner direction-left">
+          <div className="scrolling-text--inner direction-left">
  
-<div className="scrolling-text">
-  <div className="scrolling-text--item outline-text--true"><span>TRIATHLON</span></div>
-  <div className="scrolling-text--item outline-text--false"><span>TRIATHLON</span></div>
-<div className="scrolling-text--item outline-text--false"><span>TRIATHLON</span></div>
-<div className="scrolling-text--item outline-text--false"><span>TRIATHLON</span></div></div>
+            <div className="scrolling-text">
+             <div className="scrolling-text--item outline-text--true"><span>TRIATHLON</span></div>
+             <div className="scrolling-text--item outline-text--false"><span>TRIATHLON</span></div>
+             <div className="scrolling-text--item outline-text--false"><span>TRIATHLON</span></div>
+             <div className="scrolling-text--item outline-text--false"><span>TRIATHLON</span></div></div>
 			
- <div className="scrolling-text">
-   <div className="scrolling-text--item outline-text--true"><span>TRIATHLON</span></div>
-   <div className="scrolling-text--item outline-text--false"><span>TRIATHLON</span></div>
-<div className="scrolling-text--item outline-text--false"><span>TRIATHLON</span></div>
-<div className="scrolling-text--item outline-text--false"><span>TRIATHLON</span></div></div>
+            <div className="scrolling-text">
+             <div className="scrolling-text--item outline-text--true"><span>TRIATHLON</span></div>
+             <div className="scrolling-text--item outline-text--false"><span>TRIATHLON</span></div>
+             <div className="scrolling-text--item outline-text--false"><span>TRIATHLON</span></div>
+             <div className="scrolling-text--item outline-text--false"><span>TRIATHLON</span></div></div>
 
-</div>
-</div>
+        </div>
       </div>
+    </div>
       <div className='qrcode'>
         <div className='qrcodecard'>
             <span></span>

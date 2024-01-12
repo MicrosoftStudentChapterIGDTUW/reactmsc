@@ -48,7 +48,6 @@ function App() {
 </Routes>
 </BrowserRouter>
 <Footer/>
-{/* <Triathlon /> */}
 
     </div>
   );
