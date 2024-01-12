@@ -30,7 +30,7 @@ function App() {
   return (
     <div className="App">
 
-<Header/>
+{/* <Header/>
 <BrowserRouter>
 <Routes>
   <Route path="/" element={<Home/>}/>
@@ -46,8 +46,8 @@ function App() {
   <Route path="/upevent" element={<Upcoming/>}/>
 </Routes>
 </BrowserRouter>
-<Footer/>
-{/* <Triathlon /> */}
+<Footer/> */}
+<Triathlon />
 <Prizes />
 <Round />
     </div>
