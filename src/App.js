@@ -21,6 +21,8 @@ import Upcoming from './Home/Upcoming';
 // import AboutSec from './Home/AboutSec';
 // import CardContainer from './Home/CardContainer';
 import Triathlon from './Triathlon/MainPage';
+import Prizes from './prizes/Prizes';
+import Round from './Rounds/Round';
 function App() {
   useEffect(() => {
     AOS.init();
@@ -46,6 +48,8 @@ function App() {
 </BrowserRouter>
 <Footer/>
 {/* <Triathlon /> */}
+<Prizes />
+<Round />
     </div>
   );
 }
