@@ -1,5 +1,5 @@
 import "./Eventsingle.css";
-import insider1 from "../../images/insider1.jpeg";
+
 function Eventsingle(props)
 {
     function openevent()

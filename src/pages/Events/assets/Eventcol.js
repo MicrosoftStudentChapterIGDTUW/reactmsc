@@ -1,8 +1,6 @@
 import { useEffect, useState } from "react";
 import "./Eventcol.css";
-import insider1 from "../../images/insider1.jpeg";
-import insider2 from "../../images/insider2.jpeg";
-import insider3 from"../../images/insider3.png";
+
 import Eventsingle from "./Eventsingle";
 const events=[
     {

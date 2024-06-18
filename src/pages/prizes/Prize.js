@@ -1,6 +1,7 @@
 import React from 'react'
 import './prize.css'
 import CurrencyRupeeIcon from '@mui/icons-material/CurrencyRupee';
+
 function Prize({pos,img,amt}) {
   return (
     <div className='prize'>

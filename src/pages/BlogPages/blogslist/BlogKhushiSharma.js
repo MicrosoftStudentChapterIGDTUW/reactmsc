@@ -1,4 +1,4 @@
-import khushi from "../../images/Khushi_Sharma.jpeg";
+
 import "./BlogKhushiSharma.css";
 function BlogKhushiSharma()
 {
@@ -6,7 +6,7 @@ function BlogKhushiSharma()
         <>
         <div className="blogpage">
             <div className="shape"><h2>MLSA Application Process</h2></div>
-            <img src={khushi} className="blogimage"></img>
+            <img src="/public/images/Khushi_Sharma.jpeg" className="blogimage"></img>
             <div className="blogkhushicontent">
             <h2 className="headingmlsa">What is MLSA Club?</h2>
             The Microsoft learn student ambassadors(MLSA) Club is one of the most prestigious communities of developers we have across the world, started by Microsoft itself. It’s not just about getting Microsoft goodies but actually interacting and collaborating with genius minds across the globe on highly impactful projects.

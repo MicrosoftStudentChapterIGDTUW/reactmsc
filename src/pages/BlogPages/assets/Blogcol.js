@@ -1,5 +1,5 @@
 import "./Blogcol.css";
-import nandini from "../../images/Nandini.jpeg";
+
 function Blogcol(props)
 { var direct=props.name.toLowerCase().replaceAll(' ','');
     function blogdirect()

@@ -1,8 +1,8 @@
 
 import './App.css';
 import EventsPg from "./pages/Events/EventsPg";
-import Header from './components/Header/Header';
-import Footer from './components/Header/Footer';
+import Header from './pages/Header/Header';
+import Footer from './pages/Header/Footer';
 
 import Contacts from "./pages/Contact/Contacts";
 import MainSection from './pages/Teams/MainSection';
@@ -11,7 +11,7 @@ import { BrowserRouter,Route, Routes } from 'react-router-dom';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from 'react';
-import FAQs from './components/Header/FAQs';
+import FAQs from './pages/Header/FAQs';
 import Blog from "./pages/BlogPages/assets/Blog";
 import Blogpg from './pages/BlogPages/BlogPg';
 import Bootcamp from './pages/Bootcamp/Bootcamp';

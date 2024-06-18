@@ -1,23 +1,20 @@
 import React from 'react'
 import './Title.css'
-import mlsaicon from '../images/MLSA_logo-transformed.png';
-import gfg from '../images/gfg-icon.png';
-import iglogo from '../images/igdtuw_logo.png';
-import qrcode from '../images/qrcode.png';
+
 
 const Title = () => {
   return (
     <div className='Title'>
       <div className='headings'>  
        <div className='topbar'>
-         <img src={mlsaicon} className='icon'/>
-         <img src={gfg} className='gfgicon' id='gfgicon'/>
+         <img src="/public/images/MLSA_logo-transformed.png" className='icon'/>
+         <img src="/public/images/igdtuw_logo.png" className='gfgicon' id='gfgicon'/>
          <div className='text'>
           <h4>Under the Department of AI & DS</h4>
           <h4>Microsoft Learn Student Ambassador Student Chapter-IGDTUW </h4> 
           <i>Presents</i>
          </div>
-         <img src={iglogo} className='icon'/>
+         <img src="/public/images/igdtuw_logo.png" className='icon'/>
         </div>
         <div>
           <div className='headingcontainer'>
@@ -62,7 +59,7 @@ const Title = () => {
             <span></span>
             <span></span>
             <span></span>
-            <img src={qrcode} className='code'/>
+            <img src="/public/images/qrcode.png" className='code'/>
         </div>
         <div class="hero-button">
             <a id="hero-register-link" target="_blank" href="https://unstop.com/hackathons/innerve-hacks-2023-igdtuw-delhi-784324">

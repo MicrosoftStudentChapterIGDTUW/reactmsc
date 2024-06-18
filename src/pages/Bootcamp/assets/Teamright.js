@@ -1,5 +1,5 @@
 import "./Teamright.css";
-import nandini from "../../images/Kirti_Aggarwal.jpeg";
+
 function Teamright(props){
     return(
         <>
