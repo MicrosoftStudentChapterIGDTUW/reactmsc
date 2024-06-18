@@ -5,6 +5,7 @@
     display: flex;
     flex-wrap: wrap;
     padding-left: 7.5vw;
+    
 
 }
 .teamleft img{
@@ -14,10 +15,11 @@
     margin-right: 3rem;
     margin-top: 3rem;
     border-radius: 50%;
+
 }
 .teamachievementleft{
     width:60vw;
-    height:8rem;
+    height:10rem;
     border-radius: 10px;
     display: inline-block;
     background-color: #012147;

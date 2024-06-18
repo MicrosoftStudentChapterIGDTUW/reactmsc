@@ -11,12 +11,14 @@ import sidharth from "../images/siddhartha.jpg";
 import abhishek from "../images/abhishek.jpg";
 import manan from "../images/manan.jpeg";
 import Bootintro from "./assets/Bootintro";
+import WebD from "./details/webd";
 function Bootcamp24(){
     return(
         <>
         <div className="boot">
             <Bootintro/>
         </div>
+        <WebD/>
         <div className="mentorsection">
             <div className="circlementor">
                 <h3>Web Development Mentors</h3>
