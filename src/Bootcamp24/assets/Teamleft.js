@@ -1,17 +1,14 @@
 import "./Teamleft.css";
 import nandini from "../../images/Kirti_Aggarwal.jpeg";
-function Teamleft(props){
-    return(
-        <>
-        <div className="teamleft" data-aos="flip-up" data-aos-duration="1000">
-        <img src={props.image}/>
-            <div className="teamachievementleft">
-                <span>{props.name}</span>
-                {props.content}
-            </div>
-            
+function Teamleft(props) {
+  return (
+    <>
+      <div className="teamleft" data-aos="flip-up" data-aos-duration="1000">
+        <div className="teamachievementleft">
+          <span>{props.name}</span>
         </div>
-        </>
-    )
+      </div>
+    </>
+  );
 }
 export default Teamleft;
