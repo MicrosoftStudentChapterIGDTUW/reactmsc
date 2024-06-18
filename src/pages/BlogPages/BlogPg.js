@@ -1,4 +1,4 @@
-import "./BlogPg.css";
+import "../styles/BlogPg.css";
 import blogs from "./BlogList";
 import { useState } from "react";
 import Blogcol from "./assets/Blogcol";

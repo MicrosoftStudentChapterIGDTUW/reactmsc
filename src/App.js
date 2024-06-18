@@ -1,28 +1,27 @@
 
 import './App.css';
-import EventsPg from "./Events/EventsPg";
-import Header from './Header/Header';
-import Footer from './Header/Footer';
-import Modal from './Header/Modal';
-import Contacts from "./Contact/Contacts";
-import MainSection from './Teams/MainSection';
-import Home from "./Home/Home";
+import EventsPg from "./pages/Events/EventsPg";
+import Header from './components/Header/Header';
+import Footer from './components/Header/Footer';
+
+import Contacts from "./pages/Contact/Contacts";
+import MainSection from './pages/Teams/MainSection';
+import Home from "./pages/Home/Home";
 import { BrowserRouter,Route, Routes } from 'react-router-dom';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from 'react';
-import FAQs from './Header/FAQs';
-import Blog from "./BlogPages/assets/Blog";
-import Blogpg from './BlogPages/BlogPg';
-import Bootcamp from './Bootcamp/Bootcamp';
-import BlogKhushiSharma from './BlogPages/blogslist/BlogKhushiSharma';
-import BlogAasthaSinghal from './BlogPages/blogslist/BlogAasthaSinghal';
-import Upcoming from './Home/Upcoming';
-// import AboutSec from './Home/AboutSec';
-// import CardContainer from './Home/CardContainer';
-import Triathlon from './Triathlon/MainPage';
-import Prizes from './prizes/Prizes';
-import Round from './Rounds/Round';
+import FAQs from './components/Header/FAQs';
+import Blog from "./pages/BlogPages/assets/Blog";
+import Blogpg from './pages/BlogPages/BlogPg';
+import Bootcamp from './pages/Bootcamp/Bootcamp';
+import BlogKhushiSharma from './pages/BlogPages/blogslist/BlogKhushiSharma';
+import BlogAasthaSinghal from './pages/BlogPages/blogslist/BlogAasthaSinghal';
+import Upcoming from './pages/Home/Upcoming';
+
+import Triathlon from './pages/Triathlon/MainPage';
+
+
 function App() {
   useEffect(() => {
     AOS.init();
