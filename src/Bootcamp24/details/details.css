@@ -5,7 +5,7 @@
     background-color: #007ADE;
     height: 10vh;
     width: 90vw;
-    margin: auto;
+    margin: 5vh 5vw;
     font-size: 1.5rem;
     border-radius: 20px;
 }
@@ -54,6 +54,7 @@
 .timeline-container h2 {
     text-align: center;
     color: white;
+    margin-bottom: 2vh;
 }
 
 .dropdown {
@@ -61,13 +62,15 @@
 }
 
 .dropdown button {
-    width: 95%; /* Adjust as needed */
+    width: 95%;
     padding: 10px;
     background-color: rgb(2, 40, 86);
     color: white;
     border: none;
     cursor: pointer;
-    position: relative; /* For absolute positioning of arrow */
+    position: relative;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
 }
 
 .dropdown button .arrow {
@@ -78,7 +81,10 @@
     transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
     position: absolute;
-    right: 20px; /* Adjust as needed */
+    right: 20px;
+    top: 40%;
+    align-self: center;
+    transition: transform 0.3s ease;
 }
 
 .dropdown button .up {
@@ -89,4 +95,12 @@
 .lorem-text {
     padding: 10px;
     color: #fff;
+    opacity: hidden;
+    max-height: 0;
+    transition: opacity 0.3s ease, visibility 0.3s ease, max-height 0.3s ease;
+}
+
+.lorem-text.open {
+    opacity: 1;
+    visibility: visible;
 }

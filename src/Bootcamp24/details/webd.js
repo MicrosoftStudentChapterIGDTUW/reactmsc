@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import "./details.css";
-import Teamleft from "../assets/Teamleft";
-import Teamright from "../assets/Teamright";
+import Teamleft from "./Imageleft";
+import Teamright from "./Imageright";
 import Logo from "./MSC_Logo.png";
 
 function Webd_details () {
@@ -17,6 +17,7 @@ function Webd_details () {
     const toggleDropdown = (index) => {
         setIsOpen(isOpen.map((open, i) => (i === index ? !open : open)));
     };
+      
 
     return (
         <div>
@@ -61,10 +62,11 @@ function Webd_details () {
                             <span className={`arrow ${isOpen[index] ? 'up' : ''}`}></span>
                         </button>
                         {isOpen[index] && (
-                            <p className="lorem-text">
+                            <p className={`lorem-text ${isOpen[index] ? 'open' : ''}`}>
                                 {text}
                             </p>
                         )}
+
                     </div>
                 ))}
             </div>

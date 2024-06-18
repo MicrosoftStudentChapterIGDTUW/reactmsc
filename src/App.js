@@ -16,6 +16,7 @@ import Blog from "./BlogPages/assets/Blog";
 import Blogpg from './BlogPages/BlogPg';
 import Bootcamp from './Bootcamp/Bootcamp';
 import Bootcamp24 from './Bootcamp24/Bootcamp';
+import WebD from './Bootcamp24/details/Webd';
 import BlogKhushiSharma from './BlogPages/blogslist/BlogKhushiSharma';
 import BlogAasthaSinghal from './BlogPages/blogslist/BlogAasthaSinghal';
 import Upcoming from './Home/Upcoming';
@@ -43,6 +44,7 @@ function App() {
   <Route path="/googlegenerationscholarship" element={<Blog/>}/>
   <Route path="/bootcamp" element={<Bootcamp/>}/>
   <Route path="/bootcamp24" element={<Bootcamp24/>}/>
+  <Route path="/webd" element={<WebD/>}/>
   <Route path="/mlsaapplicationprocess" element={<BlogKhushiSharma/>}/>
   <Route path="/smarthackathon(ferozpur)" element={<BlogAasthaSinghal/>}/>
   <Route path="/upevent" element={<Upcoming/>}/>
