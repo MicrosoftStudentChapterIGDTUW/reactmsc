@@ -21,14 +21,10 @@ function Bootcamp(){
             <div className="circlementor">
                 <h3>Web Development Mentors</h3>
                 <Teamleft image={kartik} name="Kartik Ohri" content=" is a final year Computer Science student at the Jawaharlal Nehru University
-                                                    GSoC Contributor
-                                                    Current GSoC Mentor and forever Open source geek"/>
-                <Teamright image={rajat} name="Rajat Aggarwal" content=" is a software Engineer at Airtel Digital
-                                                    Full Stack Developer
-                                                    Open Source Contributor
-                                                    Runner up @KWOC'19
-                                                    Published 2 IEEE papers on a new algorithm
-                                                    MNITJ'22 passout"/>
+                                                    GSoC Contributor Current GSoC Mentor and forever Open source geek"/>
+                <Teamright image={rajat} name="Rajat Aggarwal" content=" is a software Engineer at Airtel Digital,
+                                                    Full Stack Developer, Open Source Contributor,
+                                                    Runner up @KWOC'19, Published 2 IEEE papers on a new algorithm, MNITJ'22 passout"/>
             </div>
             <div className="circlementor">
                 <h3>AI/ML Mentors</h3>
