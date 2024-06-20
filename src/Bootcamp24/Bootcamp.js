@@ -3,7 +3,6 @@ import "./Bootcamp.css";
 import Teamleft from "./assets/Teamleft";
 import Teamright from "./assets/Teamright";
 import Bootintro from "./assets/Bootintro";
-import WebD from "./details/Webd";
 
 function Bootcamp24() {
   return (
@@ -18,18 +17,34 @@ function Bootcamp24() {
           <Link to="/webd">
              <Teamleft name="WEB DEVELOPMENT" />{" "}
           </Link>
+          <Link to="/appd">
+            <Teamleft name="APP DEVELOPMENT" />
+          </Link>
+          <Link to="/arvr">
+            <Teamleft name="AR / VR" />
+          </Link>
           
-          <Teamleft name="APP DEVELOPMENT" />
-          <Teamleft name="AR / VR" />
         </div>
         <div className="right">
-          <Teamright name="AI / ML" />
-          <Teamright name="CYBERSECURITY" />
-          <Teamright name="WEB3" />
+          <Link to="/aiml">
+            <Teamright name="AI / ML" />
+          </Link>
+          <Link to="/cyber">
+            <Teamright name="CYBERSECURITY" />
+          </Link>
+          <Link to="/web3">
+            <Teamright name="WEB3" />
+          </Link>
+          
         </div>{" "}
         <div className="bottom">
-          <Teamleft name="PRODUCT MANAGEMENT" />{" "}
-          <Teamleft name="DATA ANALYTICS" />
+          <Link to="/prodmgmt">
+            <Teamleft name="PRODUCT MANAGEMENT" />{" "}
+          </Link>
+          <Link to="/dataanal">
+            <Teamleft name="DATA ANALYTICS" />
+          </Link>
+          
         </div>
       </div>
     </>

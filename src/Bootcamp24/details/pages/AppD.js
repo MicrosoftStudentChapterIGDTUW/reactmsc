@@ -1,10 +1,10 @@
 import React, {useState} from 'react';
-import "./details.css";
-import Teamleft from "./Imageleft";
-import Teamright from "./Imageright";
-import Logo from "./MSC_Logo.png";
+import "../layout/details.css";
+import Teamleft from "../layout/Imageleft";
+import Teamright from "../layout/Imageright";
+import Logo from "../mentors/MSC_Logo.png";
 
-function Webd_details () {
+function Appd_details () {
 
     const [isOpen, setIsOpen] = useState([false, false, false, false]);
     const loremTexts = [
@@ -21,19 +21,19 @@ function Webd_details () {
 
     return (
         <div>
-            <div className="domaintitle"><h1>&lt;Web Development/&gt;</h1></div>
+            <div className="domaintitle"><h1>App Development</h1></div>
 
             <div className="about">
-                Craft stunning, responsive websites 
-                from scratch with HTML, CSS, and JavaScript.
-                Dive deep into frameworks like
-                React and backend tech like Node.js!
-                (do we create box shadow here like bootcamp header here?)
+                Build sleek mobile apps
+                withAndroid or iOS,
+                and master cross-platform tools
+                like Flutter. Create, test,
+                and optimize your app for any device!
             </div>
 
             <div className="mentorsection">
                 <div className="circlementor">
-                    <h3>Web Development Mentors</h3>
+                    <h3>App Development Mentors</h3>
                     <Teamleft image={Logo} name="Mentor 01" content="Lorem ipsum dolor sit amet, 
                         consectetur adipiscing elit, 
                         sed do eiusmod tempor incididunt 
@@ -75,4 +75,4 @@ function Webd_details () {
     )
 }
 
-export default Webd_details;
+export default Appd_details;
