@@ -17,7 +17,7 @@ function Bootcamp(){
         <div className="boot">
             <Bootintro/>
         </div>
-        <div className="mentorsection">
+        <div className="domainsection">
             <div className="circlementor">
                 <h3>Web Development Mentors</h3>
                 <Teamleft image={kartik} name="Kartik Ohri" content=" is a final year Computer Science student at the Jawaharlal Nehru University

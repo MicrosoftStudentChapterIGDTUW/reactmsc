@@ -3,29 +3,28 @@
   margin-left: auto;
   margin-right: auto;
   display: flex;
-  flex-wrap: wrap-reverse;
-  padding-left: 7.5vw;
+  flex-wrap: wrap-reverse;  
+  justify-content: center;
 }
 
 .achievementright {
-  width: 20rem;
-  height: 20rem;
+  width: 32vw;
+  max-width: 430px;
+  height: 30vh;
   border-radius: 10px;
-  display: inline-block;
+  display: flex;
   background-color: #012147;
   padding: 1rem;
   color: white;
-  margin-right: 1rem;
-  margin-left: 0.5rem;
-  margin-top: 1rem;
+  justify-content: center;
 }
 
 .achievementright span {
   font-size: 1.4rem;
   color: rgb(255, 255, 255);
   font-family: "Nasalization", sans-serif;
-  margin-top: 7.5rem;
   display: grid;
+  align-self: center;
 }
 .achievementright:hover {
   background-color: rgb(8, 100, 247);

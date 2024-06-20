@@ -11,7 +11,7 @@ function Bootcamp24() {
         <Bootintro />
       </div>
 
-      <div className="mentorsection">
+      <div className="domainsection">
         <h3>DOMAINS</h3>
         <div className="left">
           <Link to="/webd">
@@ -29,7 +29,7 @@ function Bootcamp24() {
             <Teamright name="AI / ML" />
           </Link>
           <Link to="/cyber">
-            <Teamright name="CYBERSECURITY" />
+            <Teamright name="CYBER SECURITY" />
           </Link>
           <Link to="/web3">
             <Teamright name="WEB3" />
