@@ -8,6 +8,10 @@
 }
 .bottom {
   display: flex;
-  margin-left: 5rem;
+  margin-left: 15rem;
   margin-top: 2rem;
+}
+.mentorsection h3 {
+  font-family: "Nasalization", sans-serif;
+  color: blue;
 }

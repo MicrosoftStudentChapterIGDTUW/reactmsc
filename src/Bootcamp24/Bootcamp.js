@@ -15,7 +15,7 @@ function Bootcamp24() {
         <h3>DOMAINS</h3>
         <div className="left">
           <Link to="/webd">
-             <Teamleft name="WEB DEVELOPMENT" />{" "}
+            <Teamleft name="WEB DEVELOPMENT" />{" "}
           </Link>
           <Link to="/appd">
             <Teamleft name="APP DEVELOPMENT" />
@@ -23,7 +23,6 @@ function Bootcamp24() {
           <Link to="/arvr">
             <Teamleft name="AR / VR" />
           </Link>
-          
         </div>
         <div className="right">
           <Link to="/aiml">
@@ -35,7 +34,6 @@ function Bootcamp24() {
           <Link to="/web3">
             <Teamright name="WEB3" />
           </Link>
-          
         </div>{" "}
         <div className="bottom">
           <Link to="/prodmgmt">
@@ -44,7 +42,6 @@ function Bootcamp24() {
           <Link to="/dataanal">
             <Teamleft name="DATA ANALYTICS" />
           </Link>
-          
         </div>
       </div>
     </>
