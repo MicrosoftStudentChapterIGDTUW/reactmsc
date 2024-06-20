@@ -28,6 +28,10 @@
     font-weight: 500;
 }
 
+.mentorsection {
+    margin-bottom: 10vh;
+}
+
 .circlementor{
     width:90vw;
     margin-left: auto;
