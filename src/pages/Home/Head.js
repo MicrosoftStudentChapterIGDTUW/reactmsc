@@ -5,7 +5,8 @@ function Head() {
     <div className="headsection">
       <div className="imagehead">
         <img
-          src="/public/images/images.png"
+          src="./images/images.png"
+          // /public/images/images.png
           className="imageheadsection"
           data-aos="fade-right"
           data-aos-duration="500"
