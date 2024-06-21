@@ -2,6 +2,7 @@ import "./App.css";
 import EventsPg from "./pages/Events/EventsPg";
 import Header from "./pages/Header/Header";
 import Footer from "./pages/Header/Footer";
+import TagManager from "react-gtm-module";
 
 import Contacts from "./pages/Contact/Contacts";
 import MainSection from "./pages/Teams/MainSection";
@@ -35,6 +36,7 @@ import ScrollToTop from "./ScrollToTop";
 function App() {
   useEffect(() => {
     AOS.init();
+    TagManager.initialize({ gtmId: 'GTM-5SMHVB85' });
   }, []);
   return (
     <div className="App">

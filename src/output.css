@@ -609,16 +609,12 @@ video {
   --tw-contain-style:  ;
 }
 
-.mt-5 {
-  margin-top: 1.25rem;
-}
-
-.mb-2 {
-  margin-bottom: 0.5rem;
-}
-
 .mb-8 {
   margin-bottom: 2rem;
+}
+
+.mt-5 {
+  margin-top: 1.25rem;
 }
 
 .hidden {
