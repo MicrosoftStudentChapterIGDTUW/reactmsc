@@ -1,5 +1,5 @@
 import "./Teamleft.css";
-import nandini from "../../images/Kirti_Aggarwal.jpeg";
+// import nandini from "../../images/Kirti_Aggarwal.jpeg";
 function Teamleft(props) {
   return (
     <>
