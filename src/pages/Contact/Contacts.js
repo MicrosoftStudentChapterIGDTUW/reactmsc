@@ -26,7 +26,7 @@ function Contacts() {
   };
 
   useEffect(() => {
-    // Your JavaScript code goes here
+  
     const inputs = document.querySelectorAll(".input");
 
     function focusFunc() {
@@ -62,9 +62,7 @@ function Contacts() {
       <div className="form">
         <div className="contact-info">
           <h3 className="title">Let's get in touch</h3>
-          <p className="text">
-            Send us the message and contact now. Get your all queries resolved here!
-          </p>
+          <p className="text1">Send us the message and contact now. Get your all queries resolved here!</p>
 
           <div className="info">
             <div className="information">
