@@ -5,6 +5,13 @@ import Eventsingle from "./Eventsingle";
 const events=[
     {
         id:1,
+        name:"Bootcamp'24",
+        date:"Tentative",
+        venue:"Online",
+        image:"https://res.cloudinary.com/duxmh9dws/image/upload/v1694947654/bootcamp_modal_cauj6h.jpg",
+        link:"bootcamp24"
+    },{
+        id:2,
         name:"Insider Series 1",
         date:"20th June,2023",
         venue:"Online",
@@ -12,7 +19,7 @@ const events=[
         link:"upevent"
     },
     {
-        id:2,
+        id:3,
         name:"Insider Series 2",
         date:"23rd July,2023",
         venue:"Online",
@@ -20,15 +27,15 @@ const events=[
         link:"upevent"
     },
     {
-        id:3,
-        name:"Bootcamp",
+        id:4,
+        name:"Bootcamp'23",
         date:"5th June,2023",
         venue:"Online",
         image:"https://res.cloudinary.com/duxmh9dws/image/upload/v1694947654/bootcamp_modal_cauj6h.jpg",
         link:"bootcamp"
     },
     {
-        id:4,
+        id:5,
         name:"Insider 3",
         date:"18th August,2023",
         venue:"Online",
