@@ -61,9 +61,9 @@ const Title = () => {
             <span></span>
             <img src="/public/images/qrcode.png" className='code'/>
         </div>
-        <div class="hero-button">
+        <div className="hero-button">
             <a id="hero-register-link" target="_blank" href="https://unstop.com/hackathons/innerve-hacks-2023-igdtuw-delhi-784324">
-              <button class="hero-register">REGISTER HERE!</button>
+              <button className="hero-register">REGISTER HERE!</button>
             </a>
           </div>
       </div>
