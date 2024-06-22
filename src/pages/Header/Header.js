@@ -3,18 +3,6 @@ import "./Header.css";
 import MSC_Logo from "./MSC_Logo.png";
 const Header = () => {
   return (
-    // <>
-    // <div className='no-padding'>
-    //   <div className="containerheader blue circleBehind">
-    //     <a href="/">Home</a>
-    //     <a href="/events">Events</a>
-    //     <a href="/team">Team</a>
-    //     <a href="/contact">Contact</a>
-    //     <a href="/faq">FAQ</a>
-    //     <a href="/blog">Blogs</a>
-    //   </div>
-    // </div>
-    // </>
     <header className="containerheader blue ">
       <nav>
         <div className="logoheader">
