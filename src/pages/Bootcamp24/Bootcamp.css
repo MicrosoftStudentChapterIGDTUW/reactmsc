@@ -1,0 +1,22 @@
+.right {
+  display: flex;
+  margin-top: 2rem;
+  justify-content: space-evenly;
+  justify-items: center;
+}
+.left {
+  display: flex;
+  margin-top: 2rem;
+  justify-content: space-evenly;
+  justify-items: center;
+}
+.bottom {
+  display: flex;
+  margin-top: 2rem;
+  justify-content: space-evenly;
+
+}
+.domainsection h3 {
+  font-family: "Nasalization", sans-serif;
+  color: blue;
+}
