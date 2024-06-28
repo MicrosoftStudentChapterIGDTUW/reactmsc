@@ -4,7 +4,7 @@ const CallForMenteesButton = () => {
   return (
     <div>
       <a
-        href="https://forms.office.com/r/dSDi130fvH"
+        href="https://forms.gle/JVN8F83MyRd218B8A"
         target="_blank"
         rel="noopener noreferrer"
       >
