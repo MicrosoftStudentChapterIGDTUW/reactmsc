@@ -26,10 +26,12 @@
     margin-left: 2rem;
     margin-top: 1rem;
 }
+
 .teamachievementleft span{
     font-size: 1.1rem;
     color:rgb(8, 100, 247);
 }
+
 @media(max-width:900px)
 {
     .teamleft{

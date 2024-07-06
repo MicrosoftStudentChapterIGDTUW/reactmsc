@@ -20,7 +20,8 @@ function Bootcamp24() {
         <div className="flex mt-8 justify-evenly items-center">
 
           <Link to="/bootcamp24/webd">
-            <Teamleft name="Web Development" 
+            <Teamleft className="darkBlue2"
+            name="Web Development" 
             details="Craft stunning, responsive websites
             from scratchwith HTML, CSS, and JavaScript.
             Dive deep into frameworks like React and
