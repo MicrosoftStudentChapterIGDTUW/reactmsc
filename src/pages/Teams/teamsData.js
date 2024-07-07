@@ -1,11 +1,10 @@
 
 
 const teamData = [
-     {
+    {
       position: 'President',
       name: 'Anusha Mahajan',
-      image: 'https://res.cloudinary.com/dptfs4ixa/image/upload/v1718996384/Anusha_president-06-17_at_23.18.32_17e91d6d_p6orea.jpg',
-      email: '',
+      image: '/images/Anusha.jpg',
       instagram: 'https://www.instagram.com/anushaaaa.___',
       phone: '9873848895',
       branch: 'MAE',
@@ -16,7 +15,7 @@ const teamData = [
     {
       position: 'President',
       name: 'Samyah Khan',
-      image: ' https://res.cloudinary.com/dptfs4ixa/image/upload/v1719066517/WhatsApp_Image_2024-06-22_at_18.24.50_c5925882_lgvxti.jpg',
+      image: '/images/Samyah.jpg',
       email: 'samyahkhan15@gmail.com',
       instagram: 'https://www.instagram.com/samyahkhan_/',
       phone: '7042157846',
@@ -28,8 +27,7 @@ const teamData = [
     {
       position: 'Secretary',
       name: 'Priya Gupta',
-      image: '',
-      email: '',
+      image: '/images/priya.png',
       instagram: 'https://www.instagram.com/priya.gupta20044',
       phone: '8595712096',
       branch: 'CSE',
@@ -40,8 +38,7 @@ const teamData = [
     {
       position: 'Treasurer',
       name: 'Diya Singla',
-      image:'https://res.cloudinary.com/dptfs4ixa/image/upload/v1718996698/Diya_2024-06-17_at_20.33.08_aa29696a_ztkrbz.jpg',
-      email: 'diya036btcsai21@igdtuw.ac.in',
+      image:'/images/diya.jpg',
       instagram: 'https://instagram.com/diya__singla',
       phone: '8929401833',
       branch: 'CSEAI',
@@ -51,9 +48,21 @@ const teamData = [
     },  
     
     {
+      position: 'WebD Lead',
+      name: 'Chhavi Verma',
+      image: '/images/chhavi.jpg',
+      instagram: 'https://www.instagram.com/v.oletcv/',
+      phone: '7303526753',
+      branch: 'AIML',
+      year: '3',
+      linkedin: 'https://www.linkedin.com/in/chhavi-verma-violetcv',
+      twitter: '',
+    },
+
+    {
       position: 'Media Lead',
       name: 'Navya Raj',
-      image: 'https://res.cloudinary.com/dptfs4ixa/image/upload/v1719067052/navya-min_tq5bzr.png',
+      image: '/images/navya.png',
       email: '',
       instagram: 'https://www.instagram.com/navyaraj03',
       phone: '9311840911',
@@ -65,7 +74,7 @@ const teamData = [
     {
       position: 'Content lead',
       name: 'Tavleen Kaur',
-      image: 'https://res.cloudinary.com/dptfs4ixa/image/upload/v1718998076/TavleenKaur.jpeg_ivnzcb.jpg',
+      image: '/images/TavleenKaur.jpeg.jpg',
       email: '',
       instagram: 'https://www.instagram.com/tavleen_45',
       phone: '',
@@ -77,7 +86,7 @@ const teamData = [
     {
       position: 'EM lead',
       name: 'Palak Bakshi',
-      image: 'https://res.cloudinary.com/dptfs4ixa/image/upload/v1718998297/Palak-06-17_at_19.07.58_9f413abd_mekhpx.jpg',
+      image: '/images/palak.jpg',
       email: '',
       instagram: 'https://www.instagram.com/pbakshi04',
       phone: '',
@@ -86,24 +95,12 @@ const teamData = [
       linkedin: 'https://www.linkedin.com/in/',
       twitter: '',
     },
-    {
-      position: 'WebD Lead',
-      name: 'Chhavi Verma',
-      image: 'https://res.cloudinary.com/dptfs4ixa/image/upload/v1719052826/chhavi_iiiskc.jpg',
-      email: '',
-      instagram: 'https://www.instagram.com/v.oletcv/',
-      phone: '7303526753',
-      branch: 'AIML',
-      year: '3',
-      linkedin: 'https://www.linkedin.com/in/chhavi-verma-violetcv',
-      twitter: '',
-    },
-
+   
 
     {
       position: 'PR lead',
       name: 'Saloni Singh',
-      image: 'https://res.cloudinary.com/dptfs4ixa/image/upload/v1718997529/Saloni_14_Jun_2024_11-52_pm_indqfp.jpg',
+      image: '/images/saloni.jpg',
       email: '',
       instagram: '',
       phone: '',
@@ -130,3 +127,4 @@ const teamData = [
   
   export default teamData;
   
+
