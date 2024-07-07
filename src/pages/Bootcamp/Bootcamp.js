@@ -1,15 +1,18 @@
 import "./Bootcamp.css";
 import Teamleft from "./assets/Teamleft";
 import Teamright from "./assets/Teamright";
-import kartik from "../images/kartik.jpg";
-import rajat from "../images/rajat.jpeg";
-import arushi from "../images/aarushi.jpeg";
-import deepakshi from "../images/deepakshi.jpg";
-import himanshu from "../images/himanshu.jpeg";
-import saumya from "../images/saumya.jpg";
-import sidharth from "../images/siddhartha.jpg";
-import abhishek from "../images/abhishek.jpg";
-import manan from "../images/manan.jpeg";
+
+
+import aarushi from "./mentorimages/aarushi.jpeg";
+import abhishek from "./mentorimages/abhishek.jpg";
+import deepakshi from "./mentorimages/deepakshi.jpg";
+import himanshu from "./mentorimages/himanshu.jpeg";
+import kartik from "./mentorimages/kartik.jpg";
+import manan from "./mentorimages/manan.jpeg";
+import rajat from "./mentorimages/rajat.jpeg";
+import saumya from "./mentorimages/saumya.jpg";
+import sidharth from "./mentorimages/siddhartha.jpg";
+
 import Bootintro from "./assets/Bootintro";
 function Bootcamp(){
     return(
@@ -28,7 +31,7 @@ function Bootcamp(){
             </div>
             <div className="circlementor">
                 <h3>AI/ML Mentors</h3>
-                <Teamleft image={arushi}  name="Aarushi Garg" content=" is a product intern at Adobe. She is also an AI/ML mentor at GDSC and Lean In. She has guided more than 100 students to start their journey in ML/AI. She is also a research intern at IGDTUW and have published four research papers in esteemed conferences. She is also a Management Head at TNP."/>
+                <Teamleft image={aarushi}  name="Aarushi Garg" content=" is a product intern at Adobe. She is also an AI/ML mentor at GDSC and Lean In. She has guided more than 100 students to start their journey in ML/AI. She is also a research intern at IGDTUW and have published four research papers in esteemed conferences. She is also a Management Head at TNP."/>
                 <Teamright image={deepakshi}  name="Deepakshi Mahajan" content=" is an ML Engineer at GFG with a passion for empowering others through AI/ML mentoring. With notable achievements such as being the GDSC ML Lead at the ADGITM chapter, she has served as an AI/ML mentor in programs organized by Intel and the Government of India. She emerged as a winner at Appicorn'22 held in Bangalore, as she continues to make a significant impact."/>
                 <Teamleft image={himanshu}  name="Himanshu Maurya" content=" is a final year undergrad at NITRR pursuing B.tech in CSE.
                                                     Interned at IITD, IISc, Nference, KIT, Maddox AI and developed various products/ services using deep learning"/>
