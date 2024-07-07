@@ -48,6 +48,19 @@
   border-radius: 10px;
   font-size: 2vw;
 }
+@media (min-width:600px) {
+  .back-card {
+    font-size: 2vw;
+  }
+}
+@media (min-width:1000px) {
+  .front-card {
+    font-size: 2.5vw;
+  }
+  .back-card {
+    font-size: 1.5vw;
+  }
+}
 
 .achievementleft span {
   color: rgb(255, 255, 255);
