@@ -1,5 +1,3 @@
-
-
 const teamData = [
     {
       position: 'President',
