@@ -7,7 +7,7 @@ const Title = () => {
     <div className='Title'>
       <div className='headings'>  
        <div className='topbar'>
-         <img src="/public/images/MLSA_logo-transformed.png" className='icon'/>
+         <img src="/public/images/MLSAlogo.png" className='icon'/>
          <img src="/public/images/igdtuw_logo.png" className='gfgicon' id='gfgicon'/>
          <div className='text'>
           <h4>Under the Department of AI & DS</h4>
