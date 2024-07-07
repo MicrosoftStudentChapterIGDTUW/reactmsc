@@ -2,10 +2,12 @@ import React, { useState } from 'react';
 
 function DetailsLayout({ content, domainName, introText, mentor1data, mentor2data }) {
     
-    const [isOpen, setIsOpen] = useState([false, false, false, false]);
+    const [isOpen, setIsOpen] = useState(Array(content.length).fill(false));
 
     const toggleDropdown = (index) => {
-        setIsOpen(isOpen.map((open, i) => (i === index ? !open : open)));
+        const updatedIsOpen = [...isOpen];
+        updatedIsOpen[index] = !updatedIsOpen[index];
+        setIsOpen(updatedIsOpen);
     };
 
     return (
@@ -53,10 +55,18 @@ function DetailsLayout({ content, domainName, introText, mentor1data, mentor2dat
                                 className="w-[95%] p-[10px] bg-blue-900 text-white border-none cursor-pointer relative rounded-[10px] transition-bg duration-300 ease-in-out my-1"
                             >
                                 Week {index + 1}
-                                <span className={`arrow ${isOpen[index] ? 'up' : ''} border border-white border-[0_3px_3px_0] inline-block p-[3px] rotate-45 absolute right-[20px] top-[40%] self-center transition-transform duration-300 ease-in-out`}></span>
+                                <span
+                                    className={`arrow ${
+                                        isOpen[index] ? 'up' : ''
+                                    } border border-white border-[0_3px_3px_0] inline-block p-[3px] rotate-45 absolute right-[20px] top-[40%] self-center transition-transform duration-300 ease-in-out`}
+                                ></span>
                             </button>
                             {isOpen[index] && (
-                                <p className={`lorem-text ${isOpen[index] ? 'open' : ''} p-[10px] text-white opacity-100 h-5 inline-block transition-opacity duration-300 ease-in-out transition-visibility duration-300 ease-in-out transition-max-height duration-300 ease-in-out data-aos="flip-up" data-aos-duration="500"` }>
+                                <p
+                                    className={`lorem-text ${
+                                        isOpen[index] ? 'open' : ''
+                                    } p-[10px] text-white opacity-100 h-5 inline-block transition-opacity duration-300 ease-in-out transition-visibility duration-300 ease-in-out transition-max-height duration-300 ease-in-out data-aos="flip-up" data-aos-duration="500"`}
+                                >
                                     {text}
                                 </p>
                             )}
