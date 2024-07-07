@@ -4,7 +4,7 @@ import Teamleft from "./assets/Teamleft";
 import Teamright from "./assets/Teamright";
 import Bootintro from "./assets/Bootintro";
 import Bootdetails from './assets/Bootdetails';
-import CallForMenteesButton from "./assets/CallMenteesBtn";
+// import CallForMenteesButton from "./assets/CallMenteesBtn";
 
 function Bootcamp24() {
   return (
@@ -12,8 +12,6 @@ function Bootcamp24() {
       <div className="boot">
         <Bootintro />
       </div>
-
-      <CallForMenteesButton />
 
       <div className="domainsection">
         <h3 className="text-blue5 text-3xl">DOMAINS</h3>

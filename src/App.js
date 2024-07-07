@@ -19,8 +19,6 @@ import BlogKhushiSharma from "./pages/BlogPages/blogslist/BlogKhushiSharma";
 import BlogAasthaSinghal from "./pages/BlogPages/blogslist/BlogAasthaSinghal";
 import Upcoming from "./pages/Home/Upcoming";
 
-import Triathlon from "./pages/Triathlon/MainPage";
-
 import Bootcamp24 from "./pages/Bootcamp24/Bootcamp";
 import AIML from "./pages/Bootcamp24/details/pages/AIML";
 import AppD from "./pages/Bootcamp24/details/pages/AppD";
@@ -69,7 +67,6 @@ function App() {
               element={<BlogAasthaSinghal />}
             />
             <Route path="/upevent" element={<Upcoming />} />
-            <Route path="/triathlon" element={<Triathlon />} />
           </Routes>
         </ScrollToTop>
       </BrowserRouter>

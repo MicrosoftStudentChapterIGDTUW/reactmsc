@@ -12,7 +12,7 @@ function DetailsLayout({ content, domainName, introText, mentor1data, mentor2dat
 
     return (
         <div>
-            <div className="domaintitle flex justify-center items-center bg-blue-600 w-[90vw] my-[5vh] mx-[5vw] text-[1.5rem] rounded-[20px]">
+            <div className="domaintitle flex justify-center items-center bg-logo-blue7 w-[90vw] my-[5vh] mx-[5vw] text-[1.5rem] rounded-[20px]">
                 <h1 className="text-white text-[calc(1.2rem + 3vw)]">{domainName}</h1>
             </div>
 
@@ -46,13 +46,13 @@ function DetailsLayout({ content, domainName, introText, mentor1data, mentor2dat
             </div>
 
             <div className="timeline-container py-0">
-                <div className="box w-[90vw] mx-auto shadow-[0_0_20px_1px_rgba(0,0,0,0.1)] text-center py-[2rem] mt-[1rem] bg-blue-600 rounded-[20px]">
+                <div className="box w-[90vw] mx-auto shadow-[0_0_20px_1px_rgba(0,0,0,0.1)] text-center py-[2rem] mt-[1rem] bg-logo-blue7 rounded-[20px]">
                     <h2 className="text-center text-white text-2xl mb-[2vh]">Timeline</h2>
                     {content.map((text, index) => (
                         <div key={index} className="dropdown">
                             <button
                                 onClick={() => toggleDropdown(index)}
-                                className="w-[95%] p-[10px] bg-blue-900 text-white border-none cursor-pointer relative rounded-[10px] transition-bg duration-300 ease-in-out my-1"
+                                className="w-[95%] p-[10px] bg-logo-blue6 text-white border-none cursor-pointer relative rounded-[10px] transition-bg duration-300 ease-in-out my-1"
                             >
                                 Week {index + 1}
                                 <span
