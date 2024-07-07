@@ -14,18 +14,44 @@
   border-radius: 10px;
   display: flex;
   background-color: #012147;
-  padding: 1rem;
   color: white;
   justify-content: center;
+  transform-style: preserve-3d;
+  transition: all 0.5s ease;
+}
+
+.achievementright:hover {
+  transform: rotateY(180deg);
+}
+
+.front-card {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  padding: 1rem;
+  justify-content: space-around;
+  border-radius: 10px;
+  font-size: 1.4rem;
+}
+
+.back-card {
+  display: flex;
+  position: absolute;
+  justify-content: space-around;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background-color: rgb(8, 100, 247);
+  transform: rotateY(180deg);
+  padding: 1rem;
+  border-radius: 10px;
+  font-size: 0.9rem;
 }
 
 .achievementright span {
-  font-size: 1.4rem;
   color: rgb(255, 255, 255);
-  font-family: "Nasalization", sans-serif;
+  font-family: "Poppins", sans-serif;
   display: grid;
   align-self: center;
-}
-.achievementright:hover {
-  background-color: rgb(8, 100, 247);
 }

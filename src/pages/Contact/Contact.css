@@ -261,6 +261,7 @@ textarea.input {
   color: #000000;
   margin: 0.7rem ;
   align-items: center;
+  justify-content: center;
   font-size: 0.95rem;
   margin-left: 40px;
 }
@@ -283,7 +284,7 @@ textarea.input {
 .social-media-icons {
   display: flex;
   margin-top: 0.5rem;
-  margin-left:100px;
+  justify-content: center;
 }
 
 .social-media-icons a {
@@ -442,10 +443,6 @@ a{
     width:4rem;
     top:3.5vh;
   }
- .logo{
-  margin-left:-3rem;
-  margin-bottom:0rem;;
- }
  .col h3{
   margin-bottom:1rem;
  }
