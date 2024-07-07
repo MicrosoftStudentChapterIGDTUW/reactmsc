@@ -1,0 +1,110 @@
+.domaintitle {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    background-color: #007ADE;
+    height: 10vh;
+    width: 90vw;
+    margin: 5vh 5vw;
+    font-size: 1.5rem;
+    border-radius: 20px;
+}
+
+.domaintitle h1 {
+    color: #041e55;
+}
+
+.about {
+    width:90vw;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    /*box-shadow: 0px 0px 20px 1px rgb(0,0,0,0.1);*/
+    padding: 1rem;
+    background-color: white;
+    color:rgb(2, 40, 86);
+    border-radius: 20px;
+    font-weight: 500;
+}
+
+.mentorsection {
+    margin-bottom: 10vh;
+}
+
+.circlementor{
+    width:90vw;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0px 0px 20px 1px rgb(0,0,0,0.1);
+    text-align: center;
+    padding: 2rem 0 2rem 0;
+    margin-top: 1rem;
+    border-radius: 20px;
+}
+
+.timeline-container {
+    width:90vw;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0px 0px 20px 1px rgb(0,0,0,0.1);
+    text-align: center;
+    padding: 2rem 0 2rem 0;
+    margin-top: 1rem;
+    background-color: #007ADE;
+    border-radius: 20px;
+}
+
+.timeline-container h2 {
+    text-align: center;
+    color: white;
+    margin-bottom: 2vh;
+}
+
+.dropdown {
+    margin-bottom: 10px;
+}
+
+.dropdown button {
+    width: 95%;
+    padding: 10px;
+    background-color: rgb(2, 40, 86);
+    color: white;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown button .arrow {
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    position: absolute;
+    right: 20px;
+    top: 40%;
+    align-self: center;
+    transition: transform 0.3s ease;
+}
+
+.dropdown button .up {
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+}
+
+.lorem-text {
+    padding: 10px;
+    color: #fff;
+    opacity: hidden;
+    max-height: 0;
+    transition: opacity 0.3s ease, visibility 0.3s ease, max-height 0.3s ease;
+}
+
+.lorem-text.open {
+    opacity: 1;
+    visibility: visible;
+}

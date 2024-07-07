@@ -251,36 +251,39 @@ textarea.input {
   color: #003b9a;
 }
 
-.text {
-  color: rgb(0, 0, 0);
-  margin: 1.5rem 0 2rem 0;
+.text1 .p{
+  color: black;
+  
 }
 
 .information {
   display: flex;
   color: #000000;
-  margin: 0.7rem 0;
+  margin: 0.7rem ;
   align-items: center;
   font-size: 0.95rem;
+  margin-left: 40px;
 }
 
 .icon {
   width: 20px;
   height: 22px;
   margin-right: 0.7rem;
+  margin-bottom: 1vmax;
 }
 
 .social-media {
   padding: 1rem 0 0 0;
 }
 
-.social-media p {
+.social-media .p {
   color: #001f52;
 }
 
 .social-media-icons {
   display: flex;
   margin-top: 0.5rem;
+  margin-left:100px;
 }
 
 .social-media-icons a {
@@ -491,9 +494,10 @@ a{
 
 
 .navButtonbg{
- /* height:35px;
-  width:35px;*/
-/*  align-self: flex-end;*/
+
+  height:35px;
+  width:35px;
+  align-self: flex-end;
 }
 
 .navButton{
@@ -535,10 +539,11 @@ a{
   z-index: 10;
 }
 .logo_name{
-/*  right: 60px;*/
-/*margin-left: 100px;*/
-/*right: 2px;*/
-/*z-index: 998;*/
+
+  right: 60px;
+  margin-left: 100px;
+  right: 2px;
+  z-index: 998;
 }
 
 .navname1{

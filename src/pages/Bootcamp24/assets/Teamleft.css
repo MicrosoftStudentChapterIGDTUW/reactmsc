@@ -1,0 +1,31 @@
+.teamsleft {
+  width: 32vw;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.achievementleft {
+  width: 32vw;
+  max-width: 430px;
+  height: 30vh;
+  border-radius: 10px;
+  display: flex;
+  background-color: #012147;
+  padding: 1rem;
+  color: white;
+  justify-content: center;
+}
+
+.achievementleft span {
+  font-size: 1.4rem;
+  color: rgb(255, 255, 255);
+  font-family: "Nasalization", sans-serif;
+  display: grid;
+  align-self: center;
+}
+.achievementleft:hover {
+  background-color: rgb(8, 100, 247);
+}
