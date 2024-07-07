@@ -22,6 +22,8 @@ function ARVR_details () {
         'To be released by the mentors soon',
         'To be released by the mentors soon',
         'To be released by the mentors soon',
+        'To be released by the mentors soon',
+        'To be released by the mentors soon',
         'To be released by the mentors soon'
     ];
 

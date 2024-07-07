@@ -29,10 +29,10 @@
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
-  padding: 1rem;
+  padding: 2vw;
   justify-content: space-around;
   border-radius: 10px;
-  font-size: 1.4rem;
+  font-size: 4vw;
 }
 
 .back-card {
@@ -46,7 +46,7 @@
   transform: rotateY(180deg);
   padding: 1rem;
   border-radius: 10px;
-  font-size: 0.9rem;
+  font-size: 2vw;
 }
 
 .achievementleft span {
