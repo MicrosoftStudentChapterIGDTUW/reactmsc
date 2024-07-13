@@ -1,21 +1,14 @@
 import React from 'react';
 import DetailsLayout from './DetailsLayout';
-import Logo from '../mentors/MSC_Logo.png';
+import Priyanshu from '../mentors/Priyanshu.jpg';
 
 function ProdMgmt_details () {
 
     const mentor01 =
         {
-            image: Logo,
-            name: 'Mentor 01',
-            about: 'All the details about the mentors would be published here soon. Thank you for waiting. While you wait, it is advised to learn and explore as much as you can before the bootcamp starts so that you are up to date with the generic terms :)',
-        }
-    
-    const mentor02 =
-        {
-            image: Logo,
-            name: 'Mentor 02',
-            about: 'All the details about the mentors would be published here soon. Thank you for waiting. While you wait, it is advised to learn and explore as much as you can before the bootcamp starts so that you are up to date with the generic terms :)',
+            image: Priyanshu,
+            name: 'Priyanshu',
+            about: 'Hi, I\'m Priyanshu, a Product Manager focusing on Generative AI at Credgenics. I graduated in Information Technology from IIIT-Lucknow. My career so far has been a mix of exciting roles in product management, helping to create AI-driven products and improve business processes. I love building things and sharing my thoughts on LinkedIn, and I\'m always eager to learn from others in the tech community.',
         }
 
     const myTexts = [
@@ -42,7 +35,6 @@ function ProdMgmt_details () {
                 (KPIs), and how to strategically manage and develop products
                 from concept to launch."
                 mentor1data={mentor01}
-                mentor2data={mentor02}
             />
         </div>
     );

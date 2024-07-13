@@ -1,21 +1,22 @@
 import React from 'react';
 import DetailsLayout from './DetailsLayout';
-import Logo from '../mentors/MSC_Logo.png';
+import Divyansh from '../mentors/Divyansh.jpg';
+import Srishti from '../mentors/Srishti.jpg';
 
 function AIML() {
 
     const mentor01 =
         {
-            image: Logo,
-            name: 'Mentor 01',
-            about: 'All the details about the mentors would be published here soon. Thank you for waiting. While you wait, it is advised to learn and explore as much as you can before the bootcamp starts so that you are up to date with the generic terms :)',
+            image: Divyansh,
+            name: 'Divyansh Tuli',
+            about: 'I am a B.Tech final year student at Delhi Technological University pursuing Electronics and Communication Engineering. I am currently working in the field of AI and Machine Learning, building LLM Agents and other tools for Business Automation.',
         }
     
     const mentor02 =
         {
-            image: Logo,
-            name: 'Mentor 02',
-            about: 'All the details about the mentors would be published here soon. Thank you for waiting. While you wait, it is advised to learn and explore as much as you can before the bootcamp starts so that you are up to date with the generic terms :)',
+            image: Srishti,
+            name: 'Srishti',
+            about: 'I am Srishti, an Undergraduate Student entering third year pursuing Information Technology from J.C. Bose University of Science and Technology YMCA Faridabad.\nI am on the journey of exploring Research in the field of AI/ML.\nCurrently I am working as an SDE intern at Amazon. Apart from Technical skills I love Dancing and Reading Astronomy books.\nAs a mentor in MSC cohort 2024, I am excited to share my knowledge with the mentees.',
         }
 
     const myTexts = [

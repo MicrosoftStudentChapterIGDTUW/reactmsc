@@ -1,30 +1,23 @@
 import React from 'react';
 import DetailsLayout from './DetailsLayout';
-import Logo from '../mentors/MSC_Logo.png';
+import Sanchay from '../mentors/Sanchay.png';
 
 function Cyber_details () {
 
     const mentor01 =
         {
-            image: Logo,
-            name: 'Mentor 01',
-            about: 'All the details about the mentors would be published here soon. Thank you for waiting. While you wait, it is advised to learn and explore as much as you can before the bootcamp starts so that you are up to date with the generic terms :)',
-        }
-    
-    const mentor02 =
-        {
-            image: Logo,
-            name: 'Mentor 02',
-            about: 'All the details about the mentors would be published here soon. Thank you for waiting. While you wait, it is advised to learn and explore as much as you can before the bootcamp starts so that you are up to date with the generic terms :)',
+            image: Sanchay,
+            name: 'Sanchay Singh',
+            about: 'I am a Cybersecurity Expert, a Corporate Trainer and a Public Speaker. My main area of expertise lies in Reverse Engineering and hacking modern day video games. I am also the founder of Hackersvilla Community and have trained 500+ security enthusiasts till now.',
         }
 
     const myTexts = [
-        'To be released by the mentors soon',
-        'To be released by the mentors soon',
-        'To be released by the mentors soon',
-        'To be released by the mentors soon',
-        'To be released by the mentors soon',
-        'To be released by the mentors soon'
+        'Intermediate Network Security',
+        'Security Protocols and Encryption',
+        'Threats and Vulnerabilities',
+        'Web Application Security',
+        'Incident Response and Forensics',
+        'Capstone Project'
     ];
 
     return (
@@ -41,7 +34,6 @@ function Cyber_details () {
                 incident response strategies, ensuring participants 
                 understand how to protect and secure systems effectively."
                 mentor1data={mentor01}
-                mentor2data={mentor02}
             />
         </div>
     );

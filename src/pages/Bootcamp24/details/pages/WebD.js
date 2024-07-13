@@ -1,21 +1,22 @@
 import React from 'react';
 import DetailsLayout from './DetailsLayout';
-import Logo from '../mentors/MSC_Logo.png';
+import Chaitanya from '../mentors/Chaitanya.jpg';
+import Saksham from '../mentors/Saksham.png';
 
 function Webd_details () {
 
     const mentor01 =
         {
-            image: Logo,
-            name: 'Mentor 01',
-            about: 'All the details about the mentors would be published here soon. Thank you for waiting. While you wait, it is advised to learn and explore as much as you can before the bootcamp starts so that you are up to date with the generic terms :)',
+            image: Chaitanya,
+            name: 'Chaitanya Anand',
+            about: 'I am a creative web developer specializing in React, and Next, with a knack for quickly mastering new technologies. My interest in Generative AI, and Cybersecurity adds a unique perspective, and I thrive in fostering innovation and collaboration within teams.\n"Everyone faces the empty endless road that seems boundless. He who starts walking without looking back succeeds"',
         }
     
     const mentor02 =
         {
-            image: Logo,
-            name: 'Mentor 02',
-            about: 'All the details about the mentors would be published here soon. Thank you for waiting. While you wait, it is advised to learn and explore as much as you can before the bootcamp starts so that you are up to date with the generic terms :)',
+            image: Saksham,
+            name: 'Saksham Gambhir',
+            about: 'Hello! I\'m Saksham Gambhir, a passionate full stack developer specializing in the MERN stack. I create intuitive, responsive web applications using technologies like React, TailwindCSS, and NodeJS. With a strong foundation in HTML, CSS, JavaScript and MongoDB, I excel in both frontend and backend development. I am currently pursuing a degree in Electronics and Communication Engineering at Delhi Technological University. My projects showcase my ability to blend technical skills with creative design, delivering effective and engaging digital solutions.',
         }
 
     const myTexts = [

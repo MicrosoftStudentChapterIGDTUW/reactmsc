@@ -14,7 +14,7 @@ import { useEffect } from "react";
 import FAQs from "./pages/Header/FAQs";
 import Blog from "./pages/BlogPages/assets/Blog";
 import Blogpg from "./pages/BlogPages/BlogPg";
-import Bootcamp from "./pages/Bootcamp/Bootcamp";
+import Bootcamp from "./pages/Bootcamp23/Bootcamp";
 import BlogKhushiSharma from "./pages/BlogPages/blogslist/BlogKhushiSharma";
 import BlogAasthaSinghal from "./pages/BlogPages/blogslist/BlogAasthaSinghal";
 import Upcoming from "./pages/Home/Upcoming";

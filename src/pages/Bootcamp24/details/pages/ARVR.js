@@ -1,30 +1,22 @@
 import React from 'react';
 import DetailsLayout from './DetailsLayout';
-import Logo from '../mentors/MSC_Logo.png';
+import Harsh from '../mentors/Harsh.png';
 
 function ARVR_details () {
 
     const mentor01 =
         {
-            image: Logo,
-            name: 'Mentor 01',
-            about: 'All the details about the mentors would be published here soon. Thank you for waiting. While you wait, it is advised to learn and explore as much as you can before the bootcamp starts so that you are up to date with the generic terms :)',
-        }
-    
-    const mentor02 =
-        {
-            image: Logo,
-            name: 'Mentor 02',
-            about: 'All the details about the mentors would be published here soon. Thank you for waiting. While you wait, it is advised to learn and explore as much as you can before the bootcamp starts so that you are up to date with the generic terms :)',
+            image: Harsh,
+            name: 'Harsh Verma',
+            about: 'I am Harsh Verma, a second-year student at KIET Group of Institutions, Ghaziabad, with over a year of experience in AR/VR development. I am an ex-intern at Holokitab and currently working with a Canadian startup called OOAI as an AR developer.',
         }
 
     const myTexts = [
-        'To be released by the mentors soon',
-        'To be released by the mentors soon',
-        'To be released by the mentors soon',
-        'To be released by the mentors soon',
-        'To be released by the mentors soon',
-        'To be released by the mentors soon'
+        'Introduction and Basics',
+        'Deep Dive into AR',
+        'AR Flashcards',
+        'AR Business Card Project',
+        'Final Projects and Presentations',
     ];
 
     return (
@@ -40,7 +32,6 @@ function ARVR_details () {
                 in AR/VR settings. Participants will also learn about testing
                 and deploying AR/VR applications."
                 mentor1data={mentor01}
-                mentor2data={mentor02}
             />
         </div>
     );

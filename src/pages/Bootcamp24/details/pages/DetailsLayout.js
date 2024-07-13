@@ -13,7 +13,7 @@ function DetailsLayout({ content, domainName, introText, mentor1data, mentor2dat
     return (
         <div>
             <div className="domaintitle flex justify-center items-center bg-logo-blue7 w-[90vw] my-[5vh] mx-[5vw] text-[1.5rem] rounded-[20px]">
-                <h1 className="text-white text-[calc(1.2rem + 3vw)]">{domainName}</h1>
+                <h1 className="text-white text-[calc(1.1rem + 1vw)]">{domainName}</h1>
             </div>
 
             <div className="about w-[90vw] mx-auto my-[2rem] p-[1rem] bg-white text-blue-900 rounded-[20px] font-medium text-justify shadow-[0_0_20px_1px_rgba(0,0,0,0.1)]">
@@ -22,11 +22,11 @@ function DetailsLayout({ content, domainName, introText, mentor1data, mentor2dat
 
             <div className="mentorsection mb-[10vh]">
                 <div className="w-[90vw] mx-auto shadow-[0_0_20px_1px_rgba(0,0,0,0.1)] text-center p-[2rem] mt-[1rem] rounded-[20px]">
-                    <h3 className='text-3xl mb-4'>{domainName} Mentors</h3>
+                    <h3 className='text-3xl mb-4'>{domainName} Mentor</h3>
 
                     <div className="imageleft grid-cols-1 justify-evenly" data-aos="flip-up" data-aos-duration="1000">
                         <img src={mentor1data.image} className="w-[10rem] h-[10rem] rounded-full inline-block align-middle" alt="Mentor Avatar" />
-                        <div className="bg-logo-blue6 rounded-lg inline-block p-3 text-white align-middle m-1">
+                        <div className="bg-logo-blue6 rounded-lg p-3 text-white align-middle m-1">
                             <span className="text-blue-400 text-lg">{mentor1data.name}<br /></span>
                             <span className="text-100">{mentor1data.about}</span>
                         </div>

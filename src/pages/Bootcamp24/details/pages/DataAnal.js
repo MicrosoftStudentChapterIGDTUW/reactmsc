@@ -1,21 +1,14 @@
 import React from 'react';
 import DetailsLayout from './DetailsLayout';
-import Logo from '../mentors/MSC_Logo.png';
+import Yash from '../mentors/Yash.jpg';
 
 function DataAnal_details () {
 
     const mentor01 =
         {
-            image: Logo,
-            name: 'Mentor 01',
-            about: 'All the details about the mentors would be published here soon. Thank you for waiting. While you wait, it is advised to learn and explore as much as you can before the bootcamp starts so that you are up to date with the generic terms :)',
-        }
-    
-    const mentor02 =
-        {
-            image: Logo,
-            name: 'Mentor 02',
-            about: 'All the details about the mentors would be published here soon. Thank you for waiting. While you wait, it is advised to learn and explore as much as you can before the bootcamp starts so that you are up to date with the generic terms :)',
+            image: Yash,
+            name: 'Yash Kumar Goyal',
+            about: 'I am Yash Kumar Goel, the Founder & CEO of Ambuvians Healthcare Private Limited and the Founder & President of the MLSA KIET chapter. With over 2 years of dedicated experience in Data Analytics and Business Intelligence, I have had the privilege of serving as a speaker at  global events. I have also taught over 1,000 students and manage a growing community of over 1K+ followers. In addition to my roles as a Subject Matter Expert, I am an active mentor and judge, committed to fostering innovation and excellence in the field.',
         }
 
     const myTexts = [
@@ -44,7 +37,6 @@ function DataAnal_details () {
                 Participants will also explore best practices for data storytelling
                 and presenting their findings effectively."
                 mentor1data={mentor01}
-                mentor2data={mentor02}
             />
         </div>
     );

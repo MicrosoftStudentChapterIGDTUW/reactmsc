@@ -1,21 +1,14 @@
 import React from 'react';
 import DetailsLayout from './DetailsLayout';
-import Logo from '../mentors/MSC_Logo.png';
+import Prakhar from '../mentors/Prakhar.jpg';
 
 function Web3_details () {
 
     const mentor01 =
         {
-            image: Logo,
-            name: 'Mentor 01',
-            about: 'All the details about the mentors would be published here soon. Thank you for waiting. While you wait, it is advised to learn and explore as much as you can before the bootcamp starts so that you are up to date with the generic terms :)',
-        }
-    
-    const mentor02 =
-        {
-            image: Logo,
-            name: 'Mentor 02',
-            about: 'All the details about the mentors would be published here soon. Thank you for waiting. While you wait, it is advised to learn and explore as much as you can before the bootcamp starts so that you are up to date with the generic terms :)',
+            image: Prakhar,
+            name: 'Prakhar Tripathi',
+            about: 'I\'m Prakhar Tripathi, An engineer who knows how to build a Product.\nCurrently building Fixtix.uk as Head of Technology.\nHaving an experience of working with 7+ startups helped me gain technical expertise in Smart Contracts, Full Stack and a good grasp of Generative AI which makes me able to design solutions as best market fit.',
         }
 
     const myTexts = [
@@ -41,7 +34,6 @@ function Web3_details () {
                 integrating with Web3.js, and understanding security
                 considerations in blockchain development."
                 mentor1data={mentor01}
-                mentor2data={mentor02}
             />
         </div>
     );

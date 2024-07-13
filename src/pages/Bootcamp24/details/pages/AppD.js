@@ -1,20 +1,13 @@
 import React from 'react';
 import DetailsLayout from './DetailsLayout';
-import Logo from '../mentors/MSC_Logo.png';
+import Sagar from '../mentors/Sagar.jpg';
 
 function Appd_details () {
     const mentor01 =
         {
-            image: Logo,
-            name: 'Mentor 01',
-            about: 'All the details about the mentors would be published here soon. Thank you for waiting. While you wait, it is advised to learn and explore as much as you can before the bootcamp starts so that you are up to date with the generic terms :)',
-        }
-
-    const mentor02 =
-        {
-            image: Logo,
-            name: 'Mentor 02',
-            about: 'All the details about the mentors would be published here soon. Thank you for waiting. While you wait, it is advised to learn and explore as much as you can before the bootcamp starts so that you are up to date with the generic terms :)',
+            image: Sagar,
+            name: 'Sagar Wadhwa',
+            about: 'An enthusiastic learner with a passion for technology, having a solid foundation in programming and a keen interest in the latest trends and innovations. Dedicated to continuous learning and growth, always seeking new challenges to expand skills and knowledge.',
         }
 
     const myTexts = [
@@ -40,7 +33,6 @@ function Appd_details () {
                 and API integration. The bootcamp will also cover testing,
                 debugging, and optimizing mobile apps."
                 mentor1data={mentor01}
-                mentor2data={mentor02}
             />
         </div>
     );
