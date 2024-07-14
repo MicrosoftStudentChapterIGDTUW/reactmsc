@@ -6,7 +6,7 @@ function BlogAasthaSinghal()
         <>
         <div className="blogpage">
             <div className="shape"><h2>Smart Hackathon(Ferozpur)</h2></div>
-            <img src="/public/images/Aastha_pic (1).jpeg" className="blogimage"></img>
+            <img src="/public/images/Aastha_pic (1).jpeg" className="blogimage" alt="Aastha"/>
             <div className="blogaasthacontent">
             <h3 className="headinghack">Title: "From Idea to Triumph: Our Journey at the Smart Hackathon"</h3>
             Participating in the Smart Hackathon organized by Shaheed Bhagat Singh State University in Ferozpur, Punjab was an unforgettable experience that pushed the boundaries of our abilities and expanded our horizons. This 36-hour-long hackathon marked our first foray into the world of offline hackathons, and it was a rollercoaster ride of challenges, innovation, and personal growth.

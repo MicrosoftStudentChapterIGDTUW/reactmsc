@@ -3,6 +3,9 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
+      backgroundColor: {
+        'icons-bg' : 'hsla(0,0%,100%,0.2)',
+      },
       fontFamily: {
         sans: ["Poppins", "sans-serif"],
       },
@@ -25,7 +28,7 @@ module.exports = {
         center: true,
         padding: '1rem',
         screens: {
-          sm: '600px',
+          sm: '640px',
           lg: '984px',
         },
     },

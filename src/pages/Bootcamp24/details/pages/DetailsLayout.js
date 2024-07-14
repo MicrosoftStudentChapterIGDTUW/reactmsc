@@ -13,7 +13,7 @@ function DetailsLayout({ content, domainName, introText, mentor1data, mentor2dat
     return (
         <div>
             <div className="domaintitle flex justify-center items-center bg-logo-blue7 w-[90vw] my-[5vh] mx-[5vw] text-[1.5rem] rounded-[20px]">
-                <h1 className="text-white text-[calc(1.1rem + 1vw)]">{domainName}</h1>
+                <h1 className="text-white text-[calc(0.5rem + 0.2vw)] sm:text-[calc(1.1rem + 1vw)]">{domainName}</h1>
             </div>
 
             <div className="about w-[90vw] mx-auto my-[2rem] p-[1rem] bg-white text-blue-900 rounded-[20px] font-medium text-justify shadow-[0_0_20px_1px_rgba(0,0,0,0.1)]">

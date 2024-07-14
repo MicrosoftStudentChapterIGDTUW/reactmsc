@@ -9,7 +9,7 @@ function Teamright(props){
             <span>{props.name}</span>
                 {props.content}
             </div>
-            <img src={props.image}/>
+            <img src={props.image} alt="Mentor"/>
         </div>
         </>
     )

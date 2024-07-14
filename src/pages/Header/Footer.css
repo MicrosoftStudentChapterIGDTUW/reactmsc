@@ -1,4 +1,5 @@
 
+/*
 .space-y-2 > :not([hidden]) ~ :not([hidden]) {
     --tw-space-y-reverse: 0;
     margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
@@ -29,7 +30,7 @@ footer .footer-title{
 footer ul{ 
     padding-left: 1.75rem;
     color: white;
-    font-size: 0.875rem/* 14px */;
+    font-size: 0.875rem;
     line-height: 1.25rem;
     margin-top: .5rem;
 }
@@ -81,9 +82,10 @@ footer .cr-con{
 }
 
 
-   .logo img{
-    width:7.5rem;
-   }
+.logo img{
+width:7.5rem;
+}
+
 
 @media(max-width:900px) {
     .f-item-con{
@@ -148,5 +150,30 @@ footer .cr-con{
     }
     .g-i-t {
         order: 4;
+    }
+}
+    */
+
+@media(max-width:500px) {
+    .f-item-con{
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+    .help-sec {
+        order: 3;
+    }
+    .g-i-t {
+        order: 4;
+    }
+}
+
+@media(max-width:900px) {
+    .f-item-con{
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .help-sec{
+        order: 4;
+    }
+    .g-i-t {
+        order: 3;
     }
 }

@@ -9,6 +9,7 @@ function Head() {
           className="w-96 h-52 inline-block rounded-lg shadow-md -mt-48 sm:w-60 sm:h-32 sm:mt-0"
           data-aos="fade-right"
           data-aos-duration="500"
+          alt="Head"
         />
       </div>
 

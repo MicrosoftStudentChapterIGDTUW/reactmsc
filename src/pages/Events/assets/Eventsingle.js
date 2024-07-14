@@ -11,7 +11,7 @@ function Eventsingle(props)
 
         return(
             <div className="eventsingle eventglow" onClick={openevent}>
-            <img src={props.image}/>
+            <img src={props.image} alt="Event"/>
             <div className="eventsingledesc">
             <h3>{props.name}</h3>
             <h4>Date: {props.date} Venue: {props.venue} </h4>
@@ -24,7 +24,7 @@ function Eventsingle(props)
 
         return(
         <div className="eventsingle" onClick={openevent}>
-        <img src={props.image}/>
+        <img src={props.image} alt="Event"/>
         <div className="eventsingledesc">
         <h3>{props.name}</h3>
         <h4>Date: {props.date} Venue: {props.venue} </h4>

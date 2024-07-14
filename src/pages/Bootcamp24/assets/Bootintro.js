@@ -4,7 +4,7 @@ import banner from '../details/mentors/banner.jpg';
 function Bootintro() {
     return (
         <div className="bootintro" data-aos="fade-up">
-            <img src={banner} className="w-3/4 h-1/2 mx-auto" />
+            <img src={banner} className="w-3/4 h-1/2 mx-auto" alt="Cohort Banner"/>
             <div className="bootabout w-90 mx-auto mt-8 p-10 bg-white text-blue-800 rounded-lg font-medium text-justify">
                 <div className="intro-text">
                     Following the success of the 2023 summer bootcamp,

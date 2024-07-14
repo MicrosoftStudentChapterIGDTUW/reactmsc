@@ -4,7 +4,7 @@ function Teamleft(props){
     return(
         <>
         <div className="teamleft" data-aos="flip-up" data-aos-duration="1000">
-        <img src={props.image}/>
+        <img src={props.image} alt="Mentor"/>
             <div className="teamachievementleft">
                 <span>{props.name}</span>
                 {props.content}

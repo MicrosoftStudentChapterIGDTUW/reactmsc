@@ -5,7 +5,7 @@ function Blog()
         <>
         <div className="blogpage">
             <div className="shape"><h2>Google Generation Scholarship</h2></div>
-            <img src="/public/images/Nandini.jpeg" className="blogimage"></img>
+            <img src="/public/images/Nandini.jpeg" className="blogimage" alt="Nandini"></img>
             <div className="blogcontent">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut lobortis nulla. Suspendisse et vehicula sapien, sed sollicitudin quam. Cras dignissim pretium augue, at imperdiet massa imperdiet quis. Fusce accumsan velit a urna euismod ultrices. Pellentesque ut nibh at eros blandit ultrices. Aliquam erat volutpat. Quisque a sapien pulvinar, dictum arcu non, fringilla lorem. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;
 
