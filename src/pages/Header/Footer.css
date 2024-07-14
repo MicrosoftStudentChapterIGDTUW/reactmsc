@@ -154,7 +154,7 @@ width:7.5rem;
 }
     */
 
-@media(max-width:500px) {
+@media (max-width:500px) {
     .f-item-con{
         grid-template-columns: repeat(1, minmax(0, 1fr));
     }
@@ -166,7 +166,7 @@ width:7.5rem;
     }
 }
 
-@media(max-width:900px) {
+@media (min-width:500px) and (max-width:900px) {
     .f-item-con{
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
@@ -175,5 +175,11 @@ width:7.5rem;
     }
     .g-i-t {
         order: 3;
+    }
+}
+
+@media (min-width:900px) {
+    .f-item-con{
+        grid-template-columns: repeat(4, minmax(0, 1fr));
     }
 }

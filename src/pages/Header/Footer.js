@@ -6,7 +6,7 @@ import { FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa';
 const Footer = () => {
   return (
     <footer className="bg-[#041e55] mt-8">
-      <div className="grid-cols-1 justify-around p-6 md:w-full screens-sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div className="f-item-con grid grid-cols-1 justify-around p-6 md:w-full screens-sm:grid-cols-2 lg:grid-cols-4 gap-4">
         <div className="logo my-4 flex justify-center">
           <img src={MSC_Logo} alt="MSC" className="w-[180px]"/>
         </div>
@@ -21,13 +21,13 @@ const Footer = () => {
             <li><a href="/contact" className="hover:text-white text-[#d4d4d4]">Contact Us</a></li>
           </ul>
         </div>
-        <div className="help-sec my-4 w-full md:w-auto text-center md:text-left order-4 md:order-none">
+        <div className="help-sec my-4 w-full md:w-auto text-center md:text-left">
           <div className="text-white text-xl mb-2">Address</div>
           <ul className="text-white text-sm space-y-2 grid grid-cols-1">
             <li>IGDTUW New Delhi, India</li>
           </ul>
         </div>
-        <div className="g-i-t my-4 order-3 md:order-none flex justify-center">
+        <div className="g-i-t my-4 flex justify-center">
           <div>
             <div className="text-white text-xl mb-2 text-center md:text-left">Get in Touch</div>
             <div className="flex space-x-4 justify-center md:justify-start">
