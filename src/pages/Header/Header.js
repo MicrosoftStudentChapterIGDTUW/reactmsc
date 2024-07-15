@@ -6,7 +6,7 @@ const Header = () => {
     <header className="containerheader blue ">
       <nav>
         <div className="logoheader">
-          <img src={MSC_Logo}></img>
+          <img src={MSC_Logo} alt="Logo"/>
         </div>
         <input type="checkbox" id="menu-toggle" />
         <label htmlFor="menu-toggle" className="menu-icon">

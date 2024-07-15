@@ -24,6 +24,7 @@ function About() {
         className="imagesection"
         data-aos="fade-right"
         data-aos-duration="500"
+        alt="Home"
       ></img>
     </div>
   );

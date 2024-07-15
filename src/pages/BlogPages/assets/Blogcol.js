@@ -9,7 +9,7 @@ function Blogcol(props)
     return(
         <>
         <div className="blogcol" onClick={blogdirect}>
-            <img src={props.image}/>
+            <img src={props.image} alt="Something"/>
             <h3>{props.name}</h3>
             <p>{props.content.slice(0,200)}...</p>
             <h5>{props.author}</h5>

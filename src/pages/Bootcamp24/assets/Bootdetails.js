@@ -1,15 +1,14 @@
-import "./Bootintro.css";
+import React from 'react';
 
-function Bootdetails()
-{
-    return(
+function Bootdetails() {
+    return (
         <div className="bootintro" data-aos="fade-up">
-            <div className="bootabout" >
+            <div className="bootabout w-90 mx-auto mt-8 p-10 bg-white text-blue-800 rounded-lg font-medium text-justify">
                 This structured bootcamp will provide participants with both
                 theoretical knowledge and hands-on experience, equipping them
                 with the skills needed to excel in their chosen domains.
-                <h2>Detailed Structure</h2>
-                <h4>Registration and Selection Process</h4>
+                <h2 className="text-3xl mt-8 text-center">Detailed Structure</h2>
+                <h4 className="text-2xl mt-4 text-center">Registration and Selection Process</h4>
                 The bootcamp begins with the registration period for mentors,
                 inviting applications from individuals with expertise in the
                 relevant domains. Potential mentors will submit their resumes,
@@ -30,7 +29,7 @@ function Bootdetails()
                 will be sent via email, providing further instructions to the
                 selected mentees. The list of finalized mentors will also be
                 published on the official website and social media channels.
-                <h4>Bootcamp Schedule</h4>
+                <h4 className="text-2xl mt-4 text-center">Bootcamp Schedule</h4>
                 The first two weeks of the bootcamp will focus on orientation
                 and introductory sessions. Participants will receive an
                 overview of each domain and set up the necessary tools and 
