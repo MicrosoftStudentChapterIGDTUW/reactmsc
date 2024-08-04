@@ -1,30 +1,31 @@
-import React, {useState} from 'react';
-import "../layout/details.css";
-import Teamleft from "../layout/Imageleft";
-import Teamright from "../layout/Imageright";
-import Logo from "../mentors/MSC_Logo.png";
+import React from 'react';
+import DetailsLayout from './DetailsLayout';
+import Yash from '../mentors/Yash.jpg';
 
 function DataAnal_details () {
 
-    const [isOpen, setIsOpen] = useState([false, false, false, false]);
-    const loremTexts = [
+    const mentor01 =
+        {
+            image: Yash,
+            name: 'Yash Kumar Goyal',
+            about: 'I am Yash Kumar Goel, the Founder & CEO of Ambuvians Healthcare Private Limited and the Founder & President of the MLSA KIET chapter. With over 2 years of dedicated experience in Data Analytics and Business Intelligence, I have had the privilege of serving as a speaker at  global events. I have also taught over 1,000 students and manage a growing community of over 1K+ followers. In addition to my roles as a Subject Matter Expert, I am an active mentor and judge, committed to fostering innovation and excellence in the field.',
+        }
+
+    const myTexts = [
+        'To be released by the mentors soon',
+        'To be released by the mentors soon',
         'To be released by the mentors soon',
         'To be released by the mentors soon',
         'To be released by the mentors soon',
         'To be released by the mentors soon'
     ];
 
-    const toggleDropdown = (index) => {
-        setIsOpen(isOpen.map((open, i) => (i === index ? !open : open)));
-    };
-      
-
     return (
         <div>
-            <div className="domaintitle"><h1>Data Analytics</h1></div>
-
-            <div className="about">
-                Participants will delve into the world of data analytics,
+            <DetailsLayout
+                content={myTexts}
+                domainName="Data Analytics"
+                introText="Participants will delve into the world of data analytics,
                 beginning with an introduction to data collection and cleaning
                 techniques. They will learn how to use popular tools like Excel,
                 SQL, and Python libraries (Pandas, NumPy) to manipulate and
@@ -34,43 +35,11 @@ function DataAnal_details () {
                 the bootcamp will cover statistical analysis, exploratory data
                 analysis (EDA), and an introduction to machine learning concepts.
                 Participants will also explore best practices for data storytelling
-                and presenting their findings effectively.
-            </div>
-
-            <div className="mentorsection">
-                <div className="circlementor">
-                    <h3>Data Analytics Mentors</h3>
-                    <Teamleft image={Logo} name="Mentor 01"
-                        content="All the details about the mentors would be published here soon.
-                        Thank you for waiting. While you wait, it is advised to learn and explore as much as you can before the bootcamp starts so that you are up to date with the generic terms :)"
-                    />
-                    <Teamright image={Logo} name="Mentor 02"
-                        content="All the details about the mentors would be published here soon.
-                        Thank you for waiting. While you wait, it is advised to learn and explore as much as you can before the bootcamp starts so that you are up to date with the generic terms :)"
-                    />
-                </div>
-            </div>
-
-            <div className="timeline-container">
-                <h2>Timeline</h2>
-                {loremTexts.map((text, index) => (
-                    <div key={index} className="dropdown">
-                        <button onClick={() => toggleDropdown(index)}>
-                            Week {index + 1}
-                            <span className={`arrow ${isOpen[index] ? 'up' : ''}`}></span>
-                        </button>
-                        {isOpen[index] && (
-                            <p className={`lorem-text ${isOpen[index] ? 'open' : ''}`}>
-                                {text}
-                            </p>
-                        )}
-
-                    </div>
-                ))}
-            </div>
-
+                and presenting their findings effectively."
+                mentor1data={mentor01}
+            />
         </div>
-    )
+    );
 }
 
 export default DataAnal_details;

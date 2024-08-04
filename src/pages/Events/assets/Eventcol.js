@@ -6,42 +6,44 @@ const events=[
     {
         id:1,
         name:"Bootcamp'24",
-        date:"Tentative",
+        date:"July-August, 2024",
         venue:"Online",
         image:"https://res.cloudinary.com/duxmh9dws/image/upload/v1694947654/bootcamp_modal_cauj6h.jpg",
         link:"bootcamp24"
-    },{
+    },
+    {
         id:2,
-        name:"Insider Series 1",
-        date:"20th June,2023",
+        name:"Insider Series 3",
+        date:"18th August, 2023",
         venue:"Online",
-        image:"https://res.cloudinary.com/duxmh9dws/image/upload/v1694947655/insider1_v7omv0.jpg",
+        image:"https://res.cloudinary.com/duxmh9dws/image/upload/v1694948714/insider3_o5pmzb.png",
         link:"upevent"
     },
     {
         id:3,
         name:"Insider Series 2",
-        date:"23rd July,2023",
+        date:"23rd July, 2023",
         venue:"Online",
         image:"https://res.cloudinary.com/duxmh9dws/image/upload/v1694947655/insider2_pikd3s.jpg",
         link:"upevent"
     },
     {
         id:4,
+        name:"Insider Series 1",
+        date:"20th June, 2023",
+        venue:"Online",
+        image:"https://res.cloudinary.com/duxmh9dws/image/upload/v1694947655/insider1_v7omv0.jpg",
+        link:"upevent"
+    },
+    {
+        id:5,
         name:"Bootcamp'23",
-        date:"5th June,2023",
+        date:"5th June, 2023",
         venue:"Online",
         image:"https://res.cloudinary.com/duxmh9dws/image/upload/v1694947654/bootcamp_modal_cauj6h.jpg",
         link:"bootcamp"
     },
-    {
-        id:5,
-        name:"Insider 3",
-        date:"18th August,2023",
-        venue:"Online",
-        image:"https://res.cloudinary.com/duxmh9dws/image/upload/v1694948714/insider3_o5pmzb.png",
-        link:"upevent"
-    },
+    
    
 
 ]

@@ -5,7 +5,7 @@ function Circlepointer(props)
     return(
         <>
         <div className="goal" data-aos="flip-up" data-aos-duration="1000">
-        <img src={props.img} className="goalimg"/>
+        <img src={props.img} className="goalimg" alt="Goal"/>
             
             <div className="goalcontent">
                 <h3>{props.head}</h3>

@@ -1,75 +1,52 @@
-import React, {useState} from 'react';
-import "../layout/details.css";
-import Teamleft from "../layout/Imageleft";
-import Teamright from "../layout/Imageright";
-import Logo from "../mentors/MSC_Logo.png";
+import React from 'react';
+import DetailsLayout from './DetailsLayout';
+import Divyansh from '../mentors/Divyansh.jpg';
+import Srishti from '../mentors/Srishti.jpg';
 
-function AIML_details () {
+function AIML() {
 
-    const [isOpen, setIsOpen] = useState([false, false, false, false]);
-    const loremTexts = [
+    const mentor01 =
+        {
+            image: Divyansh,
+            name: 'Divyansh Tuli',
+            about: 'I am a B.Tech final year student at Delhi Technological University pursuing Electronics and Communication Engineering. I am currently working in the field of AI and Machine Learning, building LLM Agents and other tools for Business Automation.',
+        }
+    
+    const mentor02 =
+        {
+            image: Srishti,
+            name: 'Srishti',
+            about: 'I am Srishti, an Undergraduate Student entering third year pursuing Information Technology from J.C. Bose University of Science and Technology YMCA Faridabad.\nI am on the journey of exploring Research in the field of AI/ML.\nCurrently I am working as an SDE intern at Amazon. Apart from Technical skills I love Dancing and Reading Astronomy books.\nAs a mentor in MSC cohort 2024, I am excited to share my knowledge with the mentees.',
+        }
+
+    const myTexts = [
         'To be released by the mentors soon',
         'To be released by the mentors soon',
         'To be released by the mentors soon',
-        'To be released by the mentors soon'
+        'To be released by the mentors soon',
+        'To be released by the mentors soon',
+        'To be released by the mentors soon',
     ];
-
-    const toggleDropdown = (index) => {
-        setIsOpen(isOpen.map((open, i) => (i === index ? !open : open)));
-    };
-      
 
     return (
         <div>
-            <div className="domaintitle"><h1>AI / ML</h1></div>
-
-            <div className="about">
-                Participants will delve into the fundamentals of
-                artificial intelligence and machine learning,
-                starting with Python programming for data science,
-                using libraries like Pandas and NumPy. The curriculum
-                includes data visualization with Matplotlib and Seaborn,
-                understanding supervised and unsupervised learning
-                algorithms, and evaluating and tuning models.
-                The bootcamp will also introduce deep learning with
-                frameworks such as TensorFlow and Keras, along with
-                practical experience working with datasets.
-            </div>
-
-            <div className="mentorsection">
-                <div className="circlementor">
-                    <h3>AI/ML Mentors</h3>
-                    <Teamleft image={Logo} name="Mentor 01"
-                        content="All the details about the mentors would be published here soon.
-                        Thank you for waiting. While you wait, it is advised to learn and explore as much as you can before the bootcamp starts so that you are up to date with the generic terms :)"
-                    />
-                    <Teamright image={Logo} name="Mentor 02"
-                        content="All the details about the mentors would be published here soon.
-                        Thank you for waiting. While you wait, it is advised to learn and explore as much as you can before the bootcamp starts so that you are up to date with the generic terms :)"
-                    />
-                </div>
-            </div>
-
-            <div className="timeline-container">
-                <h2>Timeline</h2>
-                {loremTexts.map((text, index) => (
-                    <div key={index} className="dropdown">
-                        <button onClick={() => toggleDropdown(index)}>
-                            Week {index + 1}
-                            <span className={`arrow ${isOpen[index] ? 'up' : ''}`}></span>
-                        </button>
-                        {isOpen[index] && (
-                            <p className={`lorem-text ${isOpen[index] ? 'open' : ''}`}>
-                                {text}
-                            </p>
-                        )}
-
-                    </div>
-                ))}
-            </div>
-
+            <DetailsLayout
+                content={myTexts}
+                domainName="AI / ML"
+                introText="Participants will explore the fundamentals of
+                artificial intelligence and machine learning, starting with
+                Python programming for data science, using libraries like Pandas
+                and NumPy. The curriculum includes data visualization with
+                Matplotlib and Seaborn, understanding supervised and unsupervised
+                learning algorithms, and evaluating and tuning models. The
+                bootcamp will also introduce deep learning with frameworks such
+                as TensorFlow and Keras, along with practical experience working
+                with datasets."
+                mentor1data={mentor01}
+                mentor2data={mentor02}
+            />
         </div>
-    )
+    );
 }
 
-export default AIML_details;
+export default AIML;

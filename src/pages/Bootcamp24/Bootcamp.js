@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
-import "./Bootcamp.css";
+// import "./Bootcamp.css";
 import Teamleft from "./assets/Teamleft";
 import Teamright from "./assets/Teamright";
 import Bootintro from "./assets/Bootintro";
 import Bootdetails from './assets/Bootdetails';
-import CallForMenteesButton from "./assets/CallMenteesBtn";
+// import CallForMenteesButton from "./assets/CallMenteesBtn";
 
 function Bootcamp24() {
   return (
@@ -13,14 +13,13 @@ function Bootcamp24() {
         <Bootintro />
       </div>
 
-      <CallForMenteesButton />
-
       <div className="domainsection">
-        <h3>DOMAINS</h3>
-        <div className="left">
+        <h3 className="text-blue5 text-3xl">DOMAINS</h3>
+        <div className="flex mt-8 justify-evenly items-center">
 
           <Link to="/bootcamp24/webd">
-            <Teamleft name="Web Development" 
+            <Teamleft className="darkBlue2"
+            name="Web Development" 
             details="Craft stunning, responsive websites
             from scratchwith HTML, CSS, and JavaScript.
             Dive deep into frameworks like React and
@@ -44,7 +43,7 @@ function Bootcamp24() {
           </Link>
 
         </div>
-        <div className="right">
+        <div className="flex mt-8 justify-evenly items-center">
 
           <Link to="/bootcamp24/aiml">
             <Teamright name="AI / ML"
@@ -71,7 +70,7 @@ function Bootcamp24() {
           </Link>
 
         </div>{" "}
-        <div className="bottom">
+        <div className="flex mt-8 justify-evenly items-center">
 
           <Link to="/bootcamp24/prodmgmt">
             <Teamleft name="Product Management"

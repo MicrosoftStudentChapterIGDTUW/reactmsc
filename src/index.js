@@ -1,8 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
+import "./input.css";
 import App from "./App";
 import TagManager from "react-gtm-module";
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
 const tagManagerArgs = { gtmId: 'GTM-5SMHVB85' };
 
