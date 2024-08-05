@@ -18,7 +18,7 @@ function Head() {
         data-aos="fade-left"
         data-aos-duration="500"
       >
-        <h1 className="text-3xl sm:text-2xl text-blue2">
+        <h1 className="text-center text-blue1 mt-20 sm:mt-12">
           Microsoft Student Chapter IGDTUW
         </h1>
         <p className="text-lg mb-8 mt-8 font-medium sm:mt-8">
