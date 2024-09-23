@@ -20,12 +20,12 @@ function AIML() {
         }
 
     const myTexts = [
-        'To be released by the mentors soon',
-        'To be released by the mentors soon',
-        'To be released by the mentors soon',
-        'To be released by the mentors soon',
-        'To be released by the mentors soon',
-        'To be released by the mentors soon',
+        'Introduction to Jupyter, NumPy, Pandas',
+        'Libraries, ML Basics, Regression',
+        'Supervised and Unsupervised Learning',
+        'Deep learning',
+        'CNN',
+        'Doubt session + Project Idea Discussion',
     ];
 
     return (

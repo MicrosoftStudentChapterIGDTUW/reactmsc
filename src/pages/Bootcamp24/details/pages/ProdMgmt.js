@@ -12,12 +12,12 @@ function ProdMgmt_details () {
         }
 
     const myTexts = [
-        'To be released by the mentors soon',
-        'To be released by the mentors soon',
-        'To be released by the mentors soon',
-        'To be released by the mentors soon',
-        'To be released by the mentors soon',
-        'To be released by the mentors soon'
+        'Product Life Cycle & Design Thinking',
+        'Behavioural Psychology for Design and Business',
+        'Value Propositions and Prioritisation',
+        'Pricing Frameworks',
+        'Market Entry Frameworks',
+        'User Acquisition'
     ];
 
     return (

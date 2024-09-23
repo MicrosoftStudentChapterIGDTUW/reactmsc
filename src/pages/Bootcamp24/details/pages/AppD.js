@@ -11,12 +11,12 @@ function Appd_details () {
         }
 
     const myTexts = [
-        'To be released by the mentors soon',
-        'To be released by the mentors soon',
-        'To be released by the mentors soon',
-        'To be released by the mentors soon',
-        'To be released by the mentors soon',
-        'To be released by the mentors soon'
+        'Introduction to Flutter and some basc concepts',
+        'Basics of Dart, Flutter widgets hands-on',
+        'Creating login page, Navigating through different pages ',
+        'Quiz, Hands-on for Stateful Widget in Flutter',
+        'TextFormField validation, Firebase integration',
+        'Network/API calls, Quiz, List View in Flutter'
     ];
 
     return (
