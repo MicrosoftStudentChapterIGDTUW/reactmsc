@@ -1,44 +1,5 @@
-/*.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-*/
-
+/*
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
 
 * {
@@ -79,7 +40,7 @@ textarea {
 }
 
 .contact-form {
-  /* background-color: #004071; */
+ 
   background-color: #012147;
   position: relative;
 }
@@ -515,7 +476,7 @@ a{
   background-color: #ffffff;
   width:100vw;
   height:8vh;
-/*  justify-content: center;*/
+
   align-items: center;
   align-content: center;
   display: flex;
@@ -523,7 +484,7 @@ a{
   position: fixed;
   z-index: 10;
   border-bottom: 1px solid lightgrey;
-/*  flex-wrap: wrap;*/
+
   
 }
 .navlogo{
@@ -595,18 +556,14 @@ a{
   background-color: white;
   width: 100vw;
   height: 8vh;
-  /* margin-right: 150px; */
+ 
   padding-right: 70px;
   display: flex;
   justify-content: flex-end;
-  /* position:fixed; */
-  /* flex-direction: row-reverse; */
+  
 }
 
-/* .fullnavul li:first-child {
-  border-right:1px solid #bbb;
-  height: 8vh;
-} */
+
 
 .fullnavul li:last-child {
   border-right: none;
@@ -643,7 +600,7 @@ visibility: hidden;
   }
   .navname2{
     visibility: visible;
-/*    margin-right: 10px;*/
+
   }
 
 .navbody{
@@ -651,7 +608,7 @@ visibility: hidden;
 }
 }
 
-/*sidenav css end*/
+
 .logod{
   width:150px;
   height:135px;
@@ -703,8 +660,7 @@ visibility: hidden;
 
 .footer .footer-link a::before {
   position: relative;
-  /* content: "\f105";
-  font-family: "Font Awesome 5 Free"; */
+  
   font-weight: 900;
   margin-right: 10px;
 }
@@ -819,4 +775,383 @@ visibility: hidden;
   .logod{
     margin-left: 0;
   }
+} 
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
+* {
+  @apply box-border m-0 p-0;
+  font-family: "Poppins", sans-serif;
 }
+body,
+input,
+textarea {
+  font-family: "Poppins", sans-serif;
+}
+.containerc {
+  @apply relative w-full min-h-screen bg-neutral-50 overflow-hidden flex items-center justify-center p-8;
+}
+.form {
+  @apply w-full max-w-[820px] bg-white shadow-[0_0_20px_1px_rgba(0,0,0,0.1)] z-[9] overflow-hidden grid grid-cols-[repeat(2,1fr)] rounded-[10px];
+}
+.contact-form {
+  @apply bg-[#012147] relative before:content-[""] before:absolute before:w-[26px] before:h-[26px] before:bg-[#04365e] before:rotate-45 before:left-[-13px] before:top-[50px];
+
+  /* background-color: #004071; */
+}
+.circle {
+  @apply absolute rounded-[50%];
+  background: linear-gradient(135deg, transparent 20%, #2879c9);
+}
+.circle.one {
+  @apply w-[130px] h-[130px] -right-10 top-[130px];
+}
+.circle.two {
+  @apply w-20 h-20 right-[30px] top-2.5;
+}
+form {
+  @apply z-10 overflow-hidden relative px-[2.2rem] py-[2.3rem];
+}
+.title {
+  @apply text-white font-medium text-2xl leading-none mb-[0.7rem];
+}
+.input-container {
+  @apply relative mx-0 my-4;
+}
+.input {
+  @apply w-full border-neutral-50 text-white font-medium text-[0.95rem] tracking-[0.5px] transition-[0.3s] px-[1.2rem] py-[0.6rem] rounded-[25px] border-2 border-solid;
+  outline: none;
+  background: none;
+}
+textarea.input {
+  @apply min-h-[150px] resize-none overflow-y-auto px-[1.2rem] py-[0.9rem] rounded-[22px];
+}
+.input-container label {
+  @apply absolute -translate-y-2/4 text-neutral-50 text-[0.9rem] font-normal pointer-events-none z-[9] transition-[0.5s] px-2 py-0 left-[15px] top-2/4;
+}
+.input-container.textarea label {
+  @apply translate-y-0 top-4;
+}
+.btn {
+  @apply bg-white border-neutral-50 text-[0.95rem] text-[#002d5b] leading-none cursor-pointer transition-[0.3s] m-0 px-[1.3rem] py-[0.6rem] rounded-[25px] border-2 border-solid hover:bg-transparent hover:text-white;
+  outline: none;
+}
+.input-container span {
+  @apply absolute -translate-y-2/4 text-[0.8rem] text-transparent pointer-events-none z-[5] px-[0.4rem] py-0 left-[25px] top-0 before:left-2/4 after:right-2/4;
+}
+.input-container span:before,
+.input-container span:after {
+  @apply content-[""] absolute w-[10%] opacity-0 transition-[0.3s] h-[5px] bg-[#004071] -translate-y-2/4 top-2/4;
+}
+.input-container.focus label {
+  @apply -translate-y-2/4 text-[0.8rem] left-[25px] top-0;
+}
+.input-container.focus span:before,
+.input-container.focus span:after {
+  @apply w-6/12 opacity-100;
+}
+.contact-info {
+  @apply relative px-[2.2rem] py-[2.3rem] before:content-[""] before:absolute before:w-[110px] before:h-[100px] before:bottom-[-77px] before:opacity-30 before:rounded-[50%] before:border-[22px] before:border-solid before:border-[#58bfff] before:right-[50px];
+}
+.contact-info .title {
+  @apply text-[#003b9a];
+}
+.text1 .p {
+  @apply text-[black];
+}
+.information {
+  @apply flex text-black items-center justify-center text-[0.95rem] ml-10 m-[0.7rem];
+}
+.icon {
+  @apply w-5 h-[22px] mr-[0.7rem] mb-[1vmax];
+}
+.social-media {
+  @apply pt-4 pb-0 px-0;
+}
+.social-media .p {
+  @apply text-[#001f52];
+}
+.social-media-icons {
+  @apply flex justify-center mt-2;
+}
+.social-media-icons a {
+  @apply w-[35px] h-[35px] text-white text-center leading-[35px] transition-[0.3s] mr-2 rounded-[5px] hover:scale-105;
+  background: linear-gradient(45deg, #043668, #006ddb);
+}
+.big-circle {
+  @apply absolute w-[700px] h-[700px] translate-x-[-40%] translate-y-[38%] rounded-[95%] right-2/4 bottom-[70%] after:content-[""] after:absolute after:w-[360px] after:h-[360px] after:bg-neutral-50 after:top-[calc(50%_-_180px)] after:left-[calc(50%_-_180px)] after:rounded-[50%];
+  background: linear-gradient(to bottom, #01254e, #004298);
+}
+.square {
+  @apply absolute h-[400px] translate-x-[181%] translate-y-[11%] opacity-20 left-2/4 top-2/4;
+}
+a {
+  @apply no-underline;
+}
+@media (max-width: 850px) {
+  .form {
+    @apply grid-cols-[1fr];
+  }
+  .contact-info:before {
+    @apply top-[-75px] scale-95 right-[65px] bottom-[initial];
+  }
+  .contact-form:before {
+    @apply top-[-13px] left-[initial] right-[70px];
+  }
+  .square {
+    @apply translate-x-[140%] translate-y-[43%] h-[350px];
+  }
+  .big-circle {
+    @apply translate-x-[-40%] translate-y-[30%] scale-90 right-2/4 bottom-3/4;
+  }
+  .text {
+    @apply mt-4 mb-6 mx-0;
+  }
+  .social-media {
+    @apply pt-6 pb-0 px-0;
+  }
+}
+@media (max-width: 480px) {
+  .container {
+    @apply p-6;
+  }
+  .contact-info:before {
+    @apply hidden;
+  }
+  .square,
+  .big-circle {
+    @apply hidden;
+  }
+  form,
+  .contact-info {
+    @apply px-[1.6rem] py-[1.7rem];
+  }
+  .text,
+  .information,
+  .social-media p {
+    @apply text-[0.8rem];
+  }
+  .title {
+    @apply text-[1.15rem];
+  }
+  .social-icons a {
+    @apply w-[30px] h-[30px] leading-[30px];
+  }
+  .icon {
+    @apply w-[23px];
+  }
+  .input {
+    @apply px-[1.2rem] py-[0.45rem];
+  }
+  .btn {
+    @apply px-[1.2rem] py-[0.45rem];
+  }
+}
+@media (max-width: 1024px) {
+  .navlogo {
+    @apply h-16 w-16 top-[3.5vh];
+  }
+  .col h3 {
+    @apply mb-4;
+  }
+}
+.sidenav {
+  @apply h-full w-0 fixed z-[998] bg-[#305891] overflow-x-hidden transition-[0.5s] pt-[60px] right-0 top-0;
+}
+.sidenav a {
+  @apply no-underline text-[25px] text-[white] block transition-[0.3s] pl-[70px] pr-2 py-2 hover:text-3xl hover:underline hover:text-[white];
+}
+.sidenav .closebtn {
+  @apply absolute text-4xl text-[black] ml-[50px] right-[25px] top-0 hover:text-[red];
+}
+.navButtonbg {
+  @apply h-[35px] w-[35px] self-end;
+}
+.navButton {
+  @apply text-3xl font-semibold cursor-pointer z-[998] fixed -translate-x-2/4 -translate-y-2/4 invisible right-[5%] top-[4vh];
+}
+.navbody {
+  @apply bg-white w-screen h-[8vh] items-center content-center flex flex-row fixed z-10 border-b-[lightgrey] border-b border-solid;
+
+  /*  justify-content: center;*/
+
+  /*  flex-wrap: wrap;*/
+}
+.navlogo {
+  @apply h-14 w-14 -translate-x-2/4 -translate-y-2/4 fixed z-10 ml-[60px] top-[4vh];
+}
+.logo_name {
+  @apply z-[998] ml-[100px] right-[60px] right-0.5;
+}
+.navname1 {
+  @apply fixed translate-x-[0%] -translate-y-2/4 font-semibold text-[large] mr-[30px] right-[7%] top-[4vh];
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+.navname2 {
+  @apply invisible fixed translate-x-[0%] -translate-y-2/4 font-bold text-[medium] mr-[30px] right-[10%] top-[4vh];
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+.navitems {
+  @apply flex content-center flex-col;
+  align-items: left;
+}
+.fullnavitem:hover {
+  @apply text-[#001d42] underline scale-110;
+}
+@media screen and (max-height: 450px) {
+  .sidenav {
+    @apply pt-[15px];
+  }
+  .sidenav a {
+    @apply text-lg;
+  }
+}
+.fullnavul {
+  @apply list-none overflow-hidden bg-[white] w-screen h-[8vh] flex justify-end m-0 pr-[70px] p-0;
+
+  /* margin-right: 150px; */
+
+  /* position:fixed; */
+
+  /* flex-direction: row-reverse; */
+}
+
+/* .fullnavul li:first-child {
+  border-right:1px solid #bbb;
+  height: 8vh;
+} */
+.fullnavul li:last-child {
+  @apply border-r-[none];
+}
+.fullnavul li a {
+  @apply block text-[black] text-center no-underline font-normal text-[large] px-4 py-3.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+.fullnavul li a:hover:not(.active) {
+  @apply underline;
+}
+@media screen and (max-width: 600px) {
+  .navname1 {
+    @apply invisible;
+  }
+  .fullnav {
+    @apply invisible;
+  }
+  .navButton {
+    @apply visible;
+  }
+  .navname2 {
+    @apply visible;
+
+    /*    margin-right: 10px;*/
+  }
+  .navbody {
+    @apply h-[7vh];
+  }
+}
+
+/*sidenav css end*/
+.logod {
+  @apply w-[150px] h-[135px];
+}
+.footer a:hover,
+.footer a:active,
+.footer a:focus {
+  @apply no-underline;
+  outline: none;
+}
+.footer {
+  @apply relative mt-16 pt-[45px];
+  background: linear-gradient(to right, #4797ff, #001d42);
+}
+.footer .footer-logo,
+.footer .footer-address,
+.footer .footer-link,
+.footer .footer-contact {
+  @apply relative text-[#dddddd] mb-[45px];
+}
+.footer .footer-logo h3,
+.footer .footer-address h3,
+.footer .footer-link h3,
+.footer .footer-contact h3 {
+  @apply relative text-[22px] font-semibold tracking-[1px] mb-5;
+}
+.footer .footer-link a {
+  @apply block text-[#dddddd] transition-[0.3s] capitalize text-lg mb-2.5 before:relative before:font-black before:mr-2.5 hover:text-[#9accff] hover:tracking-[1px];
+}
+.footer .footer-link a::before {
+  /* content: "\f105";
+  font-family: "Font Awesome 5 Free"; */
+}
+.footer .footer-contact p i {
+  @apply w-[25px];
+}
+.footer .footer-social {
+  @apply relative mt-5;
+}
+.footer .footer-social a {
+  @apply inline-block;
+}
+.footer .footer-social a i {
+  @apply text-[25px] text-white mr-[15px];
+}
+.footer .footer-social a:last-child i {
+  @apply m-0;
+}
+.footer .footer-social a:hover i {
+  @apply text-[#9accff];
+}
+.footer .footer-menu .f-menu {
+  @apply relative text-[0] text-center px-0 py-2.5 border-y-[rgba(255,255,255,0.1)] border-t border-solid border-b;
+}
+.footer .footer-menu .f-menu a {
+  @apply text-[#dddddd] text-[8px] mr-[15px] pr-[15px] border-r-[rgba(255,255,255,0.3)] border-r border-solid hover:text-[#0085ff] last:mr-0 last:pr-0 last:border-r-[none];
+}
+.footer .copyright {
+  @apply px-[15px] py-[30px];
+}
+.footer .copyright p {
+  @apply text-[#dddddd] text-center m-0;
+}
+.footer .copyright .col-md-6:last-child p {
+  @apply text-right;
+}
+.footer .copyright p a {
+  @apply text-[#0085ff] font-medium tracking-[1px] hover:text-white;
+}
+.footer-address p {
+  @apply text-lg;
+}
+.rowd {
+  @apply flex flex-wrap ml-8;
+}
+.cold {
+  @apply ml-32;
+}
+@media (max-width: 768px) {
+  .footer .copyright p,
+  .footer .copyright .col-md-6:last-child p {
+    @apply text-center mx-0 my-[5px];
+  }
+  .cold {
+    @apply ml-3;
+  }
+  .footer {
+    @apply mt-32;
+  }
+  .logod {
+    @apply ml-0;
+  }
+}
+
+
+
