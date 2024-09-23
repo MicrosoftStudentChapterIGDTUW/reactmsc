@@ -12,12 +12,11 @@ function DataAnal_details () {
         }
 
     const myTexts = [
-        'To be released by the mentors soon',
-        'To be released by the mentors soon',
-        'To be released by the mentors soon',
-        'To be released by the mentors soon',
-        'To be released by the mentors soon',
-        'To be released by the mentors soon'
+        'Statistics',
+        'Deep Dive into Excel',
+        'POWER BI',
+        'SQL Basics',
+        'SQL Advanced'
     ];
 
     return (
