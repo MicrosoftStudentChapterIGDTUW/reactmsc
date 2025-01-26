@@ -1,7 +1,8 @@
 // Timeline.js
 import React from "react";
-import { ReactComponent as WorkIcon } from "./asset/work.png";
-import { ReactComponent as SchoolIcon } from "./asset/school.png";
+import { ReactComponent as WorkIcon } from "./asset/work.svg";
+import { ReactComponent as SchoolIcon } from "./asset/school.svg";
+
 import timelineElements from "./timelineElements";
 import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
@@ -29,6 +30,7 @@ const Timeline = () => {
               dateClassName="date"
               iconStyle={isWorkIcon ? workIconStyles : schoolIconStyles}
               icon={isWorkIcon ? <WorkIcon /> : <SchoolIcon />}
+             
             >
               <h3 className="vertical-timeline-element-title">{element.title}</h3>
               <h5 className="vertical-timeline-element-subtitle">{element.location}</h5>
