@@ -3,7 +3,6 @@ import EventsPg from "./pages/Events/EventsPg";
 import Header from "./pages/Header/Header";
 import Footer from "./pages/Header/Footer";
 
-
 import Contacts from "./pages/Contact/Contacts";
 import MainSection from "./pages/Teams/MainSection";
 import Home from "./pages/Home/Home";
@@ -33,9 +32,12 @@ import ScrollToTop from "./ScrollToTop";
 
 import HackItUp from "./pages/Hack-It-Up/Hackathon";
 
+import Judges from "./pages/Hack-It-Up/Judges/Judges";
+import Mentors from "./pages/Hack-It-Up/Judges/Mentors";
+
 function App() {
   useEffect(() => {
-    AOS.init();   
+    AOS.init();
   }, []);
   return (
     <div className="App">
@@ -51,15 +53,15 @@ function App() {
             <Route path="/blog" element={<Blogpg />} />
             <Route path="/googlegenerationscholarship" element={<Blog />} />
             <Route path="/bootcamp" element={<Bootcamp />} />
-            <Route path="/bootcamp24" element={<Bootcamp24/>}/>
-            <Route path="/bootcamp24/aiml" element={<AIML/>}/>
-            <Route path="/bootcamp24/appd" element={<AppD/>}/>
-            <Route path="/bootcamp24/arvr" element={<ARVR/>}/>
-            <Route path="/bootcamp24/cyber" element={<Cyber/>}/>
-            <Route path="/bootcamp24/dataanal" element={<DataAnal/>}/>
-            <Route path="/bootcamp24/prodmgmt" element={<ProdMgmt/>}/>
-            <Route path="/bootcamp24/web3" element={<Web3/>}/>
-            <Route path="/bootcamp24/webd" element={<WebD/>}/>
+            <Route path="/bootcamp24" element={<Bootcamp24 />} />
+            <Route path="/bootcamp24/aiml" element={<AIML />} />
+            <Route path="/bootcamp24/appd" element={<AppD />} />
+            <Route path="/bootcamp24/arvr" element={<ARVR />} />
+            <Route path="/bootcamp24/cyber" element={<Cyber />} />
+            <Route path="/bootcamp24/dataanal" element={<DataAnal />} />
+            <Route path="/bootcamp24/prodmgmt" element={<ProdMgmt />} />
+            <Route path="/bootcamp24/web3" element={<Web3 />} />
+            <Route path="/bootcamp24/webd" element={<WebD />} />
             <Route
               path="/mlsaapplicationprocess"
               element={<BlogKhushiSharma />}
@@ -70,7 +72,8 @@ function App() {
             />
             <Route path="/upevent" element={<Upcoming />} />
             <Route path="/hackitup" element={<HackItUp />} />
-
+            <Route path="/hackitup/judges" element={<Judges />} />
+            <Route path="/hackitup/mentors" element={<Mentors />} />
           </Routes>
         </ScrollToTop>
       </BrowserRouter>
