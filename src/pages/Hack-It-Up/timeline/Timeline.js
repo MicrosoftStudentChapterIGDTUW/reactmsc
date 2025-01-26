@@ -9,8 +9,8 @@ import "react-vertical-timeline-component/style.min.css";
 import "./Timeline.css";
 
 const Timeline = () => {
-  let workIconStyles = { background: "#06D6A0" };
-  let schoolIconStyles = { background: "#f9c74f" };
+  let workIconStyles = { background: "#012147" };
+  let schoolIconStyles = { background: "#012147" };
 
   return (
     <div className="timeline-container">
