@@ -1,5 +1,4 @@
-/* Timeline.css */
-.timeline-container {
+  .timeline-container {
     padding: 3em 2em;
     background: #ffffff;
   }
@@ -12,7 +11,8 @@
   }
   
   .date {
-    color: #ffffff;
+    color: #012147;
+    text-align: left;
   }
 
   .vertical-timeline::before {
@@ -20,9 +20,9 @@
 }
 
 
-  /* Change the vertical line color to blue */
+  
   .vertical-timeline-element::before {
-    background: #012147 !important; /* This changes the vertical line to blue */
+    background: #012147 !important; 
   }
   
   .vertical-timeline-element-content {
@@ -30,7 +30,9 @@
       0 0.4em 1.25em 0 rgba(0, 0, 0, 0.15) !important;
     padding: 2em 3em !important;
     background: #012147;
-    color: #ffffff; /* This makes the text white */
+    color: #ffffff; 
+    border-radius: 2rem;
+    
   }
   
   .button {
@@ -57,13 +59,24 @@
   .schoolButton:hover {
     background-color: #6ac8ee;
   }
+
   
-  @media only screen and (max-width: 1700px) {
+
+  
+  
+  @media only screen and (max-width: 768px) {
     .vertical-timeline-element-date {
       display: block !important;
       float: none !important;
-      color: #012147;
+      color: #ffffff;
       margin-top: 1.5em;
+      left: 0; 
+      text-align: center;
+      position: relative;
     }
-  }
   
+    .vertical-timeline-element-content {
+      max-width: 90%; /* Full width for mobile view */
+    }
+  }  
+ 
