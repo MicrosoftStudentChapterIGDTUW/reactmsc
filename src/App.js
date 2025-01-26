@@ -31,8 +31,6 @@ import WebD from "./pages/Bootcamp24/details/pages/WebD";
 
 import ScrollToTop from "./ScrollToTop";
 
-import HackItUp from "./pages/Hack-It-Up/Hackathon";
-
 function App() {
   useEffect(() => {
     AOS.init();   
@@ -69,8 +67,6 @@ function App() {
               element={<BlogAasthaSinghal />}
             />
             <Route path="/upevent" element={<Upcoming />} />
-            <Route path="/hackitup" element={<HackItUp />} />
-
           </Routes>
         </ScrollToTop>
       </BrowserRouter>
