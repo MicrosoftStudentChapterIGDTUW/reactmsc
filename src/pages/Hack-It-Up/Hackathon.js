@@ -3,7 +3,8 @@ import { useNavigate } from 'react-router-dom';
 // import { Link } from "react-router-dom";
 import TeamRegistrationForm from "./RegistrationForm";
 import HackathonSubmission from "./SubmissionForm";
-import RoundsComponent from "./Rounds";
+import Timeline from "./timeline/Timeline";
+
 
 
 function HackItUp() {
@@ -29,11 +30,12 @@ function HackItUp() {
 */
     <>
       <div>Hello</div>
-      <RoundsComponent/>
       <button>registration</button>
-      <TeamRegistrationForm/>
+      <TeamRegistrationForm />
       <button>submission</button>
-      <HackathonSubmission/>
+      <HackathonSubmission />
+
+      <Timeline />
     </>
   );
 }
