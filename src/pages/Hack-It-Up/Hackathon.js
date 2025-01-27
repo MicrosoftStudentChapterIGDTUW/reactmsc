@@ -1,10 +1,16 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+// import { Link } from "react-router-dom";
+import TeamRegistrationForm from "./RegistrationForm";
+import HackathonSubmission from "./SubmissionForm";
+import RoundsComponent from "./Rounds";
+
 
 function HackItUp() {
   const navigate = useNavigate();
 
   return (
+/*
     <div className="p-4">
       <div className="text-4xl font-bold mb-4">Hack - It - Up</div>
       <div
@@ -20,6 +26,15 @@ function HackItUp() {
         Submission
       </div>
     </div>
+*/
+    <>
+      <div>Hello</div>
+      <RoundsComponent/>
+      <button>registration</button>
+      <TeamRegistrationForm/>
+      <button>submission</button>
+      <HackathonSubmission/>
+    </>
   );
 }
 
