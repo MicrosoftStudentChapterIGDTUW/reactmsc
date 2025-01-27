@@ -1,19 +1,21 @@
-// import { Link } from "react-router-dom";
 import TeamRegistrationForm from "./RegistrationForm";
 import HackathonSubmission from "./SubmissionForm";
-import RoundsComponent from "./Rounds";
+import Timeline from "./timeline/Timeline";
+
 
 
 function HackItUp() {
   return (
     <>
       <div>Hello</div>
-      <RoundsComponent/>
       <button>registration</button>
-      <TeamRegistrationForm/>
+      <TeamRegistrationForm />
       <button>submission</button>
-      <HackathonSubmission/>
+      <HackathonSubmission />
+
+      <Timeline />
     </>
   );
 }
+
 export default HackItUp;
