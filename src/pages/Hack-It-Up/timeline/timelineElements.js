@@ -6,8 +6,9 @@ let timelineElements = [
       description:
         "",
       buttonText: "Register",
+      link: "/hackitup/registration",
       date: "August 2016 - present",
-      icon: "work",
+      icon: "school",
     },
     // {
     //   id: 2,
@@ -26,8 +27,9 @@ let timelineElements = [
       description:
         "",
       buttonText: "Submit",
+      link: "/hackitup/submission",
       date: "September 2011 - June 2013",
-      icon: "school",
+      icon: "work",
     },
     // {
     //   id: 4,
@@ -45,6 +47,7 @@ let timelineElements = [
       location: "",
       description:
         "",
+        link: "/hackitup/prizes",
       buttonText: "Winning Projects",
       date: "2007 - 2011",
       icon: "work",

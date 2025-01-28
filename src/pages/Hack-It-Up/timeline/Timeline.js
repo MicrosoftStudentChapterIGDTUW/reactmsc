@@ -2,7 +2,7 @@
 import React from "react";
 import { ReactComponent as WorkIcon } from "./asset/work.svg";
 import { ReactComponent as SchoolIcon } from "./asset/school.svg";
-
+import { Link } from "react-router-dom";
 import timelineElements from "./timelineElements";
 import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
@@ -37,12 +37,12 @@ const Timeline = () => {
               <p id="description">{element.description}</p>
 
               {showButton && (
-                <a
-                  className={`button ${isWorkIcon ? "workButton" : "schoolButton"}`}
-                  href="/"
-                >
-                  {element.buttonText}
-                </a>
+                <Link
+                to={element.link}
+                className={`button ${isWorkIcon ? "workButton" : "schoolButton"}`}
+              >
+                {element.buttonText}
+              </Link>
               )}
             </VerticalTimelineElement>
           );
