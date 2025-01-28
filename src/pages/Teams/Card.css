@@ -21,7 +21,7 @@
   --smaller-font-size: 0.75rem;
 }
 /*title*/
-h1{
+.cardteam h1{
     font-family: var(--body-font);
     font-size: 60px;
     text-align: center;
@@ -179,7 +179,7 @@ img {
 
 @media(max-width:1024px)
 {
-  h1{
+  .cardteam h1{
     font-family: var(--body-font);
     font-size: 40px;
     text-align: center;

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Formik, Form, Field } from 'formik';
 import * as Yup from 'yup';
 import {
@@ -11,6 +11,8 @@ import {
 } from '@material-ui/core';
 import { db } from '../../firebase.config';
 import { collection, addDoc } from 'firebase/firestore';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const validationSchema = Yup.object().shape({
   teamName: Yup.string()
@@ -50,10 +52,14 @@ const TeamRegistrationForm = () => {
     }
   };
 
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
     <Container maxWidth="sm">
       <Box my={4}>
-        <Typography variant="h4" component="h1" gutterBottom>
+      <Typography variant="h4" component="h1" gutterBottom className="text-4xl text-darkblue font-bold py-4">
           Team Registration
         </Typography>
 
@@ -71,98 +77,123 @@ const TeamRegistrationForm = () => {
           onSubmit={handleSubmit}
         >
           {({ errors, touched }) => (
-            <Form>
-              <Box mb={2}>
-                <Field
-                  name="teamName"
-                  as={TextField}
-                  label="Team Name"
-                  fullWidth
-                  error={touched.teamName && Boolean(errors.teamName)}
-                  helperText={touched.teamName && errors.teamName}
-                />
-              </Box>
+            <Form className="space-y-4 p-6 bg-white shadow-lg rounded-lg">
+            <Box mb={2} data-aos="fade-up">
+              <label className="block text-blue-600 text-lg font-bold mb-2" htmlFor="teamName">
+                What is your team name? *
+              </label>
+              <Field
+                name="teamName"
+                as={TextField}
+                placeholder="Enter your team name"
+                fullWidth
+                className="p-2 text-lg shadow-md rounded border border-gray-300"
+                error={touched.teamName && Boolean(errors.teamName)}
+                helperText={touched.teamName && errors.teamName}
+              />
+            </Box>
+  
+            <Box mb={2} data-aos="fade-up">
+              <label className="block text-blue-600 text-lg font-bold mb-2" htmlFor="teamLeaderName">
+                Who is the team leader? *
+              </label>
+              <Field
+                name="teamLeaderName"
+                as={TextField}
+                placeholder="Enter the team leader's name"
+                fullWidth
+                className="p-2 text-lg shadow-md rounded border border-gray-300"
+                error={touched.teamLeaderName && Boolean(errors.teamLeaderName)}
+                helperText={touched.teamLeaderName && errors.teamLeaderName}
+              />
+            </Box>
 
-              <Box mb={2}>
-                <Field
-                  name="teamLeaderName"
-                  as={TextField}
-                  label="Team Leader Name"
-                  fullWidth
-                  error={touched.teamLeaderName && Boolean(errors.teamLeaderName)}
-                  helperText={touched.teamLeaderName && errors.teamLeaderName}
-                />
-              </Box>
+            <Box mb={2} data-aos="fade-up">
+            <label className="block text-blue-600 text-lg font-bold mb={2}" htmlFor="teamLeaderEmail">
+              What is the team leader's email? *
+            </label>
+            <Field
+              name="teamLeaderEmail"
+              as={TextField}
+              placeholder="Enter the team leader's email"
+              fullWidth
+              className="p-2 text-lg shadow-md rounded border border-gray-300"
+              error={touched.teamLeaderEmail && Boolean(errors.teamLeaderEmail)}
+              helperText={touched.teamLeaderEmail && errors.teamLeaderEmail}
+            />
+          </Box>
 
-              <Box mb={2}>
-                <Field
-                  name="teamLeaderEmail"
-                  as={TextField}
-                  label="Team Leader Email"
-                  fullWidth
-                  error={touched.teamLeaderEmail && Boolean(errors.teamLeaderEmail)}
-                  helperText={touched.teamLeaderEmail && errors.teamLeaderEmail}
-                />
-              </Box>
+          <Box mb={2} data-aos="fade-up">
+            <label className="block text-blue-600 text-lg font-bold mb-2" htmlFor="devfolioUsername">
+              What is your Devfolio username? *
+            </label>
+            <Field
+              name="devfolioUsername"
+              as={TextField}
+              placeholder="Enter your Devfolio username"
+              fullWidth
+              className="p-2 text-lg shadow-md rounded border border-gray-300"
+              error={touched.devfolioUsername && Boolean(errors.devfolioUsername)}
+              helperText={touched.devfolioUsername && errors.devfolioUsername}
+            />
+          </Box>
 
-              <Box mb={2}>
-                <Field
-                  name="devfolioUsername"
-                  as={TextField}
-                  label="Devfolio Username"
-                  fullWidth
-                  error={touched.devfolioUsername && Boolean(errors.devfolioUsername)}
-                  helperText={touched.devfolioUsername && errors.devfolioUsername}
-                />
-              </Box>
+          <Box mb={2} data-aos="fade-up">
+            <label className="block text-blue-600 text-lg font-bold mb-2" htmlFor="teamSize">
+              How many members are in your team? *
+            </label>
+            <Field
+              name="teamSize"
+              as={TextField}
+              placeholder="Enter the number of team members"
+              fullWidth
+              className="p-2 text-lg shadow-md rounded border border-gray-300"
+              error={touched.teamSize && Boolean(errors.teamSize)}
+              helperText={touched.teamSize && errors.teamSize}
+            />
+          </Box>
 
-              <Box mb={2}>
-                <Field
-                  name="teamSize"
-                  as={TextField}
-                  label="Team Size"
-                  type="number"
-                  fullWidth
-                  error={touched.teamSize && Boolean(errors.teamSize)}
-                  helperText={touched.teamSize && errors.teamSize}
-                />
-              </Box>
+          <Box mb={2} data-aos="fade-up">
+            <label className="block text-blue-600 text-lg font-bold mb-2" htmlFor="projectDescription">
+              Describe your project
+            </label>
+            <Field
+              name="projectDescription"
+              as={TextField}
+              placeholder="Enter a brief description of your project"
+              fullWidth
+              className="p-2 text-lg shadow-md rounded border border-gray-300"
+              error={touched.projectDescription && Boolean(errors.projectDescription)}
+              helperText={touched.projectDescription && errors.projectDescription}
+            />
+          </Box>
 
-              <Box mb={2}>
-                <Field
-                  name="projectDescription"
-                  as={TextField}
-                  label="Project Description"
-                  multiline
-                  rows={4}
-                  fullWidth
-                />
-              </Box>
+          <Box mb={2} data-aos="fade-up">
+            <label className="block text-blue-600 text-lg font-bold mb-2" htmlFor="devfolioSSLink">
+              Provide a link to your Devfolio screenshot (open for all to view) *
+            </label>
+            <Field
+              name="devfolioSSLink"
+              as={TextField}
+              placeholder="Enter the URL of your Devfolio screenshot"
+              fullWidth
+              className="p-2 text-lg shadow-md rounded border border-gray-300"
+              error={touched.devfolioSSLink && Boolean(errors.devfolioSSLink)}
+              helperText={touched.devfolioSSLink && errors.devfolioSSLink}
+            />
+          </Box>
 
-              <Box mb={2}>
-                <Field
-                  name="devfolioSSLink"
-                  as={TextField}
-                  label="Devfolio Screenshot Drive Link"
-                  multiline
-                  rows={4}
-                  fullWidth
-                />
-                <Typography variant="caption" display="block" gutterBottom>
-                  Please upload a screenshot of your Devfolio registration to google drive and paste the link.
-                </Typography>
-              </Box>
-
-              <Button
+              <Button data-aos="fade-up"
                 type="submit"
                 variant="contained"
                 color="primary"
                 fullWidth
+                className="w-full p-2 bg-blue-600 text-white text-lg font-bold rounded shadow-md hover:bg-blue-700"
                 disabled={loading}
               >
                 {loading ? <CircularProgress size={24} /> : 'Submit Registration'}
               </Button>
-            </Form>
+        </Form>
           )}
         </Formik>
       </Box>

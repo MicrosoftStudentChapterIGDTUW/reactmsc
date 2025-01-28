@@ -32,6 +32,8 @@ import WebD from "./pages/Bootcamp24/details/pages/WebD";
 import ScrollToTop from "./ScrollToTop";
 
 import HackItUp from "./pages/Hack-It-Up/Hackathon";
+import RegistrationForm from "./pages/Hack-It-Up/RegistrationForm";
+import SubmissionForm from "./pages/Hack-It-Up/SubmissionForm";
 
 function App() {
   useEffect(() => {
@@ -70,6 +72,8 @@ function App() {
             />
             <Route path="/upevent" element={<Upcoming />} />
             <Route path="/hackitup" element={<HackItUp />} />
+            <Route path="/hackitup/registration" element={<RegistrationForm />} />
+            <Route path="/hackitup/submission" element={<SubmissionForm />} />
 
           </Routes>
         </ScrollToTop>
