@@ -18,8 +18,6 @@ function HackItUp() {
             src="./images/HACK-IT-UP.jpg"
             alt="mobile version"
             className="absolute md:hidden" // hidden on medium screens and up, visible below
-            data-aos="fade-right"
-            data-aos-duration="200"
           />
 
           {/* Visible on larger screens, hidden on mobile */}
@@ -27,8 +25,6 @@ function HackItUp() {
             src="./images/HACK_IT_UP.jpg"
             alt="desktop version"
             className="block" // visible on medium screens and up, hidden below
-            data-aos="fade-right"
-            data-aos-duration="200"
           />
         </div>
 
