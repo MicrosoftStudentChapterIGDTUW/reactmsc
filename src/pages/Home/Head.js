@@ -25,12 +25,12 @@ function Head() {
 
       <div
         onClick={() => navigate("/hackitup")}
-        className="mt-20 absolute top-1/2 left-[25%] transform -translate-x-1/2 -translate-y-1/2
+        className="mt-30 absolute top-1/2 left-[25%] transform -translate-x-1/2 -translate-y-1/2
           cursor-pointer p-4 bg-blue-600 hover:bg-blue-900 rounded-lg
           text-white text-xl transition duration-300 ease-in-out
           md:p-3 md:text-lg
           sm:left-1/2 sm:p-2 sm:text-sm sm:w-auto sm:text-center sm:mt-20"
-        data-aos="fade-left"
+        // data-aos="fade-left"
         data-aos-duration="200"
       >
         Know More!
