@@ -1,0 +1,38 @@
+.sponsorship-container {
+    text-align: center;
+    padding: 50px;
+    background-color: #f9f9f9;
+  }
+  
+  .sponsorship-heading {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #333;
+  }
+  
+  .sponsor-logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px; /* Adjust spacing between logos */
+  }
+  
+  .sponsor-logo {
+    flex: 0 1 200px; /* Each logo will have a max width of 200px */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .sponsor-logo img {
+    width: 100%;
+    height: auto;
+    max-width: 180px; /* Adjust size as necessary */
+    transition: transform 0.3s ease;
+  }
+  
+  .sponsor-logo img:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+  }
+  
