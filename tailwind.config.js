@@ -28,8 +28,11 @@ module.exports = {
         center: true,
         padding: '1rem',
         screens: {
+          xs: '480px',
           sm: '640px',
+          md: '768px',
           lg: '984px',
+          xl: '1280px',
         },
     },
   },
