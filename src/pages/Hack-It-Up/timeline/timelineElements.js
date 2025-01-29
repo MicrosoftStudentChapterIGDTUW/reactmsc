@@ -48,7 +48,7 @@ let timelineElements = [
       description:
         "",
         link: "/hackitup/prizes",
-      buttonText: "Winning Projects",
+      buttonText: "Prizes",
       date: "2007 - 2011",
       icon: "work",
     },
