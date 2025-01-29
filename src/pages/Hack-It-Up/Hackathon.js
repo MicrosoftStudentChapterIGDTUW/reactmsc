@@ -7,6 +7,8 @@ import Timeline from "./timeline/Timeline";
 import Judges from "./Judges/Judges";
 import Mentors from "./Judges/Mentors";
 
+
+
 function HackItUp() {
   const navigate = useNavigate();
 
@@ -34,6 +36,8 @@ function HackItUp() {
         >
           Register Now!
         </div>
+
+       
 
         {/* <div
         onClick={() => navigate('/hackitup/submission')}
