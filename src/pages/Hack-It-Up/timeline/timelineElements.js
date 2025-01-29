@@ -22,7 +22,7 @@ let timelineElements = [
     // },
     {
       id: 2,
-      title: " PROTOTYPE AND MENTORSHIP ROUND",
+      title: " PROTOTYPE ROUND",
       location: "",
       description:
         "",
@@ -31,24 +31,24 @@ let timelineElements = [
       date: "September 2011 - June 2013",
       icon: "work",
     },
-    // {
-    //   id: 4,
-    //   title: "MENTORSHIP",
-    //   location: "",
-    //   description:
-    //     "",
-    //   buttonText: "Connect",
-    //   date: "September 2011",
-    //   icon: "school",
-    // },
     {
       id: 3,
+      title: " MENTORSHIP ",
+      location: "",
+      description:
+        "",
+      buttonText: "Connect",
+      date: "September 2011",
+      icon: "school",
+    },
+    {
+      id: 4,
       title: "FINALE",
       location: "",
       description:
         "",
         link: "/hackitup/prizes",
-      buttonText: "Winning Projects",
+      buttonText: "Prizes",
       date: "2007 - 2011",
       icon: "work",
     },
