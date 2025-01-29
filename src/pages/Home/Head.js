@@ -4,37 +4,53 @@ import { useNavigate } from "react-router-dom";
 function Head() {
   const navigate = useNavigate();
 
+  const buttonStyle = {
+    width: '20vw',
+    fontSize: '1rem',
+    padding: '0.5%',
+    bottom: '1vh'
+  };
+
+  const mediaQuery = window.matchMedia("(max-width: 760px)");
+  if (mediaQuery.matches) {
+    buttonStyle.fontSize = '0.8rem';
+    buttonStyle.padding = '0.1%';
+  }
+
   return (
-    <div className="w-screen mx-auto inline-block">
+    <div className="w-full mx-auto inline-block">
       <div className="inline-block w-full h-auto bg-transparent rounded-lg relative">
-        <div>
+        {/*}
           <img
             src="./images/HACK-IT-UP-HomePage-Mobile.jpg"
             alt="mobile version"
-            className="absolute md:hidden" // hidden on medium screens and up, visible below
+            className="absolute sm:hidden w-full mx-auto" // hidden on medium screens and up, visible below
           />
-
+          */}
           {/* Visible on larger screens, hidden on mobile */}
+          
           <img
             src="./images/HACK-IT-UP-HomePage.jpg"
             alt="desktop version"
-            className="block" // visible on medium screens and up, hidden below
+            className="sm:block w-full" // visible on medium screens and up, hidden below
           />
+          
+        
+        <div
+          onClick={() => navigate("/hackitup")}
+          className="absolute bottom-4 left-1/2 transform -translate-x-1/2
+            cursor-pointer bg-blue-600 hover:bg-blue-900 rounded-xl
+            text-white text-xl md:text-lg sm:text-sm transition duration-300 ease-in-out text-center"
+          style={buttonStyle} // Inline CSS for width and font size
+          
+          // data-aos="fade-left"
+          data-aos-duration="200"
+        >
+          Know More!
         </div>
       </div>
 
-      <div
-        onClick={() => navigate("/hackitup")}
-        className="mt-30 absolute top-1/2 left-[25%] transform -translate-x-1/2 -translate-y-1/2
-          cursor-pointer p-4 bg-blue-600 hover:bg-blue-900 rounded-lg
-          text-white text-xl transition duration-300 ease-in-out
-          md:p-3 md:text-lg
-          sm:left-1/2 sm:p-2 sm:text-sm sm:w-auto sm:text-center sm:mt-20"
-        // data-aos="fade-left"
-        data-aos-duration="200"
-      >
-        Know More!
-      </div>
+      
 
       <div
         className="inline-block w-1/2 ml-8 p-4 sm:w-full sm:ml-0 sm:mt-8"
