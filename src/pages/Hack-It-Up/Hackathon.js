@@ -1,7 +1,10 @@
 import { useNavigate } from "react-router-dom";
+import { useState,useEffect } from "react";
 import Timeline from "./timeline/Timeline";
 import Judges from "./Judges/Judges";
-
+import Tracks from "./Tracks";
+import Sponsorship from "./Sponsorship";
+import Faqhack from "./Faqhack";
 function HackItUp() {
   const navigate = useNavigate();
   const [isMobile, setIsMobile] = useState(false);
@@ -57,6 +60,15 @@ function HackItUp() {
       {/* Judges Section */}
       <section className="w-full px-4 md:px-8 my-8">
         <Judges />
+      </section>
+      <section className="w-full px-4 md:px-8 my-8">
+        <Tracks />
+      </section>
+      <section className="w-full px-4 md:px-8 my-8">
+        <Sponsorship />
+      </section>
+      <section className="w-full px-4 md:px-8 my-8">
+        <Faqhack />
       </section>
     </div>
   );
