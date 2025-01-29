@@ -12,30 +12,30 @@ export default function Judges() {
   const judges = [
     {
       id: 1,
-      name: "Mr X",
+      name: "To be Announced",
       image: "https://via.placeholder.com/345x140", // Replace with actual working link
       description:
-        "Judge is an AI expert with a focus on fairness in decision-making.",
+        "-",
       detailedDescription:
-        "With expertise in modern JavaScript frameworks like React and tools such as Tailwind CSS, Judge Aakshi has crafted numerous high-performance web applications. Her passion lies in creating intuitive user interfaces and seamless user experiences. Aakshi is also a mentor, guiding aspiring developers in the art of web development and fostering innovation in the tech community",
+        "-",
     },
     {
       id: 2,
-      name: "Mr Y",
-      image: "https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d", // Example public link
+      name: "To be Announced",
+      image: "https://via.placeholder.com/345x140", // Replace with actual working link
       description:
-        "Judge Robin has a background in international law and diplomacy.",
+        "-",
       detailedDescription:
-        "With expertise in modern JavaScript frameworks like React and tools such as Tailwind CSS, Judge Aakshi has crafted numerous high-performance web applications. Her passion lies in creating intuitive user interfaces and seamless user experiences. Aakshi is also a mentor, guiding aspiring developers in the art of web development and fostering innovation in the tech community",
+        "-",
     },
     {
       id: 3,
-      name: "Ms Z",
+      name: "To be Announced",
       image: "https://via.placeholder.com/345x140", // Replace with actual working link
       description:
-        "Judge is an accomplished web developer specializing in front-end technologies and responsive design.",
+        "-",
       detailedDescription:
-        "With expertise in modern JavaScript frameworks like React and tools such as Tailwind CSS, Judge Aakshi has crafted numerous high-performance web applications. Her passion lies in creating intuitive user interfaces and seamless user experiences. Aakshi is also a mentor, guiding aspiring developers in the art of web development and fostering innovation in the tech community",
+        "-",
     },
   ];
 
