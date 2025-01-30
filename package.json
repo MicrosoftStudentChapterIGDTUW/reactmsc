@@ -22,6 +22,7 @@
     "firebase": "^11.2.0",
     "font-awesome": "^4.7.0",
     "formik": "^2.4.6",
+    "framer-motion": "^12.0.6",
     "mdb-react-ui-kit": "^6.2.0",
     "react": "^18.2.0",
     "react-big-calendar": "^1.8.2",
