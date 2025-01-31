@@ -1,13 +1,14 @@
 let timelineElements = [
     {
       id: 1,
-      title: "APPLICATION PHASE",
-      location: "",
+      title: "REGISTRATION",
+      location: "Virtual",
       description:
-        "",
+        "Brainstorm and conceptualize impactful solutions. Register your ideas now!",
       buttonText: "Register",
-      date: "August 2016 - present",
-      icon: "work",
+      link: "/hackitup/registration",
+      date: "22nd February, 2025",
+      icon: "school",
     },
     // {
     //   id: 2,
@@ -21,32 +22,34 @@ let timelineElements = [
     // },
     {
       id: 2,
-      title: " PROTOTYPE AND MENTORSHIP ROUND",
-      location: "",
+      title: " PROTOTYPE ROUND",
+      location: "Virtual",
       description:
-        "",
+        "In the second round, it’s time to bring ideas to life. This phase is dedicated to turning the proposed solutions into fully functional prototypes.",
       buttonText: "Submit",
-      date: "September 2011 - June 2013",
-      icon: "school",
+      link: "/hackitup/submission",
+      date: "22nd February, 2025",
+      icon: "work",
     },
-    // {
-    //   id: 4,
-    //   title: "MENTORSHIP",
-    //   location: "",
-    //   description:
-    //     "",
-    //   buttonText: "Connect",
-    //   date: "September 2011",
-    //   icon: "school",
-    // },
     {
       id: 3,
-      title: "FINALE",
-      location: "",
+      title: " MENTORSHIP ",
+      location: "Virtual",
       description:
-        "",
-      buttonText: "Winning Projects",
-      date: "2007 - 2011",
+        "Selected teams will have the unique opportunity to work with expert mentors who will guide them throughout the process",
+      buttonText: "Connect",
+      date: "22nd February, 2025",
+      icon: "school",
+    },
+    {
+      id: 4,
+      title: "FINALE",
+      location: "In-Person",
+      description:
+        "Submit your prototype and present your innovations in the finale!",
+        link: "/hackitup/prizes",
+      buttonText: "Prizes",
+      date: "To Be Announced",
       icon: "work",
     },
     // {

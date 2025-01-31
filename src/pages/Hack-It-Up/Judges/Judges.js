@@ -1,10 +1,9 @@
 import React, { useState } from "react";
-import Card from "@mui/material/Card";
+// import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
-import "./judges.css";
 
 export default function Judges() {
   const [activeCard, setActiveCard] = useState(null);
@@ -12,79 +11,96 @@ export default function Judges() {
   const judges = [
     {
       id: 1,
-      name: "Mr X",
-      image: "https://via.placeholder.com/345x140", // Replace with actual working link
-      description:
-        "Judge is an AI expert with a focus on fairness in decision-making.",
-      detailedDescription:
-        "With expertise in modern JavaScript frameworks like React and tools such as Tailwind CSS, Judge Aakshi has crafted numerous high-performance web applications. Her passion lies in creating intuitive user interfaces and seamless user experiences. Aakshi is also a mentor, guiding aspiring developers in the art of web development and fostering innovation in the tech community",
+      name: "To be Announced",
+      image: "https://via.placeholder.com/345x140",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod.",
+      detailedDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate",
     },
     {
       id: 2,
-      name: "Mr Y",
-      image: "https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d", // Example public link
-      description:
-        "Judge Robin has a background in international law and diplomacy.",
-      detailedDescription:
-        "With expertise in modern JavaScript frameworks like React and tools such as Tailwind CSS, Judge Aakshi has crafted numerous high-performance web applications. Her passion lies in creating intuitive user interfaces and seamless user experiences. Aakshi is also a mentor, guiding aspiring developers in the art of web development and fostering innovation in the tech community",
+      name: "To be Announced",
+      image: "https://via.placeholder.com/345x140",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod.",
+      detailedDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate",
     },
     {
       id: 3,
-      name: "Ms Z",
-      image: "https://via.placeholder.com/345x140", // Replace with actual working link
-      description:
-        "Judge is an accomplished web developer specializing in front-end technologies and responsive design.",
-      detailedDescription:
-        "With expertise in modern JavaScript frameworks like React and tools such as Tailwind CSS, Judge Aakshi has crafted numerous high-performance web applications. Her passion lies in creating intuitive user interfaces and seamless user experiences. Aakshi is also a mentor, guiding aspiring developers in the art of web development and fostering innovation in the tech community",
+      name: "To be Announced",
+      image: "https://via.placeholder.com/345x140",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod.",
+      detailedDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate",
     },
   ];
 
   return (
-    <div className="judges-page">
-      <h1 className="judges-heading">Judges</h1>
-      <div className="judges-cards">
+    <div className="min-h-screen p-5 md:p-8">
+      <h1 className="mt-8 text-3xl md:text-5xl lg:text-[5em] md:text-[5em] text-center font-['Bebas_Neue'] text-[#012147] animate-fadeIn">
+        Judges
+      </h1>
+      
+      <div className="flex flex-wrap justify-center gap-6 md:gap-12 mt-8 md:mt-12">
         {judges.map((judge) =>
           activeCard === judge.id ? (
-            <Card key={judge.id} className="judges-card">
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="div">
+            <div
+              key={judge.id}
+              className="w-full md:w-[350px] bg-white rounded-xl shadow-lg transform transition-all duration-300 hover:scale-105 animate-jumpIn"
+            >
+              <CardContent className="p-6">
+                <Typography
+                  variant="h5"
+                  className="text-[#182B46] font-bold text-center mb-4"
+                >
                   {judge.name}
                 </Typography>
-                <Typography variant="body2" className="judges-description">
+                <Typography
+                  variant="body2"
+                  className="text-[#182B46] text-sm leading-relaxed text-justify px-4"
+                >
                   {judge.detailedDescription}
                 </Typography>
                 <Button
                   size="small"
                   onClick={() => setActiveCard(null)}
-                  sx={{ marginTop: 2 }}
+                  className="mt-4 w-[90%] bg-white text-[#00509e] font-bold rounded-lg capitalize hover:bg-white hover:text-[#00509e]"
                 >
                   Back
                 </Button>
               </CardContent>
-            </Card>
+            </div>
           ) : (
-            <Card key={judge.id} className="judges-card">
+            <div
+              key={judge.id}
+              className="w-full md:w-[350px] h-[400px] bg-white rounded-xl shadow-lg transform transition-all duration-300 hover:scale-105 flex flex-col animate-jumpIn"
+            >
               <CardMedia
-                className="judges-media"
+                className="h-[180px] object-cover bg-[#cce7ff]"
                 image={judge.image}
                 title={judge.name}
               />
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="div">
+              <CardContent className="flex-grow p-6">
+                <Typography
+                  variant="h5"
+                  className="text-[#003366] font-bold text-center mb-4"
+                >
                   {judge.name}
                 </Typography>
-                <Typography variant="body2" className="judges-description">
+                <Typography
+                  variant="body2"
+                  className="text-[#003366] text-sm leading-relaxed text-justify px-4"
+                >
                   {judge.description}
                 </Typography>
               </CardContent>
-              <Button
-                size="small"
-                onClick={() => setActiveCard(judge.id)}
-                sx={{ margin: "0 auto", display: "block" }}
-              >
-                Learn More
-              </Button>
-            </Card>
+              <div className="p-4">
+                <Button
+                  size="small"
+                  onClick={() => setActiveCard(judge.id)}
+                  className="w-[90%] bg-white text-[#00509e] font-bold rounded-lg capitalize hover:bg-white hover:text-[#00509e]"
+                >
+                  Learn More
+                </Button>
+              </div>
+            </div>
           )
         )}
       </div>
