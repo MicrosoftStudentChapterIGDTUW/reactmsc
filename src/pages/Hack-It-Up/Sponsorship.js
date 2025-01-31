@@ -24,7 +24,7 @@ const Sponsorship = () => {
         {sponsors.map((sponsor) => (
           <div
             key={sponsor.id}
-            className="sponsor-logo flex justify-center items-center p-4 w-full sm:w-[80vw] md:w-[40vw] lg:w-[25vw]"
+            className="sponsor-logo flex justify-center items-center p-4 w-full sm:w-[80vw] md:w-[35vw] lg:w-[20vw]"
           >
             <img
               src={sponsor.image}
