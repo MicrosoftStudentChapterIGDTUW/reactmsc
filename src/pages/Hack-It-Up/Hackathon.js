@@ -75,9 +75,12 @@ function HackItUp() {
       </section>
 
       {/* Judges Section */}
+      {/*
       <section className="w-full px-4 md:px-8 my-8">
         <Judges />
       </section>
+      */}
+      
       <section className="w-full px-4 md:px-8 my-8">
         <Tracks />
       </section>

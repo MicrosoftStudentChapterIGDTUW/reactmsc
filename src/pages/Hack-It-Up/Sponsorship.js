@@ -1,14 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import logo1 from "./images/sponsor.png";
-import logo2 from "./images/sponsor.png";
-import logo3 from "./images/sponsor.png";
+import devfoliologo from "./images/sponsors/devfolio.png";
+import ethindialogo from "./images/sponsors/ethindia.svg";
+import interviewbuddylogo from "./images/sponsors/interviewbuddy.svg";
+import polygonlogo from './images/sponsors/polygon.png';
 
 const Sponsorship = () => {
   const sponsors = [
-    { id: 1, image: logo1, alt: "Sponsor 1" },
-    { id: 2, image: logo2, alt: "Sponsor 2" },
-    { id: 3, image: logo3, alt: "Sponsor 3" },
+    { id: 1, image: devfoliologo, alt: "Devfolio" },
+    { id: 2, image: polygonlogo, alt: "Polygon" },
+    { id: 3, image: ethindialogo, alt: "EthIndia" },
+    { id: 4, image: interviewbuddylogo, alt: "Interview Buddy" },
   ];
 
   return (
@@ -18,17 +20,17 @@ const Sponsorship = () => {
       </h1>
 
       {/* Grid container for sponsor logos */}
-      <div className="mt-8 md:mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
+      <div className="mt-8 md:mt-12 flex flex-wrap justify-center gap-x-8 md:gap-x-12">
         {sponsors.map((sponsor) => (
           <div
             key={sponsor.id}
-            className="sponsor-logo flex justify-center items-center p-4"
+            className="sponsor-logo flex justify-center items-center p-4 w-full sm:w-[80vw] md:w-[40vw] lg:w-[25vw]"
           >
             <img
               src={sponsor.image}
               alt={sponsor.alt}
               className="w-full max-w-[200px] md:max-w-[250px] lg:max-w-xs 
-                         transform transition-transform duration-300 hover:scale-110"
+                        transform transition-transform duration-300 hover:scale-110"
             />
           </div>
         ))}
