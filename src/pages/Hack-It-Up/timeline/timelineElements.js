@@ -1,13 +1,13 @@
 let timelineElements = [
     {
       id: 1,
-      title: "APPLICATION PHASE",
-      location: "",
+      title: "REGISTRATION",
+      location: "Virtual",
       description:
-        "",
+        "Brainstorm and conceptualize impactful solutions. Register your ideas now!",
       buttonText: "Register",
       link: "/hackitup/registration",
-      date: "August 2016 - present",
+      date: "22nd February, 2025",
       icon: "school",
     },
     // {
@@ -23,33 +23,33 @@ let timelineElements = [
     {
       id: 2,
       title: " PROTOTYPE ROUND",
-      location: "",
+      location: "Virtual",
       description:
-        "",
+        "In the second round, it’s time to bring ideas to life. This phase is dedicated to turning the proposed solutions into fully functional prototypes.",
       buttonText: "Submit",
       link: "/hackitup/submission",
-      date: "September 2011 - June 2013",
+      date: "22nd February, 2025",
       icon: "work",
     },
     {
       id: 3,
       title: " MENTORSHIP ",
-      location: "",
+      location: "Virtual",
       description:
-        "",
+        "Selected teams will have the unique opportunity to work with expert mentors who will guide them throughout the process",
       buttonText: "Connect",
-      date: "September 2011",
+      date: "22nd February, 2025",
       icon: "school",
     },
     {
       id: 4,
       title: "FINALE",
-      location: "",
+      location: "In-Person",
       description:
-        "",
+        "Submit your prototype and present your innovations in the finale!",
         link: "/hackitup/prizes",
       buttonText: "Prizes",
-      date: "2007 - 2011",
+      date: "To Be Announced",
       icon: "work",
     },
     // {
