@@ -21,7 +21,7 @@ function Home() {
   );
 
   return (
-    <div className="w-full overflow-x-hidden">
+    <div className="w-full">
       
       {/* Hero Section */}
       <section className="w-full">

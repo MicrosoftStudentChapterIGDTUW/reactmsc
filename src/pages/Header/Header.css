@@ -64,7 +64,7 @@
   background-color: #041e55;
 }
 .logoheader img{
-    width:4rem;
+  height: 7vh;
 }
 
 
@@ -74,7 +74,7 @@
       background-color: #041e55;
       align-items: start;
       position: absolute;
-      top: 110px;
+      top: calc(7vh + 40px);
       left: 0;
       width: 100%;
       z-index: 1;

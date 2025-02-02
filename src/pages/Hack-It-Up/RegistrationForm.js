@@ -27,6 +27,7 @@ const validationSchema = Yup.object().shape({
     .required('Team size is required')
     .min(1, 'Team must have at least 1 member')
     .max(4, 'Team cannot exceed 4 members'),
+  devfolioSSLink: Yup.string().required('Devfolio screenshot link is required'),
 });
 
 const TeamRegistrationForm = () => {
