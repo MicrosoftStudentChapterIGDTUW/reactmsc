@@ -7,7 +7,7 @@ let timelineElements = [
         "Brainstorm and conceptualize impactful solutions. Register your ideas now!",
       buttonText: "Register",
       link: "/hackitup/registration",
-      date: "22nd February, 2025",
+      date: "12th February, 2025",
       icon: "school",
     },
     // {
@@ -26,9 +26,9 @@ let timelineElements = [
       location: "Virtual",
       description:
         "In the second round, it’s time to bring ideas to life. This phase is dedicated to turning the proposed solutions into fully functional prototypes.",
-      buttonText: "Submit",
-      link: "/hackitup/submission",
-      date: "22nd February, 2025",
+      buttonText: "Submissions Open Soon",
+      link: "/hackitup",
+      date: "12th February, 2025",
       icon: "work",
     },
     {
@@ -38,7 +38,7 @@ let timelineElements = [
       description:
         "Selected teams will have the unique opportunity to work with expert mentors who will guide them throughout the process",
       buttonText: "Connect",
-      date: "22nd February, 2025",
+      date: "18th February, 2025",
       icon: "school",
     },
     {
