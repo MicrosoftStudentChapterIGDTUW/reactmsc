@@ -47,8 +47,8 @@ let timelineElements = [
       location: "In-Person",
       description:
         "Submit your prototype and present your innovations in the finale!",
-        link: "/hackitup/prizes",
-      buttonText: "Prizes",
+        link: "/hackitup",
+      buttonText: "Prizes To Be Revealed Soon",
       date: "To Be Announced",
       icon: "work",
     },
