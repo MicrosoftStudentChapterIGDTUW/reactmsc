@@ -42,7 +42,7 @@ function HackItUp() {
       <div className="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-8">
     {/* Register Button */}
     <a
-        href="https://console.firebase.google.com"
+        href="https://hackitup-msc.devfolio.co/"
         target="_blank"
         rel="noopener noreferrer"
         className="cursor-pointer bg-blue-600 hover:bg-blue-900 rounded-xl
