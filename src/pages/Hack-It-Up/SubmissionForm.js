@@ -15,19 +15,37 @@ const validationSchema = Yup.object().shape({
   member1Name: Yup.string().required('Team member 1 name is required'),
   member1Email: Yup.string().email('Invalid email').required('Team member 1 email is required'),
   member1Contact: Yup.string().required('Team member 1 contact is required'),
-  member1GradYear: Yup.string().required('Team member 1 graduation year is required'),
+  member1GradYear: Yup.number()
+  .required('Team member 1 graduation year is required')
+  .min(2025, 'Graduation year must be 2025 or later')
+  .max(2028, 'Graduation year must be 2028 or earlier')
+  .integer('Please enter a valid year'),
   member2Name: Yup.string().required('Team member 2 name is required'),
   member2Email: Yup.string().email('Invalid email').required('Team member 2 email is required'),
   member2Contact: Yup.string().required('Team member 2 contact is required'),
-  member2GradYear: Yup.string().required('Team member 2 graduation year is required'),
+  member2GradYear: Yup.number()
+  .required('Team member 2 graduation year is required')
+  .min(2025, 'Graduation year must be 2025 or later')
+  .max(2028, 'Graduation year must be 2028 or earlier')
+  .integer('Please enter a valid year'),
   member3Name: Yup.string(),
   member3Email: Yup.string().email('Invalid email'),
   member3Contact: Yup.string(),
-  member3GradYear: Yup.string(),
+  member3GradYear: Yup.number()
+    .nullable()
+    .transform((value, originalValue) => originalValue === '' ? null : value)
+    .min(2025, 'Graduation year must be 2025 or later')
+    .max(2028, 'Graduation year must be 2028 or earlier')
+    .integer('Please enter a valid year'),
   member4Name: Yup.string(),
   member4Email: Yup.string().email('Invalid email'),
   member4Contact: Yup.string(),
-  member4GradYear: Yup.string(),
+  member4GradYear: Yup.number()
+    .nullable()
+    .transform((value, originalValue) => originalValue === '' ? null : value)
+    .min(2025, 'Graduation year must be 2025 or later')
+    .max(2028, 'Graduation year must be 2028 or earlier')
+    .integer('Please enter a valid year'),
   prototypeLink: Yup.string()
     .required('Prototype/Figma link is required')
     .url('Please enter a valid URL'),
