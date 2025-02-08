@@ -352,7 +352,7 @@ const HackathonSubmission = () => {
               {/* Prototype Link */}
               <Box mb={2} data-aos="fade-up">
                 <label className="block text-blue-600 text-lg font-bold mb-2">
-                  Prototype/Figma Link *
+                  Prototype/Figma Link(If all the members of the team are from 1st year) *
                 </label>
                 <Field
                   name="prototypeLink"
