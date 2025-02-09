@@ -1,352 +1,452 @@
 import React, { useState, useEffect } from 'react';
 import { db } from '../../firebase.config';
 import { collection, addDoc } from 'firebase/firestore';
-
 import * as Yup from 'yup';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { Container, Box, Typography, Button, CircularProgress, TextField } from '@material-ui/core';
+import { Container, Box, Typography, Button, CircularProgress, TextField, Dialog, DialogTitle, DialogContent, DialogActions } from '@material-ui/core';
 import { Formik, Form, Field } from 'formik';
-// import './HackathonSubmission.css';
 
-    // Define validation schema using Yup
-    const validationSchema = Yup.object().shape({
-        teamName: Yup.string()
-          .required('Team name is required')
-          .min(2, 'Team name must be at least 2 characters')
-          .max(50, 'Team name must not exceed 50 characters'),
-        projectName: Yup.string()
-          .required('Project name is required')
-          .min(2, 'Project name must be at least 2 characters')
-          .max(100, 'Project name must not exceed 100 characters'),
-        deployedLink: Yup.string()
-          .required('Deployed link is required')
-          .url('Please enter a valid URL')
-          .matches(
-            /^(https?:\/\/)?([\da-z.-]+)\.([a-z.]{2,6})([/\w .-])\/?$/,
-            'Please enter a valid URL'
-          ),
-        githubRepo: Yup.string()
-          .required('GitHub repository link is required')
-          .url('Please enter a valid URL')
-          .matches(
-            /^(https?:\/\/)?(www\.)?github\.com\/[a-zA-Z0-9_-]+\/[a-zA-Z0-9_-]+$/,
-            'Please enter a valid GitHub repository URL'
-          ),
-        description: Yup.string()
-          .required('Project description is required')
-          .min(50, 'Description must be at least 50 characters')
-          .max(1000, 'Description must not exceed 1000 characters'),
-          techStack: Yup.string().required('Tech stack is required'),
-        });
-    
+const validationSchema = Yup.object().shape({
+  teamName: Yup.string()
+    .required('Team name is required')
+    .min(2, 'Team name must be at least 2 characters')
+    .max(50, 'Team name must not exceed 50 characters'),
+  member1Name: Yup.string().required('Team member 1 name is required'),
+  member1Email: Yup.string().email('Invalid email').required('Team member 1 email is required'),
+  member1Contact: Yup.string().required('Team member 1 contact is required'),
+  member1GradYear: Yup.number()
+  .required('Team member 1 graduation year is required')
+  .min(2025, 'Graduation year must be 2025 or later')
+  .max(2028, 'Graduation year must be 2028 or earlier')
+  .integer('Please enter a valid year'),
+  member2Name: Yup.string().required('Team member 2 name is required'),
+  member2Email: Yup.string().email('Invalid email').required('Team member 2 email is required'),
+  member2Contact: Yup.string().required('Team member 2 contact is required'),
+  member2GradYear: Yup.number()
+  .required('Team member 2 graduation year is required')
+  .min(2025, 'Graduation year must be 2025 or later')
+  .max(2028, 'Graduation year must be 2028 or earlier')
+  .integer('Please enter a valid year'),
+  member3Name: Yup.string(),
+  member3Email: Yup.string().email('Invalid email'),
+  member3Contact: Yup.string(),
+  member3GradYear: Yup.number()
+    .nullable()
+    .transform((value, originalValue) => originalValue === '' ? null : value)
+    .min(2025, 'Graduation year must be 2025 or later')
+    .max(2028, 'Graduation year must be 2028 or earlier')
+    .integer('Please enter a valid year'),
+  member4Name: Yup.string(),
+  member4Email: Yup.string().email('Invalid email'),
+  member4Contact: Yup.string(),
+  member4GradYear: Yup.number()
+    .nullable()
+    .transform((value, originalValue) => originalValue === '' ? null : value)
+    .min(2025, 'Graduation year must be 2025 or later')
+    .max(2028, 'Graduation year must be 2028 or earlier')
+    .integer('Please enter a valid year'),
+  prototypeLink: Yup.string()
+    .required('Prototype/Figma link is required')
+    .url('Please enter a valid URL'),
+  githubRepo: Yup.string()
+    .required('GitHub repository link is required')
+});
+
+const initialValues = {
+  teamName: '',
+  member1Name: '',
+  member1Email: '',
+  member1Contact: '',
+  member1GradYear: '',
+  member2Name: '',
+  member2Email: '',
+  member2Contact: '',
+  member2GradYear: '',
+  member3Name: '',
+  member3Email: '',
+  member3Contact: '',
+  member3GradYear: '',
+  member4Name: '',
+  member4Email: '',
+  member4Contact: '',
+  member4GradYear: '',
+  prototypeLink: '',
+  githubRepo: '',
+};
+
 const HackathonSubmission = () => {
-    const [formData, setFormData] = useState({
-        teamName: '',
-        projectName: '',
-        deployedLink: '',
-        githubRepo: '',
-        description: '',
-        techStack: ''
-    });
-    const [loading, setLoading] = useState(false);
-    const [error, setErrors] = useState({});
-    const [success, setSuccess] = useState(false);    
+  const [loading, setLoading] = useState(false);
+  const [openDialog, setOpenDialog] = useState(false);
+  const [openErrorDialog, setOpenErrorDialog] = useState(false);
+  const [errorMessages, setErrorMessages] = useState([]);
 
-    const validateField = async (name, value) => {
-        try {
-          await Yup.reach(validationSchema, name).validate(value);
-          setErrors(prev => ({ ...prev, [name]: '' }));
-        } catch (error) {
-          setErrors(prev => ({ ...prev, [name]: error.message }));
-        }
-    };
+  useEffect(() => {
+    AOS.init();
+  }, []);
 
+  const handleSubmit = async (values, { setSubmitting, resetForm }) => {
+    setLoading(true);
+    setSubmitting(true);
 
-    const handleChange = (e) => {
-        const { name, value } = e.target;
-        setFormData(prev => ({ ...prev, [name]: value }));
-        validateField(name, value);
-        setSuccess(false);
-      };
+    try {
+      let errorList = [];
 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        setLoading(true);
-        
-        try {
-            // Validate all fields
-            await validationSchema.validate(formData, { abortEarly: false });
-            
-            // Submit to Firebase
-            await addDoc(collection(db, 'submissions'), {
-            ...formData,
-            submittedAt: new Date(),
-            });
-            
-            // Reset form
-            setFormData({
-            teamName: '',
-            projectName: '',
-            deployedLink: '',
-            githubRepo: '',
-            description: '',
-            techStack: [],
-            customTechStack: ''
-            });
-            setErrors({});
-            setSuccess(true);
-            
-        } catch (error) {
-            if (error instanceof Yup.ValidationError) {
-            // Handle Yup validation errors
-            const validationErrors = {};
-            error.inner.forEach(err => {
-                validationErrors[err.path] = err.message;
-            });
-            setErrors(validationErrors);
-            } else {
-            // Handle Firebase or other errors
-            setErrors({ submit: 'Failed to submit. Please try again.' });
-            console.error('Submission error:', error);
-            }
-        } finally {
-            setLoading(false);
-        }
-    };
+      // Required fields validation
+      if (!values.teamName) errorList.push("Team Name is required");
+      if (!values.member1Name) errorList.push("Team Member 1 Name is required");
+      if (!values.member1Email) errorList.push("Team Member 1 Email is required");
+      if (!values.member1Contact) errorList.push("Team Member 1 Contact is required");
+      if (!values.member1GradYear) errorList.push("Team Member 1 Graduation Year is required");
+      if (!values.member2Name) errorList.push("Team Member 2 Name is required");
+      if (!values.member2Email) errorList.push("Team Member 2 Email is required");
+      if (!values.member2Contact) errorList.push("Team Member 2 Contact is required");
+      if (!values.member2GradYear) errorList.push("Team Member 2 Graduation Year is required");
+      if (!values.prototypeLink) errorList.push("Prototype/Figma Link is required");
+      if (!values.githubRepo) errorList.push("GitHub Repository Link is required");
 
-    useEffect(() => {
-        AOS.init();
-      }, []);
+      // Email validation
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (values.member1Email && !emailRegex.test(values.member1Email)) {
+        errorList.push("Team Member 1 Email is invalid");
+      }
+      if (values.member2Email && !emailRegex.test(values.member2Email)) {
+        errorList.push("Team Member 2 Email is invalid");
+      }
 
-      /*
-      const initialTechOptions = [
-        'Others', // Move Others to the top
-        'Vercel', // Place Vercel at the top
-        'React', 'Node.js', 'Express', 'MongoDB', 'Firebase', 'Tailwind CSS', 'Bootstrap', 'AWS',
-        'Angular', 'Vue.js', 'Django', 'Flask', 'PostgreSQL', 'MySQL', 'SQLite', 'GraphQL', 'Docker',
-        'Kubernetes', 'HTML', 'Git', 'GitHub Actions', 'Azure', 'Netlify', 'Sass', 'Less', 'Webpack',
-        'CSS', 'MobX', 'Next.js', 'Nuxt.js', 'Gatsby', 'Render', 'Ionic', 'Cordova'
-      ].sort((a, b) => a === 'Others' ? -1 : b === 'Others' ? 1 : a.localeCompare(b));
+      // URL validation
+      const urlRegex = /^(https?:\/\/)?([\da-z.-]+)\.([a-z.]{2,6})([/\w .-]*)*\/?$/;
+      if (values.prototypeLink && !urlRegex.test(values.prototypeLink)) {
+        errorList.push("Prototype/Figma Link is invalid");
+      }
+      if (values.githubRepo && values.githubRepo !== "NA" && !urlRegex.test(values.githubRepo)) {
+        errorList.push("GitHub Repository Link is invalid");
+      }
+
+      if (errorList.length > 0) {
+        setErrorMessages(errorList);
+        setOpenErrorDialog(true);
+        setLoading(false);
+        setSubmitting(false);
+        return;
+      }
+
+      await addDoc(collection(db, 'submissions'), {
+        ...values,
+        submittedAt: new Date(),
+      });
       
-        const [showCustomTechStack, setShowCustomTechStack] = useState(false);
-        const [techOptions, setTechOptions] = useState(initialTechOptions);
+      setOpenDialog(true);
+      resetForm();
+      
+    } catch (error) {
+      console.error('Submission error:', error);
+      setErrorMessages(['Failed to submit. Please try again.']);
+      setOpenErrorDialog(true);
+    } finally {
+      setLoading(false);
+      setSubmitting(false);
+    }
+  };
 
-        const handleTechStackChange = (e) => {
-            const selectedTech = e.target.value;
-            if (selectedTech === 'Others') {
-                setShowCustomTechStack(true);
-            } else if (selectedTech && !formData.techStack.includes(selectedTech)) {
-                setFormData({
-                ...formData,
-                techStack: [...formData.techStack, selectedTech],
-                });
-                setTechOptions(techOptions.filter((tech) => tech !== selectedTech));
-                setShowCustomTechStack(false);
-            }
-            e.target.value = '';
-            };
-    
-      const handleCustomTechStackChange = (e) => {
-        setFormData({
-          ...formData,
-          customTechStack: e.target.value,
-        });
-      };
-    
-      const addCustomTechStack = () => {
-        if (formData.customTechStack && !formData.techStack.includes(formData.customTechStack)) {
-          setFormData({
-            ...formData,
-            techStack: [...formData.techStack, formData.customTechStack],
-            customTechStack: ''
-          });
-          setShowCustomTechStack(false);
-        }
-      };
-    
-      const removeTechStack = (tech) => {
-        setFormData({
-          ...formData,
-          techStack: formData.techStack.filter((t) => t !== tech),
-        });
-        setTechOptions([...techOptions, tech].sort());
-      };
-      */
+  const handleCloseDialog = () => {
+    setOpenDialog(false);
+    window.location.reload();
+  };
 
-    return (
-        <Container maxWidth="sm">
-        <Box my={4}>
-          <Typography variant="h4" component="h1" gutterBottom className="text-4xl text-darkblue font-bold py-4">
-            Hackathon Project Submission
-          </Typography>
-    
-          <Formik
-            initialValues={{
-              teamName: '',
-              projectName: '',
-              deployedLink: '',
-              githubRepo: '',
-              description: '',
-              techStack: '',
-            }}
-            validationSchema={validationSchema}
-            onSubmit={handleSubmit}
-          >
-            {({ errors, touched }) => (
-              <Form className="space-y-4 p-6 bg-white shadow-lg rounded-lg">
-                <Box mb={2} data-aos="fade-up">
-                  <label className="block text-blue-600 text-lg font-bold mb-2" htmlFor="teamName">
-                    Team Name *
-                  </label>
-                  <Field
-                    name="teamName"
-                    as={TextField}
-                    placeholder="Enter your team name"
-                    fullWidth
-                    className="p-2 text-lg shadow-md rounded border border-gray-300"
-                    error={touched.teamName && Boolean(errors.teamName)}
-                    helperText={touched.teamName && errors.teamName}
-                  />
-                </Box>
-    
-                <Box mb={2} data-aos="fade-up">
-                  <label className="block text-blue-600 text-lg font-bold mb-2" htmlFor="projectName">
-                    Project Name *
-                  </label>
-                  <Field
-                    name="projectName"
-                    as={TextField}
-                    placeholder="Enter your project name"
-                    fullWidth
-                    className="p-2 text-lg shadow-md rounded border border-gray-300"
-                    error={touched.projectName && Boolean(errors.projectName)}
-                    helperText={touched.projectName && errors.projectName}
-                  />
-                </Box>
+  const handleCloseErrorDialog = () => {
+    setOpenErrorDialog(false);
+  };
+  return (
+    <Container maxWidth="sm">
+      <Box my={4}>
+        <Typography variant="h4" component="h1" gutterBottom className="text-4xl text-darkblue font-bold py-4">
+          Hackathon Project Submission
+        </Typography>
 
-                <Box mb={2} data-aos="fade-up">
-              <label className="block text-blue-600 text-lg font-bold mb-2" htmlFor="deployedLink">
-                Deployed Link *
-              </label>
-              <Field
-                name="deployedLink"
-                as={TextField}
-                placeholder="https://your-project.com"
+        <Formik
+          initialValues={initialValues}
+          validationSchema={validationSchema}
+          onSubmit={handleSubmit}
+          validateOnBlur={true}
+          validateOnChange={true}
+        >
+          {({ errors, touched, isSubmitting }) => (
+            <Form className="space-y-4 p-6 bg-white shadow-lg rounded-lg">
+              {/* Team Name */}
+              <Box mb={2} data-aos="fade-up">
+                <label className="block text-blue-600 text-lg font-bold mb-2">
+                  Team Name *
+                </label>
+                <Field
+                  name="teamName"
+                  as={TextField}
+                  placeholder="Enter your team name"
+                  fullWidth
+                  error={touched.teamName && errors.teamName}
+                  helperText={touched.teamName && errors.teamName}
+                  className="p-2 text-lg shadow-md rounded border border-gray-300"
+                />
+              </Box>
+            
+              {/* Team Member 1 */}
+              <Typography variant="h6" className="text-blue-600 font-bold mt-4">Team Member 1 (Required)</Typography>
+              <Box mb={2} data-aos="fade-up">
+                <Field
+                  name="member1Name"
+                  as={TextField}
+                  label="Name *"
+                  fullWidth
+                  error={touched.member1Name && errors.member1Name}
+                  helperText={touched.member1Name && errors.member1Name}
+                  className="mb-2"
+                />
+                <Field
+                  name="member1Email"
+                  as={TextField}
+                  label="Email *"
+                  fullWidth
+                  error={touched.member1Email && errors.member1Email}
+                  helperText={touched.member1Email && errors.member1Email}
+                  className="mb-2"
+                />
+                <Field
+                  name="member1Contact"
+                  as={TextField}
+                  label="Contact Number *"
+                  fullWidth
+                  error={touched.member1Contact && errors.member1Contact}
+                  helperText={touched.member1Contact && errors.member1Contact}
+                  className="mb-2"
+                />
+                <Field
+                  name="member1GradYear"
+                  as={TextField}
+                  label="Graduation Year *"
+                  fullWidth
+                  error={touched.member1GradYear && errors.member1GradYear}
+                  helperText={touched.member1GradYear && errors.member1GradYear}
+                />
+              </Box>
+            
+              {/* Team Member 2 */}
+              <Typography variant="h6" className="text-blue-600 font-bold mt-4">Team Member 2 (Required)</Typography>
+              <Box mb={2} data-aos="fade-up">
+                <Field
+                  name="member2Name"
+                  as={TextField}
+                  label="Name *"
+                  fullWidth
+                  error={touched.member2Name && errors.member2Name}
+                  helperText={touched.member2Name && errors.member2Name}
+                  className="mb-2"
+                />
+                <Field
+                  name="member2Email"
+                  as={TextField}
+                  label="Email *"
+                  fullWidth
+                  error={touched.member2Email && errors.member2Email}
+                  helperText={touched.member2Email && errors.member2Email}
+                  className="mb-2"
+                />
+                <Field
+                  name="member2Contact"
+                  as={TextField}
+                  label="Contact Number *"
+                  fullWidth
+                  error={touched.member2Contact && errors.member2Contact}
+                  helperText={touched.member2Contact && errors.member2Contact}
+                  className="mb-2"
+                />
+                <Field
+                  name="member2GradYear"
+                  as={TextField}
+                  label="Graduation Year *"
+                  fullWidth
+                  error={touched.member2GradYear && errors.member2GradYear}
+                  helperText={touched.member2GradYear && errors.member2GradYear}
+                />
+              </Box>
+            
+              {/* Team Member 3 */}
+              <Typography variant="h6" className="text-blue-600 font-bold mt-4">Team Member 3 (Optional)</Typography>
+              <Box mb={2} data-aos="fade-up">
+                <Field
+                  name="member3Name"
+                  as={TextField}
+                  label="Name"
+                  fullWidth
+                  error={touched.member3Name && errors.member3Name}
+                  helperText={touched.member3Name && errors.member3Name}
+                  className="mb-2"
+                />
+                <Field
+                  name="member3Email"
+                  as={TextField}
+                  label="Email"
+                  fullWidth
+                  error={touched.member3Email && errors.member3Email}
+                  helperText={touched.member3Email && errors.member3Email}
+                  className="mb-2"
+                />
+                <Field
+                  name="member3Contact"
+                  as={TextField}
+                  label="Contact Number"
+                  fullWidth
+                  error={touched.member3Contact && errors.member3Contact}
+                  helperText={touched.member3Contact && errors.member3Contact}
+                  className="mb-2"
+                />
+                <Field
+                  name="member3GradYear"
+                  as={TextField}
+                  label="Graduation Year"
+                  fullWidth
+                  error={touched.member3GradYear && errors.member3GradYear}
+                  helperText={touched.member3GradYear && errors.member3GradYear}
+                />
+              </Box>
+            
+              {/* Team Member 4 */}
+              <Typography variant="h6" className="text-blue-600 font-bold mt-4">Team Member 4 (Optional)</Typography>
+              <Box mb={2} data-aos="fade-up">
+                <Field
+                  name="member4Name"
+                  as={TextField}
+                  label="Name"
+                  fullWidth
+                  error={touched.member4Name && errors.member4Name}
+                  helperText={touched.member4Name && errors.member4Name}
+                  className="mb-2"
+                />
+                <Field
+                  name="member4Email"
+                  as={TextField}
+                  label="Email"
+                  fullWidth
+                  error={touched.member4Email && errors.member4Email}
+                  helperText={touched.member4Email && errors.member4Email}
+                  className="mb-2"
+                />
+                <Field
+                  name="member4Contact"
+                  as={TextField}
+                  label="Contact Number"
+                  fullWidth
+                  error={touched.member4Contact && errors.member4Contact}
+                  helperText={touched.member4Contact && errors.member4Contact}
+                  className="mb-2"
+                />
+                <Field
+                  name="member4GradYear"
+                  as={TextField}
+                  label="Graduation Year"
+                  fullWidth
+                  error={touched.member4GradYear && errors.member4GradYear}
+                  helperText={touched.member4GradYear && errors.member4GradYear}
+                />
+              </Box>
+            
+              {/* Prototype Link */}
+              <Box mb={2} data-aos="fade-up">
+                <label className="block text-blue-600 text-lg font-bold mb-2">
+                  Deployed Link/Figma Link(If all the members of the team are from 1st year) *
+                </label>
+                <Field
+                  name="prototypeLink"
+                  as={TextField}
+                  placeholder="https://figma.com/..."
+                  fullWidth
+                  error={touched.prototypeLink && errors.prototypeLink}
+                  helperText={touched.prototypeLink && errors.prototypeLink}
+                  className="p-2 text-lg shadow-md rounded border border-gray-300"
+                />
+              </Box>
+            
+              {/* GitHub Repo */}
+              <Box mb={2} data-aos="fade-up">
+                <label className="block text-blue-600 text-lg font-bold mb-2">
+                  GitHub Repository * (Write NA if all team members are first years)
+                </label>
+                <Field
+                  name="githubRepo"
+                  as={TextField}
+                  placeholder="https://github.com/... or NA"
+                  fullWidth
+                  error={touched.githubRepo && errors.githubRepo}
+                  helperText={touched.githubRepo && errors.githubRepo}
+                  className="p-2 text-lg shadow-md rounded border border-gray-300"
+                />
+              </Box>
+            
+              {/* Submit Button */}
+              <Button
+                type="submit"
+                variant="contained"
+                color="primary"
                 fullWidth
-                className="p-2 text-lg shadow-md rounded border border-gray-300"
-                error={touched.deployedLink && Boolean(errors.deployedLink)}
-                helperText={touched.deployedLink && errors.deployedLink}
-              />
-            </Box>
-
-            <Box mb={2} data-aos="fade-up">
-              <label className="block text-blue-600 text-lg font-bold mb-2" htmlFor="githubRepo">
-                GitHub Repository *
-              </label>
-              <Field
-                name="githubRepo"
-                as={TextField}
-                placeholder="https://github.com/username/repo"
-                fullWidth
-                className="p-2 text-lg shadow-md rounded border border-gray-300"
-                error={touched.githubRepo && Boolean(errors.githubRepo)}
-                helperText={touched.githubRepo && errors.githubRepo}
-              />
-            </Box>
-
-            <Box mb={2} data-aos="fade-up">
-              <label className="block text-blue-600 text-lg font-bold mb-2" htmlFor="techStack">
-                Tech Stack *
-              </label>
-              <Field
-                name="techStack"
-                as={TextField}
-                placeholder="HTML, CSS, Python, ReactJS, MongoDB etc"
-                fullWidth
-                className="p-2 text-lg shadow-md rounded border border-gray-300"
-                error={touched.techStack && Boolean(errors.techStack)}
-                helperText={touched.techStack && errors.techStack}
-              />
-            </Box>
-
-
-                {/* <div className="form-group mb-4" data-aos="fade-up">
-                <label htmlFor="techStack" className="block text-blue-600 text-lg font-bold mb-2">Tech Stack *</label>
-                <select
-                    id="techStack"
-                    name="techStack"
-                    onChange={handleTechStackChange}
-                    className="p-2 text-lg shadow-md rounded border border-gray-300 w-full"
-                >
-                    <option value="">Select a technology</option>
-                    {techOptions.map((tech) => (
-                    <option key={tech} value={tech}>{tech}</option>
-                    ))}
-                    <option value="Others">Others</option>
-                </select>
-                {showCustomTechStack && (
-                    <div className="mt-2 flex items-center">
-                    <input
-                        type="text"
-                        value={formData.customTechStack}
-                        onChange={handleCustomTechStackChange}
-                        placeholder="Enter custom tech stack"
-                        className="p-2 text-lg shadow-md rounded border border-gray-300 w-full"
-                    />
-                    <button type="button" onClick={addCustomTechStack} className="ml-2 p-2 bg-blue-600 text-white text-lg font-bold rounded shadow-md hover:bg-blue-700">
-                        Add
-                    </button>
-                    </div>
-                )}
-                <div className="mt-2 flex flex-wrap gap-2">
-                {formData.techStack.map((tech) => (
-                    <div key={tech} className="flex items-center justify-between p-2 bg-gray-200 rounded shadow-md w-auto">
-                    <span className="mr-2">{tech}</span>
-                    <button type="button" onClick={() => removeTechStack(tech)} className="text-black font-bold">X</button>
-                    </div>
-                ))}
-                </div>
-                </div>
-                */}
-
-                <Box mb={2} data-aos="fade-up">
-              <label className="block text-blue-600 text-lg font-bold mb-2" htmlFor="description">
-                Project Description *
-              </label>
-              <Field
-                name="description"
-                as={TextField}
-                placeholder="Describe your project, its features, and how it solves the problem"
-                fullWidth
-                multiline
-                rows={5}
-                className="p-2 text-lg shadow-md rounded border border-gray-300"
-                error={touched.description && Boolean(errors.description)}
-                helperText={touched.description && errors.description}
-              />
-            </Box>
-
-            {errors.submit && <div className="error-message text-red-600 mb-4">{errors.submit}</div>}
-            {success && <div className="success-message text-green-600 mb-4">Project submitted successfully!</div>}
-
-            <Button
-            data-aos="fade-up"
-            type="submit"
-            variant="contained"
-            color="primary"
-            fullWidth
-            className="w-full p-2 bg-blue-600 text-white text-lg font-bold rounded shadow-md hover:bg-blue-700"
-            disabled={loading}
-            >
-            {loading ? <CircularProgress size={24} /> : 'Submit Project'}
-            </Button>
+                className="w-full p-2 bg-blue-600 text-white text-lg font-bold rounded shadow-md hover:bg-blue-700"
+                disabled={loading || isSubmitting}
+              >
+                {loading ? <CircularProgress size={24} /> : 'Submit Project'}
+              </Button>
             </Form>
-        )}
+          )}
         </Formik>
+
+        {/* Success Dialog */}
+        <Dialog
+          open={openDialog}
+          onClose={handleCloseDialog}
+          aria-labelledby="alert-dialog-title"
+        >
+          <DialogTitle id="alert-dialog-title">
+            {"Submission Successful!"}
+          </DialogTitle>
+          <DialogContent>
+            <Typography>
+              Your project has been successfully submitted.
+            </Typography>
+          </DialogContent>
+          <DialogActions>
+            <Button onClick={handleCloseDialog} color="primary" autoFocus>
+              OK
+            </Button>
+          </DialogActions>
+        </Dialog>
+
+        {/* Error Dialog */}
+        <Dialog
+          open={openErrorDialog}
+          onClose={handleCloseErrorDialog}
+          aria-labelledby="error-dialog-title"
+        >
+          <DialogTitle id="error-dialog-title" style={{ color: '#f44336' }}>
+            {"Required Fields Missing"}
+          </DialogTitle>
+          <DialogContent>
+            <Typography color="error">
+              Please fill in all required fields:
+            </Typography>
+            <ul style={{ marginTop: '10px', color: '#f44336' }}>
+              {errorMessages.map((message, index) => (
+                <li key={index} style={{ marginBottom: '5px' }}>
+                  • {message}
+                </li>
+              ))}
+            </ul>
+          </DialogContent>
+          <DialogActions>
+            <Button onClick={handleCloseErrorDialog} color="primary" autoFocus>
+              OK
+            </Button>
+          </DialogActions>
+        </Dialog>
       </Box>
     </Container>
-    );
+  );
 };
 
 export default HackathonSubmission;
