@@ -5,8 +5,8 @@ let timelineElements = [
       location: "Virtual",
       description:
         "Brainstorm and conceptualize impactful solutions. Register your ideas now!",
-      buttonText: "Register on Devfolio",
-      link: "/hackitup",
+      buttonText: "Register Now",
+      link: "/hackitup/registration",
       date: "12th February, 2025",
       icon: "school",
     },
