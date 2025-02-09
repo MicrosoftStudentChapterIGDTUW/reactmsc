@@ -14,7 +14,9 @@ const validationSchema = Yup.object().shape({
     .max(50, 'Team name must not exceed 50 characters'),
   member1Name: Yup.string().required('Team member 1 name is required'),
   member1Email: Yup.string().email('Invalid email').required('Team member 1 email is required'),
-  member1Contact: Yup.string().required('Team member 1 contact is required'),
+  member1Contact: Yup.string()
+    .required('Team member 1 contact is required')
+    .matches(/^\d{10}$/, 'Contact number must be exactly 10 digits'),
   member1GradYear: Yup.number()
   .required('Team member 1 graduation year is required')
   .min(2025, 'Graduation year must be 2025 or later')
@@ -22,7 +24,9 @@ const validationSchema = Yup.object().shape({
   .integer('Please enter a valid year'),
   member2Name: Yup.string().required('Team member 2 name is required'),
   member2Email: Yup.string().email('Invalid email').required('Team member 2 email is required'),
-  member2Contact: Yup.string().required('Team member 2 contact is required'),
+  member2Contact: Yup.string()
+    .required('Team member 2 contact is required')
+    .matches(/^\d{10}$/, 'Contact number must be exactly 10 digits'),
   member2GradYear: Yup.number()
   .required('Team member 2 graduation year is required')
   .min(2025, 'Graduation year must be 2025 or later')
@@ -30,7 +34,7 @@ const validationSchema = Yup.object().shape({
   .integer('Please enter a valid year'),
   member3Name: Yup.string(),
   member3Email: Yup.string().email('Invalid email'),
-  member3Contact: Yup.string(),
+  member3Contact: Yup.string().matches(/^\d{10}$/, 'Contact number must be exactly 10 digits'),
   member3GradYear: Yup.number()
     .nullable()
     .transform((value, originalValue) => originalValue === '' ? null : value)
@@ -39,7 +43,7 @@ const validationSchema = Yup.object().shape({
     .integer('Please enter a valid year'),
   member4Name: Yup.string(),
   member4Email: Yup.string().email('Invalid email'),
-  member4Contact: Yup.string(),
+  member4Contact: Yup.string().matches(/^\d{10}$/, 'Contact number must be exactly 10 digits'),
   member4GradYear: Yup.number()
     .nullable()
     .transform((value, originalValue) => originalValue === '' ? null : value)
