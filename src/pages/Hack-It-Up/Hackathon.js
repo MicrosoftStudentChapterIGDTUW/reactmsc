@@ -41,10 +41,8 @@ function HackItUp() {
 
       <div className="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-8">
     {/* Register Button */}
-    <a
-        href="https://hackitup-msc.devfolio.co/"
-        target="_blank"
-        rel="noopener noreferrer"
+    <div
+        onClick={() => navigate("/hackitup/registration")}
         className="cursor-pointer bg-blue-600 hover:bg-blue-900 rounded-xl
         text-white transition duration-300 ease-in-out text-center
         transform hover:scale-105 my-4 md:my-10 w-64 md:w-auto"
@@ -53,7 +51,7 @@ function HackItUp() {
         data-aos-duration="200"
     >
         Register Now
-    </a>
+    </div>
 
     {/* Guidelines Button */}
     <a
