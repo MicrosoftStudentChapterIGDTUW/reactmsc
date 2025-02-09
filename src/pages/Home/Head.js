@@ -28,7 +28,7 @@ function Head() {
       {/* Image Container */}
       <div className="w-full relative">
         <img
-          src="./images/HACK-IT-UP-HomePage.jpg"
+          src="./images/HACK-IT-UP-homepage.png"
           alt="hack it up banner"
           className="w-full h-auto object-cover"
         />
