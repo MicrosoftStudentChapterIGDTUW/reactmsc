@@ -119,7 +119,7 @@ const HackathonSubmission = () => {
       }
 
       // URL validation
-      const urlRegex = /^(https?:\/\/)?([\da-z.-]+)\.([a-z.]{2,6})([/\w .-]*)*\/?$/;
+      const urlRegex = /^(https?:\/\/)?([\da-z.-]+)\.([a-z.]{2,6})([/\w .-])(\?.)?(#.)?$/;
       if (values.prototypeLink && !urlRegex.test(values.prototypeLink)) {
         errorList.push("Prototype/Figma Link is invalid");
       }
