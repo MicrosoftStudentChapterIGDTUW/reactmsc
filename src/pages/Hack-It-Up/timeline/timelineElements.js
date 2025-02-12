@@ -28,7 +28,7 @@ let timelineElements = [
         "In the second round, it’s time to bring ideas to life. This phase is dedicated to turning the proposed solutions into fully functional prototypes.",
       buttonText: "Submissions Open",
       link: "/hackitup/submission",
-      date: "12th February, 2025",
+      date: "14th February, 2025",
       icon: "work",
     },
     {
