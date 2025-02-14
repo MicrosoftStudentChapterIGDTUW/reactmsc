@@ -4,6 +4,7 @@ import devfoliologo from "./images/sponsors/devfolio.png";
 import ethindialogo from "./images/sponsors/ethindia.svg";
 import interviewbuddylogo from "./images/sponsors/interviewbuddy.svg";
 import polygonlogo from './images/sponsors/polygon.png';
+import newagelogo from './images/sponsors/new_age_logo.png';
 
 const Sponsorship = () => {
   const sponsors = [
@@ -11,6 +12,7 @@ const Sponsorship = () => {
     { id: 2, image: polygonlogo, alt: "Polygon" },
     { id: 3, image: ethindialogo, alt: "EthIndia" },
     { id: 4, image: interviewbuddylogo, alt: "Interview Buddy" },
+    { id: 5, image: newagelogo, alt: "New Age"},
   ];
 
   return (

@@ -34,7 +34,9 @@ import ScrollToTop from "./ScrollToTop";
 import HackItUp from "./pages/Hack-It-Up/Hackathon";
 
 import RegistrationForm from "./pages/Hack-It-Up/RegistrationForm";
-import SubmissionForm from "./pages/Hack-It-Up/SubmissionForm";
+// import SubmissionForm from "./pages/Hack-It-Up/SubmissionForm";
+import SubmissionRedirect from "./pages/Hack-It-Up/SubmissionRedirect";
+
 
 
 function App() {
@@ -75,7 +77,9 @@ function App() {
             <Route path="/upevent" element={<Upcoming />} />
             <Route path="/hackitup" element={<HackItUp />} />
             <Route path="/hackitup/registration" element={<RegistrationForm />} />
-            <Route path="/hackitup/submission" element={<SubmissionForm />} />
+            {/* <Route path="/hackitup/submission" element={<SubmissionForm />} /> */}
+            <Route path="/hackitup/submission" element={<SubmissionRedirect />} />
+
 
 
           </Routes>

@@ -38,18 +38,18 @@ let timelineElements = [
       description:
         "Selected teams will have the unique opportunity to work with expert mentors who will guide them throughout the process",
       buttonText: "Connect",
-      date: "18th February, 2025",
+      date: "15th-17th February, 2025",
       icon: "school",
     },
     {
       id: 4,
       title: "FINALE",
-      location: "In-Person",
+      location: "IGDTUW Seminar Hall",
       description:
         "Submit your prototype and present your innovations in the finale!",
         link: "/hackitup",
       buttonText: "Prizes To Be Revealed Soon",
-      date: "To Be Announced",
+      date: "18th February, 2025",
       icon: "work",
     },
     // {
