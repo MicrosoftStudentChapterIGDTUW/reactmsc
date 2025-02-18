@@ -5,6 +5,7 @@ import Timeline from "./timeline/Timeline";
 import Tracks from "./Tracks";
 import Sponsorship from "./Sponsorship";
 import Faqhack from "./Faqhack";
+import PrizeRankings from "./Prizes";
 function HackItUp() {
   const navigate = useNavigate();
   const [isMobile, setIsMobile] = useState(false);
@@ -40,47 +41,47 @@ function HackItUp() {
       </div>
 
       <div className="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-8">
-    {/* Register Button */}
-    <div
-        onClick={() => navigate("/hackitup/registration")}
-        className="cursor-pointer bg-blue-600 hover:bg-blue-900 rounded-xl
+        {/* Register Button */}
+        <div
+          onClick={() => navigate("/hackitup/registration")}
+          className="cursor-pointer bg-blue-600 hover:bg-blue-900 rounded-xl
         text-white transition duration-300 ease-in-out text-center
         transform hover:scale-105 my-4 md:my-10 w-64 md:w-auto"
-        style={buttonStyle}
-        data-aos="fade-up"
-        data-aos-duration="200"
-    >
-        Register Now
-    </div>
+          style={buttonStyle}
+          data-aos="fade-up"
+          data-aos-duration="200"
+        >
+          Register Now
+        </div>
 
-    {/* Guidelines Button */}
-    <a
-        href="https://docs.google.com/document/d/1iH230OE78i7oN-ZIyFKEKowJxuVYn4tSJZ3HM7_2K8Q/edit?tab=t.0"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="cursor-pointer bg-blue-600 hover:bg-blue-900 rounded-xl
+        {/* Guidelines Button */}
+        <a
+          href="https://docs.google.com/document/d/1iH230OE78i7oN-ZIyFKEKowJxuVYn4tSJZ3HM7_2K8Q/edit?tab=t.0"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="cursor-pointer bg-blue-600 hover:bg-blue-900 rounded-xl
         text-white transition duration-300 ease-in-out text-center
         transform hover:scale-105 my-4 md:my-10 w-64 md:w-auto"
-        style={buttonStyle}
-        data-aos="fade-up"
-        data-aos-duration="200"
-    >
-        Rules & Guidelines
-    </a>
+          style={buttonStyle}
+          data-aos="fade-up"
+          data-aos-duration="200"
+        >
+          Rules & Guidelines
+        </a>
 
-    {/* Submit Button */}
-    <div
-        onClick={() => navigate("/hackitup/submission")}
-        className="cursor-pointer bg-blue-600 hover:bg-blue-900 rounded-xl
+        {/* Submit Button */}
+        <div
+          onClick={() => navigate("/hackitup/submission")}
+          className="cursor-pointer bg-blue-600 hover:bg-blue-900 rounded-xl
         text-white transition duration-300 ease-in-out text-center
         transform hover:scale-105 my-4 md:my-10 w-64 md:w-auto"
-        style={buttonStyle}
-        data-aos="fade-up"
-        data-aos-duration="200"
-    >
-        Submit Now
-    </div>
-</div>
+          style={buttonStyle}
+          data-aos="fade-up"
+          data-aos-duration="200"
+        >
+          Submit Now
+        </div>
+      </div>
 
       {/* Timeline Section */}
       <section className="w-full px-4 md:px-8 my-8">
@@ -99,6 +100,9 @@ function HackItUp() {
       </section>
       <section className="w-full px-4 md:px-8 my-8">
         <Sponsorship />
+      </section>
+      <section className="w-full px-4 md:px-8 my-8">
+        <PrizeRankings />
       </section>
       <section className="w-full px-4 md:px-8 my-8">
         <Faqhack />
