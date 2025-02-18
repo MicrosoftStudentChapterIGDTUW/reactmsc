@@ -36,7 +36,7 @@ import HackItUp from "./pages/Hack-It-Up/Hackathon";
 import RegistrationForm from "./pages/Hack-It-Up/RegistrationForm";
 // import SubmissionForm from "./pages/Hack-It-Up/SubmissionForm";
 import SubmissionRedirect from "./pages/Hack-It-Up/SubmissionRedirect";
-
+import PrizeRankings from "./pages/Hack-It-Up/Prizes";
 
 
 function App() {
@@ -79,7 +79,7 @@ function App() {
             <Route path="/hackitup/registration" element={<RegistrationForm />} />
             {/* <Route path="/hackitup/submission" element={<SubmissionForm />} /> */}
             <Route path="/hackitup/submission" element={<SubmissionRedirect />} />
-
+            <Route path="/hackitup/prizes" element={<PrizeRankings />}/>
 
 
           </Routes>

@@ -18,40 +18,40 @@ const PrizeRankings = () => {
       rank: "Third Prize",
       reward: "₹3000",
       color: "bg-gradient-to-b from-orange-600 to-orange-800",
-      image: "/images/third_prize_msc.png", // Ensure correct path
+      image: "/images/third_prize_msc.png",
     },
   ];
 
   return (
-    <div className="w-full bg-white p-4 sm:p-8">
-      <h1 className="text-3xl sm:text-4xl font-bold text-center mb-8 sm:mb-12">
+    <div className="w-full bg-white py-8 px-4 sm:px-6 lg:px-8">
+      <h1 className="mb-8 sm:mb-12 text-4xl sm:text-5xl lg:text-6xl text-center font-['Bebas_Neue'] text-[#012147] tracking-wide">
         Prizes
       </h1>
 
-      <div className="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-8 max-w-6xl mx-auto">
+      <div className="flex flex-col sm:flex-row justify-center items-center gap-6 max-w-5xl mx-auto">
         {prizes.map((prize, index) => (
           <div
             key={prize.rank}
-            className="w-full md:w-[300px] transform hover:-translate-y-2 transition-all duration-300"
+            className={`w-full sm:w-[250px] lg:w-[280px] transform hover:-translate-y-2 transition-all duration-300 ${
+              index === 0 ? "sm:scale-105" : ""
+            }`}
           >
-            <div
-              className={`h-full rounded-lg shadow-xl overflow-hidden bg-[#012147] ${
-                index === 0 ? "md:scale-105" : ""
-              }`}
-            >
-              {/* Image with fixed height and cover */}
-              <img
-                src={prize.image}
-                alt={prize.rank}
-                className="w-full h-80 object-cover bg-[#012147]"
-              />
+            <div className="h-full rounded-lg shadow-lg overflow-hidden bg-[#012147]">
+              {/* Image container with adjusted height */}
+              <div className="relative h-48 sm:h-56">
+                <img
+                  src={prize.image}
+                  alt={prize.rank}
+                  className="w-full h-full object-cover object-center"
+                />
+              </div>
 
-              {/* Header */}
-              <div className={`${prize.color} p-6 sm:p-8 text-center`}>
-                <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3">
+              {/* Prize details with adjusted padding */}
+              <div className={`${prize.color} p-4 sm:p-6 text-center`}>
+                <h2 className="text-xl sm:text-2xl font-bold text-white mb-2">
                   {prize.rank}
                 </h2>
-                <p className="text-4xl sm:text-5xl font-bold text-white">
+                <p className="text-3xl sm:text-4xl font-bold text-white">
                   {prize.reward}
                 </p>
               </div>

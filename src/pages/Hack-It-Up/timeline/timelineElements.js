@@ -47,8 +47,8 @@ let timelineElements = [
       location: "IGDTUW Seminar Hall",
       description:
         "Submit your prototype and present your innovations in the finale!",
-        link: "/hackitup",
-      buttonText: "Prizes To Be Revealed Soon",
+        link: "/hackitup/prizes",
+      buttonText: "Prizes",
       date: "18th February, 2025",
       icon: "work",
     },
