@@ -43,7 +43,7 @@ const PrizeRankings = () => {
               <img
                 src={prize.image}
                 alt={prize.rank}
-                className="w-full h-80 object-cover bg-[#012147]"
+                className="w-full h-100 object-cover bg-[#012147]"
               />
 
               {/* Header */}
