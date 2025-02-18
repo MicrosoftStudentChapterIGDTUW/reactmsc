@@ -5,6 +5,8 @@ import Timeline from "./timeline/Timeline";
 import Tracks from "./Tracks";
 import Sponsorship from "./Sponsorship";
 import Faqhack from "./Faqhack";
+import PrizeRankings from "./Prizes";
+
 function HackItUp() {
   const navigate = useNavigate();
   const [isMobile, setIsMobile] = useState(false);
@@ -87,15 +89,11 @@ function HackItUp() {
         <Timeline />
       </section>
 
-      {/* Judges Section */}
-      {/*
-      <section className="w-full px-4 md:px-8 my-8">
-        <Judges />
-      </section>
-      */}
-
       <section className="w-full px-4 md:px-8 my-8">
         <Tracks />
+      </section>
+      <section className="w-full px-4 md:px-8 my-8">
+        <PrizeRankings />
       </section>
       <section className="w-full px-4 md:px-8 my-8">
         <Sponsorship />
