@@ -24,7 +24,7 @@ const PrizeRankings = () => {
 
   return (
     <div className="w-full bg-white p-4 sm:p-8">
-      <h1 className="text-3xl sm:text-4xl font-bold text-center mb-8 sm:mb-12">
+      <h1 className="mt-8 text-3xl md:text-5xl lg:text-[5em] text-center font-['Bebas_Neue'] text-[#012147]">
         Prizes
       </h1>
 
